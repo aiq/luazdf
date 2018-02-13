@@ -1,0 +1,41 @@
+= eqf
+
+[source,lua]
+----
+function eqf( val ) --> func
+----
+
+== Description
+
+Creates a function that takes one parameter and compares it with _val_ via the *==* operator.
+
+== Paramters
+
+val::
+The basic value for the comparsion.
+
+== Return Values
+
+func::
+A new function that takes one parameter and returns *true* or *false*.
+
+== Code
+
+[source,lua]
+----
+include::eqf.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::eqf.ex1.lua[]
+----
+
+== See also
+
+* link:gtef.html[gtef]
+* link:gtf.html[gtf]
+* link:ltef.html[ltef]
+* link:ltf.html[ltf]

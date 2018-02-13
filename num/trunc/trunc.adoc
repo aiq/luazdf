@@ -1,0 +1,38 @@
+= trunc
+
+[source,lua]
+----
+function trunc( num ) --> i
+----
+
+== Description
+
+Truncates a number to an integer by removing the fractional part of the number.
+
+== Parameters
+
+num::
+The number that should be truncated.
+
+== Return Values
+
+i::
+Integer number representation of the assigned number value.
+
+== Code
+
+[source,lua]
+----
+include::trunc.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::trunc.ex1.lua[]
+----
+
+== Inspired by
+
+* https://support.office.com/en-us/article/TRUNC-function-8b86a64c-3127-43db-ba14-aa5ceb292721[Excel trunc]

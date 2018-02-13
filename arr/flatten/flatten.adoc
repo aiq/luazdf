@@ -1,0 +1,45 @@
+= flatten
+
+[source,lua]
+----
+function flatten( arr [, shallow] ) --> flatarr
+----
+
+== Description
+
+Flattens nested arrays in array table.
+The nesting can be to any depth.
+If you pass _shallow_, the array will only be flattened a single level.
+
+== Parameters
+
+arr::
+The array table that should be flatten.
+
+shallow::
+Defines how deep the the sub array should be flatten.
+If you pass shallow, the array table will only be flattened a single level.
+If shallow is omitted flattes the function every nested array.
+
+== Return Values
+
+flatarr::
+The flattened array table.
+
+== Code
+
+[source,lua]
+----
+include::flatten.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::flatten.ex1.lua[]
+----
+
+== Inspired by
+
+* http://underscorejs.org/#flatten[Underscore.js flatten]

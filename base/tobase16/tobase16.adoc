@@ -1,0 +1,42 @@
+= tobase16
+
+[source,lua]
+----
+function tobase16( str ) --> base16str
+----
+
+== Description
+
+Encodes a data string to a base 16 string.
+
+== Parameters
+
+str::
+The data string that should be encoded.
+
+== Return Values
+
+base16str::
+The base 16 encoded string.
+
+== Code
+
+[source,lua]
+----
+include::tobase16.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::tobase16.ex1.lua[]
+----
+
+== Inspired by
+
+* https://tools.ietf.org/html/rfc4648#section-8[RFC 4648]
+
+== See also
+
+* link:frombase16.html[frombase16]

@@ -1,0 +1,46 @@
+= appendall
+
+[source,lua]
+----
+function appendall( arr, oth ) --> arr
+----
+
+== Description
+
+Appends all values of _oth_ to _arr_.
+
+== Parameters
+
+arr::
+Array table where the values should be append.
+
+oth::
+Array table with the values that should be append.
+
+== Return Values
+
+arr::
+Returns the modified table _arr_.
+
+== Code
+
+[source,lua]
+----
+include::appendall.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::appendall.ex1.lua[]
+----
+
+== Inspired by
+
+* http://ruby-doc.org/core-2.1.1/Array.html#method-i-concat[Ruby Array.concat]
+
+== See also
+
+* link:append.html[append]
+* link:insertall.html[insertall]

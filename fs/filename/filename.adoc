@@ -1,0 +1,43 @@
+= filename
+
+[source,lua]
+----
+function filename( path ) --> name
+----
+
+== Description
+
+Returns the file name without the extension used by _path_.
+The name is the prefix before the first dot in the final slash-separated element of path.
+
+== Parameters
+
+path::
+Path with file name.
+
+== Return Values
+
+name::
+File name without the extension.
+
+== Code
+
+[source,lua]
+----
+include::filename.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::filename.ex1.lua[]
+----
+
+== See also
+
+* link:basename.html[basename]
+* link:dirname.html[dirname]
+* link:extname.html[extname]
+* link:longextname.html[longextname]
+* link:shortfilename.html[shortfilename]

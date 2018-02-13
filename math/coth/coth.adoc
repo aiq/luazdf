@@ -1,0 +1,47 @@
+= coth
+
+[source,lua]
+----
+function coth( x ) --> res
+----
+
+== Description
+
+Returns the hyperbolic cotangent of the hyperbolic angle _x_.
+
+== Parameters
+
+x::
+An angle in radians.
+
+== Return Values
+
+res::
+Hyperbolic cotangent of _x_.
+
+== Code
+
+[source,lua]
+----
+include::coth.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::coth.ex1.lua[]
+----
+
+== Inspired by
+
+* http://office.microsoft.com/en-us/excel-help/coth-function-HA102753261.aspx[Excel coth]
+* http://uk.mathworks.com/help/matlab/ref/coth.html[MATLAB coth]
+
+== See also
+
+* link:acoth.html[acoth]
+* link:cosh.html[cosh]
+* link:cot.html[cot]
+* link:sinh.html[sinh]
+* link:tanh.html[tanh]

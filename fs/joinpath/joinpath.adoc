@@ -1,0 +1,39 @@
+= joinpath
+
+[source,lua]
+----
+function joinpath( tab ) --> path
+----
+
+== Description
+
+Joins any number of path elements into a single path, adding a separating slash if necessary.
+The result is Cleaned; in particular, all empty strings are ignored.
+
+== Parameters
+
+tab::
+Array table with the path components.
+
+== Return Values
+
+path::
+Valid path string.
+
+== Code
+
+[source,lua]
+----
+include::joinpath.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::joinpath.ex1.lua[]
+----
+
+== See also
+
+* link:splitpath.html[splitpath]

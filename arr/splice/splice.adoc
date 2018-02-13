@@ -1,0 +1,57 @@
+= splice
+
+[source,lua]
+----
+function splice( tab, idx [, n [, ...]] ) --> removed
+----
+
+== Description
+
+Changes the content of an array table, adding new elements while removing old elements.
+It is possible to use negative numbers to identifie the first and last element of the sub-array.
+
+== Parameters
+
+tab::
+The array tables where you want to remove or replace elements
+
+idx::
+Index at which to start changing the array table.
+If greater than the length of the array, actual starting index will be set to the length of the array.
+If negative, will begin that many elements from the end.
+
+n::
+An integer indicating the number of old elements to remove.
+If _n_ is 0, no elements are removed.
+In this case, you should specify at least one new element(_..._).
+If _n_ is greater than the number of elements left in the array starting at index, then all of the elements through the end of the array will be deleted.
+If no _n_ parameter is specified, all elements after index are removed.
+
+...::
+The elements to add to the array.
+If no elements are specified, splice simply removes elements from the array table.
+
+== Return Values
+
+removed::
+An array table containing the removed elements.
+If only one element is removed, an array of one element is returned.
+If no elements are removed, an empty array is returned.
+
+== Code
+
+[source,lua]
+----
+include::splice.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::splice.ex1.lua[]
+----
+
+== Inspired by
+
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice[JavaScript splice]

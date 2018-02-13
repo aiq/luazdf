@@ -1,0 +1,59 @@
+= getoptvalues
+
+[source,lua]
+----
+function getoptvalues( args [, name [, max]] ) --> opt, values, rest
+----
+
+== Description
+
+Parses an option with the attendant values from an arguments table.
+For example:
+----
+--add 1 2 3
+----
+
+== Parameters
+
+args::
+The cli arguments that should be parsed.
+
+name::
+An optional expected option name.
+The default name must just start with a "-".
+
+max::
+The maximum number off values that are attendant to the option.
+The dafault behaviour if no _max_ value is defined takes all entries that not start with "-".
+
+== Return Values
+
+opt::
+The identified option value, or *nil* if the first value in _args_ does not match _name_ or does not start with "-".
+
+values::
+The values that follow the _opt_ entry in the _args_ table.
+The maximal number of values can be defined with the _max_ parameter.
+All entries that not start with "-".
+If the option value is *nil* is the values table empty.
+
+rest::
+The remaining entries from _args_.
+
+== Code
+
+[source,lua]
+----
+include::getoptvalues.lua[]
+----
+
+== Example
+
+[source,lua]
+----
+include::getoptvalues.ex1.lua[]
+----
+
+== See also
+
+* link:getoptpair.html[getoptpair]

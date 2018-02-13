@@ -1,0 +1,44 @@
+= juxt
+
+[source,lua]
+----
+function juxt( ... ) --> func
+----
+
+== Description
+
+Returns a function that is the juxtaposition of a list of functions.
+_func_ takes a variable number of arguments, and returns an array table containing the result of applying each function to the arguments (left-to-right).
+
+== Parameters
+
+...::
+A variable number of functions
+
+== Return Values
+
+func::
+Function that calls all functions and returns an array table with the results.
+
+== Code
+
+[source,lua]
+----
+include::juxt.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::juxt.ex1.lua[]
+----
+
+== Inspired by
+
+* http://clojuredocs.org/clojure_core/clojure.core/juxt[Clojure juxt]
+
+== See also
+
+* link:compose.html[compose]
+* link:partial.html[partial

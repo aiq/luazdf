@@ -1,0 +1,40 @@
+= isolatednodes
+
+[source,lua]
+----
+function isolatednodes( graph ) --> nodes
+----
+
+== Description
+
+Returns all nodes of _graph_ that have no incoming and no outcoming edges.
+
+== Parameters
+
+graph::
+The graph where the function looks for isolated nodes.
+The graph itself will not be modified.
+
+== Return Values
+
+nodes::
+The isolated nodes of _graph_.
+
+== Code
+
+[source,lua]
+----
+include::isolatednodes.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isolatednodes.ex1.lua[]
+----
+
+== See Also
+
+* link:leafnodes.html[leafnodes]
+* link:sinknodes.html[sinknodes]

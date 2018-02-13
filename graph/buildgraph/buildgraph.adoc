@@ -1,0 +1,42 @@
+= buildgraph
+
+[source,lua]
+----
+function buildgraph( nodes, edges [, undirected] ) --> graph
+----
+
+== Description
+
+Creates a graph data structure with the defined nodes and edges.
+If the nodes from the edges are not existing creates the function the nodes in the graph.
+The edges are by default direct, with the optional _undirected_ parameter is it possible to define it as undirected edge.
+
+== Parameters
+
+nodes::
+The nodes for the graph.
+
+edges::
+The edges that should be created.
+
+undirected::
+Optional value that is by default *false*. Can be *true* to create undirected edges.
+
+== Return Values
+
+graph::
+The created graph.
+
+== Code
+
+[source,lua]
+----
+include::buildgraph.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::buildgraph.ex1.lua[]
+----

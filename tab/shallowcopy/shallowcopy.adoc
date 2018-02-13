@@ -1,0 +1,43 @@
+= shallowcopy
+
+[source,lua]
+----
+function shallowcopy( tab ) --> copy
+----
+
+== Description
+
+Makes a copy of the table _tab_, copies only the toplevel keys and values.
+The metatable will not be handled.
+
+== Parameters
+
+tab::
+The table that should be copied.
+
+== Return Values
+
+copy::
+A new table.
+
+== Code
+
+[source,lua]
+----
+include::shallowcopy.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::shallowcopy.ex1.lua[]
+----
+
+== Inspired by
+
+* http://lua-users.org/wiki/CopyTable[Lua Users]
+
+== See also
+
+* link:deepcopy.html[deepcopy]

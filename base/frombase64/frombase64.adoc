@@ -1,0 +1,50 @@
+= frombase64
+
+[source,lua]
+----
+function frombase64( base64str [, ignore] ) --> str, err
+----
+
+== Description
+
+Decodes a base 64 encoded string to a data string.
+It is possible to ignore characters like \n in _base64str_ via the optional _ignore_ string.
+
+== Parameters
+
+base64str::
+The base 64 encoded string that should be decoded.
+
+ignore::
+String that represents a optional set of characters that should be ignored in _base64str_.
+
+== Return Values
+
+str::
+The decoded data string or *nil* if an error occurs.
+
+err::
+A message that explains the error, otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::frombase64.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::frombase64.ex1.lua[]
+----
+
+== Inspired by
+
+* https://tools.ietf.org/html/rfc4648#section-4[RFC 4648]
+
+== See also
+
+* link:frombase64url.html[frombase64url]
+* link:tobase64.html[tobase64]

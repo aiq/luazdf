@@ -1,0 +1,38 @@
+= tobase2
+
+[source,lua]
+----
+function tobase2( str ) --> base2str
+----
+
+== Description
+
+Encodes a data string to a base 2 string(bitfield).
+
+== Parameters
+
+str::
+The data string that should be encoded.
+
+== Return Values
+
+base2str::
+The bitfield.
+
+== Code
+
+[source,lua]
+----
+include::tobase2.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::tobase2.ex1.lua[]
+----
+
+== See also
+
+* link:frombase2.html[frombase2]

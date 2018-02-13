@@ -1,0 +1,5 @@
+
+= arr
+
+Usefull functions to handle array tables.
+Most functions are inspired by *JavaScript* util libraries like https://lodash.com/[Lodash] and http://underscorejs.org/[underscore.js].

@@ -1,0 +1,40 @@
+= linecol
+
+[source,lua]
+----
+function linecol( str, idx ) --> line, col
+----
+
+== Description
+
+Converts an index(_idx_) inside a multi-line string(_str_) into a line and column number.
+
+== Parameters
+
+str::
+A multi-line string.
+
+idx::
+Index inside the string.
+
+== Return Values
+
+line::
+Line number of the index that starts with 1.
+
+col::
+Column number of the index that starts with 1.
+
+== Code
+
+[source,lua]
+----
+include::linecol.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::linecol.ex1.lua[]
+----

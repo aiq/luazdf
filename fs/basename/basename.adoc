@@ -1,0 +1,49 @@
+= basename
+
+[source,lua]
+----
+function basename( path [, ext] ) --> name
+----
+
+== Description
+
+Returns the trailing name of the path, with the ability to remove the extension.
+
+== Parameters
+
+path::
+A unix like path.
+
+ext::
+If the name component ends with ext this will also be cut off.
+
+== Return Values
+
+name::
+Trailing name of the path.
+
+== Code
+
+[source,lua]
+----
+include::basename.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::basename.ex1.lua[]
+----
+
+== Inspired by
+
+* https://nodejs.org/api/path.html#path_path_basename_p_ext[Node.js path.basename]
+* http://php.net/manual/de/function.basename.php[PHP basename]
+
+== See also
+
+* link:cutpath.html[cutpath]
+* link:dirname.html[dirname]
+* link:extname.html[extname]
+* link:filename.html[filename]

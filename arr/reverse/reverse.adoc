@@ -1,0 +1,43 @@
+= reverse
+
+[source,lua]
+----
+function reverse( arr ) --> arr
+----
+
+== Description
+
+Reverses the order in the array table _arr_.
+
+== Parameters
+
+arr::
+The array table that should be modified.
+
+== Return Values
+
+arr::
+The modified array table.
+
+== Code
+
+[source,lua]
+----
+include::reverse.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::reverse.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/algorithm/reverse/[C++ reverse]
+* https://lodash.com/docs#reverse[lodash reverse]
+
+== See also
+
+* link:shuffle.html[shuffle]

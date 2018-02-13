@@ -1,0 +1,50 @@
+= tilldayofweek
+
+[source,lua]
+----
+function tilldayofweek( greg, target, dir ) --> days
+----
+
+== Description
+
+Calculates the days from a _greg_ till a defined _target_ weekday.
+
+== Parameters
+
+greg::
+A table containing the Gregorian date values year, month and day.
+* The year as a number.
+* The month as a number from 1(January) to 12(December).
+* The day as a number from 1 to 31
+
+target::
+The weekday as integer ranging from 1(Monday) to 7(Sunday).
+
+dir::
+Indicates the direction(forward/backward) and distance of target weekday.
+* _dir < 0_ means that we are looking backward for the previous target weekday
+* _dir > 0_ means that we are looking forward for the next target weekday
+* _|dir|_ defines the distance we are looking forward or backward
+
+== Return Values
+
+days::
+The number of days till the target weekday
+
+== Code
+
+[source,lua]
+----
+include::tilldayofweek.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::tilldayofweek.ex1.lua[]
+----
+
+== See also
+
+* link:dayofweek.html[dayofweek]

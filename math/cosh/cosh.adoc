@@ -1,0 +1,47 @@
+= cosh
+
+[source,lua]
+----
+function cosh( x ) --> res
+----
+
+== Description
+
+Returns the hyperbolic cosine of _x_.
+
+== Parameters
+
+x::
+An angle in radians.
+
+== Return Values
+
+res::
+Hyperbolic cosine of _x_.
+
+== Code
+
+[source,lua]
+----
+include::cosh.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::cosh.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/cmath/cosh/[C++ cosh]
+* http://office.microsoft.com/en-us/excel-help/cosh-function-HA102753082.aspx[Excel cosh]
+* https://golang.org/pkg/math/#Cosh[Go Cosh]
+* http://uk.mathworks.com/help/matlab/ref/cosh.html[MATLAB cosh]
+
+== See also
+
+* link:acosh.html[acosh]
+* link:sinh.html[sinh]
+* link:tanh.html[tanh]

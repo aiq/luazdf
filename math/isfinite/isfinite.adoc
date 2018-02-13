@@ -1,0 +1,39 @@
+= isfinite
+
+[source,lua]
+----
+function isfinite( x ) --> res
+----
+
+== Description
+
+Returns whether _x_ is a finite value.
+
+== Parameters
+
+x::
+The number that should be checked.
+
+== Return Values
+
+res::
+*true* if _x_ is a finite, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::isfinite.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isfinite.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/cmath/isfinite/[C++ isfinite]
+* http://lua-users.org/wiki/InfAndNanComparisons[Lua Users Implemeantation Hints]

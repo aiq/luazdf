@@ -1,0 +1,44 @@
+= fact2
+
+[source,lua]
+----
+function fact2( x ) --> res
+----
+
+== Description
+
+Returns the double factorial of _x_.
+
+== Parameters
+
+x::
+The nonnegative number for which you want the double factorial.
+If number is not an integer, it is truncated.
+
+== Return Values
+
+res::
+The double factorial of _x_.
+
+== Code
+
+[source,lua]
+----
+include::fact2.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::fact2.ex1.lua[]
+----
+
+== Inspired by
+
+* http://office.microsoft.com/en-us/excel-help/factdouble-function-HA102753023.aspx[Excel factdouble]
+* http://uk.mathworks.com/help/symbolic/mupad_ref/fact2.html[MuPAD fact2]
+
+== See also
+
+* link:fact.html[fact]

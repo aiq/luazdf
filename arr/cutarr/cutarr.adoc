@@ -1,0 +1,41 @@
+= cutarr
+
+[source,lua]
+----
+function cutarr( arr, n ) --> left, right
+----
+
+== Description
+
+The function splits an array table at position _n_ in two pieces.
+The element at _n_ will be part of the left sub array table.
+
+== Parameters
+
+arr::
+The array table that should be split.
+
+n::
+The position in the array table where the cut happens.
+
+== Return Values
+
+left::
+The left part of the array table.
+
+right::
+The right part of the array table.
+
+== Code
+
+[source,lua]
+----
+include::cutarr.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::cutarr.ex1.lua[]
+----

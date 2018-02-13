@@ -1,0 +1,38 @@
+= dirmatch
+
+[source,lua]
+----
+function dirmatch( path, pattern ) --> iter
+----
+
+== Description
+
+Creates a Lua interator over the entries in a directory where the name matches the _pattern_.
+Raises an error if _path_ is not a directory.
+
+== Parameters
+
+path::
+A path to a directory in the filesystem.
+
+pattern::
+Lua pattern to identify the relevant entries.
+
+== Return Values
+
+iter::
+Lua iterator over the entries that match the pattern.
+
+== Code
+
+[source,lua]
+----
+include::dirmatch.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::dirmatch.ex1.lua[]
+----

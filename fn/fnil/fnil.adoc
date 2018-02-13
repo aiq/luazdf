@@ -1,0 +1,42 @@
+= fnil
+
+[source,lua]
+----
+function fnil( f, ... ) --> mf
+----
+
+== Description
+
+Takes a function _f_ and returns a function that calls _f_ and replacing *nil* arguments to _f_ with the supplied values _..._.
+Note that the function _f_ can take any number of arguments, not just the one(s) being *nil*-patched.
+
+== Parameters
+
+f::
+Function that should have default values for their parameters.
+
+...::
+Default values for the parameters.
+
+== Return Values
+
+mf::
+Wrapper function that defines default values for _f_.
+
+== Code
+
+[source,lua]
+----
+include::fnil.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::fnil.ex1.lua[]
+----
+
+== Inspired by
+
+* http://clojuredocs.org/clojure_core/clojure.core/fnil[Clojure fnil]

@@ -1,0 +1,45 @@
+= countmatch
+
+[source,lua]
+----
+function countmatch( str, pattern [, plain] ) --> n
+----
+
+== Description
+
+Returns the number of occurrences of the _pattern_ in _str_.
+If _plain_ is defined with true no characters in _pattern_ will be considered magic.
+
+== Parameters
+
+str::
+The source string that should be scanned.
+
+pattern::
+The pattern or substring that should be used.
+
+plain::
+Defines if plain.
+
+== Return Values
+
+n::
+Number of occurrences of the pattern.
+
+== Code
+
+[source,lua]
+----
+include::countmatch.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::countmatch.ex1.lua[]
+----
+
+== Inspired by
+
+* http://something.else

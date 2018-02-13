@@ -1,0 +1,47 @@
+= cadr
+
+[source,lua]
+----
+function cadr( arr ) --> val
+----
+
+== Description
+
+Returns the second value of an array table.
+Useful for methods with multiple return values.
+
+== Parameters
+
+arr::
+An array table with two or more values.
+
+== Return Values
+
+val::
+The second value from _arr_, if no second value exist returns the function *nil*.
+
+== Code
+
+[source,lua]
+----
+include::cadr.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::cadr.ex1.lua[]
+----
+
+== Inspired by
+
+* https://en.wikipedia.org/wiki/CAR_and_CDR[Wikipedia CAR/CDR]
+* http://help.autodesk.com/view/ACD/2016/ENU/?guid=GUID-F8E9E4F0-218D-4587-9D7E-922BE57C9F9B[AudoLISP cadr]
+
+== See also
+
+* link:caddr.html[caddr]
+* link:car.html[car]
+* link:cddr.html[cddr]
+* link:cdr.html[cdr]

@@ -1,0 +1,41 @@
+= gtf
+
+[source,lua]
+----
+function gtf( val ) --> func
+----
+
+== Description
+
+Creates a function that takes one parameter and compares it with _val_ via the *>* operator.
+
+== Parameters
+
+val::
+The basic value for the comparsion.
+
+== Return Values
+
+func::
+A new function that takes one parameter and returns *true* or *false*.
+
+== Code
+
+[source,lua]
+----
+include::gtf.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::gtf.ex1.lua[]
+----
+
+== See also
+
+* link:eqf.html[eqf]
+* link:gtef.html[gtef]
+* link:ltef.html[ltef]
+* link:ltf.html[ltf]

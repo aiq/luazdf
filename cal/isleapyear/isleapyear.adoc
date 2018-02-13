@@ -1,0 +1,34 @@
+= isleapyear
+
+[source,lua]
+----
+function isleapyear( year ) --> res
+----
+
+== Description
+
+Checks if the given _year_ is a leap year or not.
+
+== Parameters
+
+year::
+The year that needs to be checked as number.
+
+== Return Values
+
+res::
+*true* if the year is a leap year, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::isleapyear.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isleapyear.ex1.lua[]
+----

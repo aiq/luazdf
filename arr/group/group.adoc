@@ -1,0 +1,45 @@
+= group
+
+[source,lua]
+----
+function group( arr, fv ) --> multiset
+----
+
+== Description
+
+Splits a array table into sub arrays, grouped by the result of running each value through _fv_.
+
+== Parameters
+
+arr::
+Array table where the values should be grouped.
+
+fv::
+Function that takes a value from the array table and decides in which group it belongs.
+
+== Return Values
+
+multiset::
+A multiset with the detected groups.
+
+== Code
+
+[source,lua]
+----
+include::group.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::group.ex1.lua[]
+----
+
+== Inspired by
+
+* http://underscorejs.org/#groupBy[Underscore.js groupBy]
+
+== See also
+
+* link:count.html[count]

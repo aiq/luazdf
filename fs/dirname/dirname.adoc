@@ -1,0 +1,39 @@
+= dirname
+
+[source,lua]
+----
+function dirname( path ) --> parent
+----
+
+== Description
+
+Returns the parent directory's path of the file or directory that is defined with _path_.
+
+== Parameters
+
+path::
+A unix like path.
+
+== Return Values
+
+parent::
+Directory name of the path.
+
+== Code
+
+[source,lua]
+----
+include::dirname.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::dirname.ex1.lua[]
+----
+
+== Inspired by
+
+* https://nodejs.org/api/path.html#path_path_dirname_p[Node.js path.dirname] 
+* http://php.net/manual/en/function.dirname.php[PHP dirname]

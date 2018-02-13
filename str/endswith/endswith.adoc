@@ -1,0 +1,47 @@
+= endswith
+
+[source,lua]
+----
+function endswith( str, suffix ) --> res
+----
+
+== Description
+
+Checks if _str_ ends with _suffix_.
+
+== Parameters
+
+str::
+The string that should be checked.
+
+suffix::
+The string to search for.
+
+== Return Values
+
+res::
+Is *true* if the string ends with _suffix_, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::endswith.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::endswith.ex1.lua[]
+----
+
+== Inspired by
+
+* https://lodash.com/docs#endsWith[lodash endsWith]
+
+== See also
+
+* link:endswithany.html[endswithany]
+* link:startswith.html[startswith]
+* link:startswithany.html[startswithany]

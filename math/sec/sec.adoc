@@ -1,0 +1,43 @@
+= sec
+
+[source,lua]
+----
+function sec( x ) --> res
+----
+
+== Description
+
+Returns the secant of the angle _x_.
+
+== Parameters
+
+x::
+Angle in radians.
+
+== Return Values
+
+res::
+The secant of the angle.
+
+== Code
+
+[source,lua]
+----
+include::sec.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::sec.ex1.lua[]
+----
+
+== Inspired by
+
+* http://office.microsoft.com/en-us/excel-help/sec-function-HA102753268.aspx[Excel sec]
+* http://uk.mathworks.com/help/matlab/ref/sec.html[MATLAB sec]
+
+== See also
+
+* link:sech.html[sech]

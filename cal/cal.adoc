@@ -1,0 +1,20 @@
+
+= cal
+
+Time and calendar functions.
+
+The functions are using some conventions to declare months or days of the week in numbers.
+
+.Table months
+|===
+|January |February   |March   |April   |May  |June |July |August  |September  |October |November   |December
+
+|1       |2          |3       |4       |5    |6    |7    |8       |9          |10      |11         |12
+|===
+
+.Table days of the week
+|===
+|Monday  |Tuesday |Wednesday  |Thursday   |Friday  |Saturday   |Sunday
+
+|1       |2       |3          |4          |5       |6          |7
+|===

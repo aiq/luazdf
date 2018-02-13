@@ -1,0 +1,43 @@
+= isdict
+
+[source,lua]
+----
+function isdict( tab ) --> res
+----
+
+== Description
+
+Checks if _tab_ is a dictionary table.
+If _tab_ is not a table returns the function *nil* and an error message.
+
+== Parameters
+
+tab::
+Table that should be checked.
+
+== Return Values
+
+res::
+Is *true* if _tab_ is a dictionary table, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::isdict.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isdict.ex1.lua[]
+----
+
+== Inspired by
+
+* http://stackoverflow.com/questions/7526223/how-do-i-know-if-a-table-is-an-array[Stack Overflow]
+
+== See also
+
+* link:isarray.html[isarray]

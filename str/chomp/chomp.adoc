@@ -1,0 +1,43 @@
+= chomp
+
+[source,lua]
+----
+function chomp( str ) --> nstr
+----
+
+== Description
+
+Removes the endline separators from the end of _str_ (if present).
+Endline separator means \n, \r or \r\n, whitespaces and tabs will not be removed.
+
+== Parameters
+
+str::
+The string where the endline should be removed.
+
+== Return Values
+
+nstr::
+String that has not a endline separator at the end.
+
+== Code
+
+[source,lua]
+----
+include::chomp.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::chomp.ex1.lua[]
+----
+
+== Inspired by
+
+* http://ruby-doc.org/core-2.0.0/String.html#method-i-chomp[Ruby String.chomp]
+
+== See also
+
+* link:ltrim.html[ltrim]

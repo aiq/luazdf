@@ -1,0 +1,49 @@
+= acosh
+
+[source,lua]
+----
+function acosh( x ) --> res
+----
+
+== Description
+
+Returns the inverse hyperbolic cosine of _x_.
+The inverse hyperbolic cosine is the value whose hyperbolic cosine is _x_, so _acosh( cosh( x ) )_ equals _x_.
+
+== Parameters
+
+x::
+Real number that must be greater or equal to 1.
+
+== Return Values
+
+res::
+The inverse hyperbolic cosine of _x_ or NaN if _x_ < 1.
+
+== Code
+
+[source,lua]
+----
+include::acosh.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::acosh.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/cmath/acosh/[C++ acosh]
+* http://office.microsoft.com/en-us/excel-help/acosh-function-HA102753124.aspx[Excel acosh]
+* https://golang.org/pkg/math/#Acosh[Go Acosh]
+* http://uk.mathworks.com/help/matlab/ref/acosh.html[MATLAB acosh]
+* https://reference.wolfram.com/language/ref/ArcCosh.html[Wolfram ArcCosh]
+
+== See also
+
+* link:asinh.html[asinh]
+* link:atanh.html[atanh]
+* link:cosh.html[cosh]

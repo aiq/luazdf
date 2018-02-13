@@ -1,0 +1,48 @@
+= partial
+
+[source,lua]
+----
+function partial( f, ... ) --> mfunc
+----
+
+== Description
+
+Takes a function _f_ and fewer than the normal arguments(_..._) to _f_, and
+returns a function _mfunc_ that takes a variable number of additional arguments.
+When called, the function _mfunc_ calls _f_ with _..._ and the additional arguments.
+
+== Parameters
+
+f::
+The function that should be called.
+
+...::
+The arguments of the function _f_ that should be preset.
+
+== Return Values
+
+mfunc::
+A function that calls _f_ with the preset arguments( _..._ ).
+
+== Code
+
+[source,lua]
+----
+include::partial.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::partial.ex1.lua[]
+----
+
+== Inspired by
+
+* http://clojuredocs.org/clojure_core/clojure.core/partial[Clojure partial]
+
+== See also
+
+* link:compose.html[compose]
+* link:juxt.html[juxt]

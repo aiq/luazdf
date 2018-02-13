@@ -1,0 +1,47 @@
+= writefile
+
+[source,lua]
+----
+function writefile( filename, ... ) --> res, err
+----
+
+== Description
+
+Creates a file and writes the value of each of its arguments(_..._) to the file.
+The arguments must be strings or numbers.
+
+== Parameters
+
+filename::
+Path to the file that should be created.
+
+...::
+Strings and numbers that will be written into the file.
+
+== Return Values
+
+res::
+*true* or *nil* if an error occurse.
+
+err::
+A message if an error occurse otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::writefile.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::writefile.ex1.lua[]
+----
+
+== See also
+
+* link:readfile.html[readfile]
+* link:readlines.html[readlines]
+* link:writelines.html[writelines]

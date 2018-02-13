@@ -1,0 +1,37 @@
+= abspath
+
+[source,lua]
+----
+function abspath( path ) --> abs
+----
+
+== Description
+
+Returns an absolute representation of path.
+If the path is not absolute it will be joined with the current working directory to turn it into an absolute path.
+The absolute path name for a given file is not guaranteed to be unique.
+
+== Parameters
+
+path::
+A relative path.
+
+== Return Values
+
+abs::
+Absolute representation of path.
+
+== Code
+
+[source,lua]
+----
+include::abspath.lua[]
+----
+
+== Inspired By
+
+* https://golang.org/pkg/path/filepath/#Abs[Go Abs]
+
+== See also
+
+* link:relativepath.html[relativepath]

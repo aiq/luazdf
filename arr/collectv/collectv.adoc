@@ -1,0 +1,39 @@
+= collectv
+
+[source,lua]
+----
+function collectv( ... ) --> arr
+----
+
+== Description
+
+Util function to collect all values during the generic for loop for the list of expressions(`...`).
+The value is the second value inside the generic for loop.
+
+== Parameters
+
+...::
+One or more expressions that will be passed to the generic for loop.
+
+== Return Values
+
+arr::
+Array table that contains all values.
+
+== Code
+
+[source,lua]
+----
+include::collectv.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::collectv.ex1.lua[]
+----
+
+== See also
+
+* link:collectk.html[collectk]

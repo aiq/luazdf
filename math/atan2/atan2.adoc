@@ -1,0 +1,49 @@
+= atan2
+
+[source,lua]
+----
+function atan2( y, x ) --> res
+----
+
+== Description
+
+Returns the arctangent, or inverse tangent, of the specified _x_ and _y_.
+
+== Parameters
+
+y::
+The proportion of the y-coordinate in radians.
+
+x::
+The proportion of the x-coordinate in radians.
+
+== Return Values
+
+res::
+The arctangent of _y_ and _x_ in radians.
+
+== Code
+
+[source,lua]
+----
+include::atan2.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::atan2.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/cmath/atan2/[C++ atan2]
+* http://office.microsoft.com/en-us/excel-help/atan2-function-HA102753111.aspx[Excel atan2]
+* https://golang.org/pkg/math/#Atan2[Go Atan2]
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2[JavaScript atan2]
+* http://uk.mathworks.com/help/matlab/ref/atan2.html[MATLAB atan2]
+
+== See also
+
+* link:atanh.html[atanh]

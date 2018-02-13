@@ -1,0 +1,32 @@
+= sysinfo
+
+[source,lua]
+----
+function sysinfo() --> info
+----
+
+== Description
+
+Returns a table with information about the system.
+
+== Return Values
+
+info::
+Table with the string field name and the flag unix, windows or unknown set with *true*.
+Additional optional flag fields are:
+* bsd
+* freebsd
+* openbsd
+* netbsd
+* macosx
+* linux
+* solaris
+* cygwin
+* mingw32
+
+== Code
+
+[source,lua]
+----
+include::sysinfo.lua[]
+----

@@ -1,0 +1,41 @@
+= mkpath
+
+[source,lua]
+----
+function mkpath( path ) --> res, err
+----
+
+== Description
+
+This creates a directory and any missing ancestor directories that are defined in the path.
+
+== Parameters
+
+path::
+The path with the directories that should be created.
+
+== Return Values
+
+res::
+*true* or *nil* if an error occurse.
+
+err::
+A message if an error occurse otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::mkpath.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::mkpath.ex1.lua[]
+----
+
+== See also
+
+* link:mkdirtree.html[mkdirtree]

@@ -1,0 +1,39 @@
+= isinf
+
+[source,lua]
+----
+function isinf( x ) --> res
+----
+
+== Description
+
+Returns whether _x_ is an infinity value (either positive infinity or negative infinity).
+
+== Parameters
+
+x::
+The number that should be checked.
+
+== Return Values
+
+res::
+*true* if _x_ is an infinity, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::isinf.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isinf.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/cmath/isinf/[C++ isinf]
+* http://lua-users.org/wiki/InfAndNanComparisons[Lua Users Implementation Hints]

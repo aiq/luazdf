@@ -1,0 +1,46 @@
+= caddr
+
+[source,lua]
+----
+function caddr( arr ) --> val
+----
+
+== Description
+
+Returns the third value of an array table.
+Useful for methods with multiple return values.
+
+== Parameters
+
+arr::
+An array table with three or more values.
+
+== Return Values
+
+val::
+The third value from _arr_, if no third value exist returns the function *nil*.
+
+== Code
+
+[source,lua]
+----
+include::caddr.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::caddr.ex1.lua[]
+----
+
+== Inspired by
+
+* http://help.autodesk.com/view/ACD/2016/ENU/?guid=GUID-0E81B9F0-7AAD-4BB4-98EB-378AEBE5C4CF[AutoLISP caddr]
+
+== See also
+
+* link:cadr.html[cadr]
+* link:car.html[car]
+* link:cddr.html[cddr]
+* link:cdr.html[cdr]

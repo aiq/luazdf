@@ -1,0 +1,46 @@
+= sinh
+
+[source,lua]
+----
+function sinh( x ) --> res
+----
+
+== Description
+
+Returns the hyperbolic sine of _x_.
+
+== Parameters
+
+x::
+An angle in radians.
+
+== Return Values
+
+res::
+The hyperbolic sine of _x_.
+
+== Code
+
+[source,lua]
+----
+include::sinh.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::sinh.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/cmath/sinh/[C++ sinh]
+* http://office.microsoft.com/en-us/excel-help/sinh-function-HA102752870.aspx[Excel sinh]
+* https://golang.org/pkg/math/#Sinh[Go Sinh]
+* http://uk.mathworks.com/help/matlab/ref/sinh.html[MATLAB sinh]
+
+== See also
+
+* link:asinh.html[asinh]
+* link:cosh.html[cosh]

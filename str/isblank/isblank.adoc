@@ -1,0 +1,42 @@
+= isblank
+
+[source,lua]
+----
+function isblank( str ) --> res, idx
+----
+
+== Description
+
+Checks if all characters in the string are blank characters and there is at least one character.
+Blank characters are the tab character(U+0009) and the space character(U+0020).
+
+== Parameters
+
+str::
+The string that should be checked.
+
+== Return Values
+
+res::
+*true* if all characters in the string are blank characters and there is at least one character, otherwise *false*.
+
+idx::
+If _res_ is *false* shows _idx_ the first character that is not a blank character.
+
+== Code
+
+[source,lua]
+----
+include::isblank.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isblank.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/cctype/isblank/[C++ isblank]

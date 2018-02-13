@@ -1,0 +1,48 @@
+= atanh
+
+[source,lua]
+----
+function atanh( x ) --> res
+----
+
+== Description
+
+Returns the inverse hyperbolic tangenent of _x_.
+
+== Parameters
+
+x::
+A number that should be between -1 and 1.
+
+== Return Values
+
+res::
+The inverse hyperbolic tangenent, or NaN if _x_ is not between -1 and 1.
+
+== Code
+
+[source,lua]
+----
+include::atanh.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::atanh.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/cmath/atanh/[C++ atanh]
+* http://office.microsoft.com/en-us/excel-help/atanh-function-HA102753110.aspx[Excel atanh]
+* https://golang.org/pkg/math/#Atanh[Go Atanh]
+* http://uk.mathworks.com/help/matlab/ref/atanh.html[MATLAB atanh]
+
+== See also
+
+* link:acosh.html[acosh]
+* link:asinh.html[asinh]
+* link:atan2.html[atan2]
+* link:tanh.html[tanh]

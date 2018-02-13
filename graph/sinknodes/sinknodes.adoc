@@ -1,0 +1,40 @@
+= sinknodes
+
+[source,lua]
+----
+function sinknodes( graph ) --> nodes
+----
+
+== Description
+
+Returns all nodes of _graph_ that have at least one incoming edge and no outcoming edges.
+
+== Parameters
+
+graph::
+The graph where the function looks for sink nodes.
+The graph itself will not be modified.
+
+== Return Values
+
+nodes::
+The sink nodes of _graph_.
+
+== Code
+
+[source,lua]
+----
+include::sinknodes.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::sinknodes.ex1.lua[]
+----
+
+== See Also
+
+* link:isolatednodes.html[isolatednodes]
+* link:leafnodes.html[leafnodes]

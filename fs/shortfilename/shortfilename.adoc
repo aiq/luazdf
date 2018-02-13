@@ -1,0 +1,41 @@
+= shortfilename
+
+[source,lua]
+----
+function shortfilename( path ) --> name
+----
+
+== Description
+
+Returns the file name without the longest extension used by _path_.
+The name is the prefix befor the first dot in the final slash-separated element of path.
+
+== Parameters
+
+path::
+Path with file name.
+
+== Return Values
+
+name::
+File name without the longest extension.
+
+== Code
+
+[source,lua]
+----
+include::shortfilename.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::shortfilename.ex1.lua[]
+----
+
+== See also
+
+* link:extname.html[extname]
+* link:filename.html[filename]
+* link:longextname.html[longextname]

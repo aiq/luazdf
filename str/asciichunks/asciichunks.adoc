@@ -1,0 +1,45 @@
+= asciichunks
+
+[source,lua]
+----
+function asciichunks( str [, length] ) --> chunks
+----
+
+== Description
+
+Splits a the string _str_ into smaller chunks with a maximum size.
+The default value of _length_ is 1.
+
+NOTE: _asciichunks_ will split into bytes, rather than characters when dealing with a multi-byte encoded string.
+
+== Parameters
+
+str::
+The string that should be chunked.
+
+length::
+The optional chunk length.
+The default value is 1.
+
+== Return Values
+
+chunks::
+Array table with the generated chunks.
+
+== Code
+
+[source,lua]
+----
+include::asciichunks.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::asciichunks.ex1.lua[]
+----
+
+== Inspired by
+
+* http://php.net/manual/en/function.str-split.php[PHP str_split]

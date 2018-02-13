@@ -1,0 +1,55 @@
+= findif
+
+[source,lua]
+----
+function findif( arr, fv [, init] ) --> v, i
+----
+
+== Description
+
+Looks through an array table and returning the first element that matches a truth function.
+The function returns as soon as it finds an acceptable element.
+
+== Parameters
+
+arr::
+The array table where you want to find the value.
+
+fv::
+Check function that checks the single value.
+
+init::
+Specifies where to start the search, the default value is 1.
+
+== Return Values
+
+v::
+The first value in the array table that matches the function condition.
+If no value matches with the function condition is it *nil*.
+
+i::
+The index of the first value in the array table that matches the function condition.
+If no value matches with the function condition is it *nil*.
+
+== Code
+
+[source,lua]
+----
+include::findif.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::findif.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/algorithm/find_if/[C++ find_if]
+* http://underscorejs.org/#find[Underscore.js find]
+
+== See also
+
+* link:removeif.html[removeif]

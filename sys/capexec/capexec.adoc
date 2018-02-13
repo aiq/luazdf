@@ -1,0 +1,44 @@
+= capexec
+
+[source,lua]
+----
+function capexec( cmd ) --> exit, signal, stdout, stderr
+----
+
+== Description
+
+Executes a shell command _cmd_ and returns also the captured output( _stdout_, _stderr_ ).
+
+== Parameters
+
+cmd::
+A shell command.
+
+== Return Values
+
+exit::
+The exit status of the command, if it terminated normally.
+
+signal::
+The signal that terminated the command, if it was terminated by a signal.
+
+stdout::
+The standourt output that the execution of _cmd_ generated.
+
+stderr::
+The error output that the execution of _cmd_ generated.
+
+== Code
+
+[source,lua]
+----
+include::capexec.lua[]
+----
+
+== Inspired by
+
+* http://stevedonovan.github.io/Penlight/api/libraries/pl.utils.html#executeex[Penlight executeex]
+
+== See also
+
+* link:capinexec.html[capinexec]

@@ -1,0 +1,37 @@
+= difference
+
+[source,lua]
+----
+function difference( a, b ) --> res
+----
+
+== Description
+
+Computes the values of _a_ that not occure in _b_.
+
+== Parameters
+
+a::
+Source array table to inspect.
+
+b::
+Array table with the values to exclude.
+
+== Return Values
+
+res::
+Array table with the filtered values.
+
+== Code
+
+[source,lua]
+----
+include::difference.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::difference.ex1.lua[]
+----

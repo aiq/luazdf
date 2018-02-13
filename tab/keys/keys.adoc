@@ -1,0 +1,40 @@
+= keys
+
+[source,lua]
+----
+function keys( tab ) --> arr
+----
+
+== Description
+
+Return an array table containing all the keys in the table.
+
+== Parameters
+
+tab::
+The table from where you want to read the keys.
+
+== Return Values
+
+keylist::
+An array table with the keys.
+
+== Code
+
+[source,lua]
+----
+include::keys.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::keys.ex1.lua[]
+----
+
+== See also
+
+* link:divorce.html[divorce]
+* link:marry.html[marry]
+* link:values.html[values]

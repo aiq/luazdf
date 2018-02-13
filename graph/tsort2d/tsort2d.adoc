@@ -1,0 +1,45 @@
+= tsort2d
+
+[source,lua]
+----
+function tsort2d( graph ) --> groups, err
+----
+
+== Description
+
+Returns an two dimensional array table where at least one entry from [n+1] depent on the entries in [n].
+Isolated nodes and sink nodes are stored at the end.
+It works only for directed acyclic graphs.
+The implementation is using a Kahn-like implementation.
+
+== Parameters
+
+graph::
+The graph that should be ordered.
+
+== Return Values
+
+groups::
+An two dimensional array table where at least one entry from [n+1] depent on the entries in [n].
+
+
+err::
+*nil* or a message if the graph contains cycles.
+
+== Code
+
+[source,lua]
+----
+include::tsort2d.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::tsort2d.ex1.lua[]
+----
+
+== See Also
+
+* link:tsort.hmtl[tsort]

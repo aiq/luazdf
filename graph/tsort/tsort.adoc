@@ -1,0 +1,48 @@
+= tsort
+
+[source,lua]
+----
+function tsort( graph ) --> order, err
+----
+
+== Description
+
+Returns a linear ordering of the nodes in _graph_.
+It works only for directed acyclic graphs.
+The implemention of the topological sorting is using a depth-first search implementations.
+
+== Parameters
+
+graph::
+The graph that should be ordered.
+
+== Return Values
+
+order::
+The linear ordering of _graph_ as array table or *nil* if the graph contains cycles.
+
+err::
+*nil* or a message if the graph contains cycles.
+
+== Code
+
+[source,lua]
+----
+include::tsort.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::tsort.ex1.lua[]
+----
+
+== Inspired by
+
+* http://networkx.readthedocs.io/en/stable/reference/generated/networkx.algorithms.dag.topological_sort.html[NetworkX topological_sort]
+* http://ruby-doc.org/stdlib-2.1.2/libdoc/tsort/rdoc/TSort.html[Ruby TSort]
+
+== See Also
+
+* link::tsort2d.html[tsort2d]

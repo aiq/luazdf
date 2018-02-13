@@ -1,0 +1,41 @@
+= product
+
+[source,lua]
+----
+function product( x, ... ) --> res
+----
+
+== Description
+
+Computes the product of _x_ with all the additional value (_..._).
+
+== Parameters
+
+x::
+The first number you want to add to the product.
+
+...::
+An variable number of values that will be multiplied with _x_.
+
+== Return Values
+
+res::
+The calculated product value.
+
+== Code
+
+[source,lua]
+----
+include::product.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::product.ex1.lua[]
+----
+
+== Inspired by
+
+* http://office.microsoft.com/en-us/excel-help/product-function-HA102752896.aspx[Excel product]

@@ -1,0 +1,49 @@
+= frombase16
+
+[source,lua]
+----
+function frombase16( base16str [, ignore] ) --> str, err
+----
+
+== Description
+
+Decodes a base 16 encoded string to a data string.
+It is possible to ignore characters like \n in _base16str_ via the optional _ignore_ string.
+
+== Parameters
+
+base16str::
+The base 16 encoded string that should be decoded.
+
+ignore::
+String that represents a optional set of characters that should be ignored in _base16str_.
+
+== Return Values
+
+str::
+The decoded data string or *nil* if an error occurs.
+
+err::
+A message that explains the error, otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::frombase16.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::frombase16.ex1.lua[]
+----
+
+== Inspired by
+
+* https://tools.ietf.org/html/rfc4648#section-8[RFC 4648]
+
+== See also
+
+* link:tobase16.html[tobase16]

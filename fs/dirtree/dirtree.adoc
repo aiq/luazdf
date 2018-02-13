@@ -1,0 +1,44 @@
+= dirtree
+
+[source,lua]
+----
+function dirtree( dir ) --> iter
+----
+
+== Description
+
+Provides a Lua iterator function that recursively iterates over the files and subdirectories in a given directory(_dir_). 
+
+== Parameters
+
+dir::
+The directory that should be loaded.
+
+== Return Values
+
+iter::
+Iterator that delivers the _dirname_ and _basename_ of each entry at any level.
+
+== Code
+
+[source,lua]
+----
+include::dirtree.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::dirtree.ex1.lua[]
+----
+
+== Inspired by
+
+* http://lua-users.org/wiki/DirTreeIterator[LuaUsers DirTreeIterator]
+
+== See also
+
+* link:dirfiles.html[dirfiles]
+* link:mkdirtree.html[mkdirtree]
+* link:rmdirtree.html[rmdirtree]

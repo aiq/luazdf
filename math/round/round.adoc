@@ -1,0 +1,46 @@
+= round
+
+[source,lua]
+----
+function round( x, n ) --> res
+----
+
+== Description
+
+Rounds _x_ to a specified number with _n_ digits.
+
+== Parameters
+
+x::
+The number that should be round.
+
+n::
+The number of digits to which you want to round _x_.
+
+== Return Values
+
+res::
+The rounded number.
+
+== Code
+
+[source,lua]
+----
+include::round.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::round.ex1.lua[]
+----
+
+== Inspired by
+
+* http://office.microsoft.com/en-us/excel-help/round-function-HA102752882.aspx[Excel round]
+
+== See also
+
+* link:rounddown.html[rounddown]
+* link:roundup.html[roundup]

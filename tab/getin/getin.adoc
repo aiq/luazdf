@@ -1,0 +1,48 @@
+= getin
+
+[source,lua]
+----
+function getin( tab, ... ) --> val
+----
+
+== Description
+
+Returns the value _val_ in a nested table _tab_, where _..._ are a sequence of keys.
+Returns *nil* if the key sequence not exist in the table.
+
+== Parameters
+
+tab::
+The table with the value.
+
+...::
+A sequence of keys.
+
+== Return Values
+
+val::
+The value inside the table.
+
+== Code
+
+[source,lua]
+----
+include::getin.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::getin.ex1.lua[]
+----
+
+== Inspired by
+
+* http://clojuredocs.org/clojure.core/get-in[Clojure get-in]
+
+== See also
+
+* link:accessor.html[accessor]
+* link:updatein.html[updatein]
+* link:setin.html[setin]

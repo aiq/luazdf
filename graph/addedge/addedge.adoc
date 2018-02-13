@@ -1,0 +1,51 @@
+= addedge
+
+[source,lua]
+----
+function addedge( graph, from, to [, undirected] ) --> graph
+----
+
+== Description
+
+Adds an edge to a existing _graph_.
+If the nodes _from_ or _to_ not existing creates the function the nodes in the graph.
+The edges are by default direct, with the optional _undirected_ parameter is it possible to define it as undirected edge.
+
+== Parameters
+
+graph::
+The graph that should get the edge.
+
+from::
+Source node of the edge.
+
+to::
+Destination node of the edge.
+
+undirected::
+Optional value that is by default *false*.
+Can be *true* to create undirected edges.
+
+== Return Values
+
+graph::
+The modified graph.
+
+== Code
+
+[source,lua]
+----
+include::addedge.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::addedge.ex1.lua[]
+----
+
+== See also
+
+* link:rmedge.html[rmedge]
+* link:rmnode.html[rmnode]

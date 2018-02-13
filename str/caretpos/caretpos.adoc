@@ -1,0 +1,40 @@
+= caretpos
+
+[source,lua]
+----
+function caretpos( str, line, col ) --> idx
+----
+
+== Description
+
+Converts a _line_ and _col_ inside a multi-line string(_str_) into an index value.
+
+== Parameters
+
+str::
+A multi-line string.
+
+line::
+Line number inside a multi-line string.
+
+col::
+Column number inside a multi-line string. 
+
+== Return Values
+
+idx::
+Index inside the string.
+
+== Code
+
+[source,lua]
+----
+include::caretpos.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::caretpos.ex1.lua[]
+----

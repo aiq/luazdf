@@ -1,0 +1,40 @@
+= zip
+
+[source,lua]]
+----
+function zip( tab ) --> res
+----
+
+== Description
+
+Merges together the values of each of the array tables in _tab_ with the same index.
+Useful when you have separate data sources that are coordinated through matching indexes.
+
+== Parameters
+
+tab::
+Array table that includes sub-arrays.
+The sub-arrays should have the same size.
+
+== Return Values
+
+res::
+An array table with new consolidated sub-arrays.
+
+== Code
+
+[source,lua]
+----
+include::zip.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::zip.ex1.lua[]
+----
+
+== Inspired by
+
+* http://underscorejs.org/#zip[Underscore.js zip]

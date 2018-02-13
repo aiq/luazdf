@@ -1,0 +1,51 @@
+= frombase32
+
+[source,lua]
+----
+function frombase32( base32str [, ignore] ) --> str, err
+----
+
+== Description
+
+Decodes a base 32 encoded string to a data string.
+It is possible to ignore characters like \n in _base32str_ via the optional _ignore_ string.
+
+== Parameters
+
+base32str::
+The base 32 encoded string that should be decoded.
+
+ignore::
+String that represents a optional set of characters that should be ignored in _base32str_.
+
+== Return Values
+
+str::
+The decoded data string or *nil* if an error occurs.
+
+err::
+A message that explains the error, otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::frombase32.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::frombase32.ex1.lua[]
+----
+
+== Inspired by
+
+* https://tools.ietf.org/html/rfc4648#section-6[RFC 4648]
+
+== See also
+
+* link:frombase32.html[frombase32hex]
+* link:fromcrockford32.html[fromcrockford32]
+* link:tobase32.html[tobase32]

@@ -1,0 +1,49 @@
+= repeatedly
+
+[source,lua]
+----
+function repeatedly( n, f, ... ) --> tab
+----
+
+== Description
+
+Takes a function _f_ and returns an array table with _n_ elements with the result of the calls.
+The function _f_ will get _..._ as the arguments.
+
+== Parameters
+
+n::
+Defines how often the function _f_ is called.
+
+f::
+The function that will be called.
+
+...::
+The arguments of the function.
+
+== Return Values
+
+tab::
+An array table with the call results.
+
+== Code
+
+[source,lua]
+----
+include::repeatedly.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::repeatedly.ex1.lua[]
+----
+
+== Inspired by
+
+* http://clojuredocs.org/clojure_core/clojure.core/repeatedly[Clojure repeatedly]
+
+== See also
+
+* link:constantly.html[constantly]

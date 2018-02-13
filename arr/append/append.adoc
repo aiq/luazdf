@@ -1,0 +1,45 @@
+= append
+
+[source,lua]
+----
+function append( arr, v [, ...] ) --> arr
+----
+
+== Description
+
+Inserts one (_v_) or more (_..._) values to the array table _arr_ at the end.
+
+== Parameters
+
+arr::
+Array table that should be extended.
+
+v::
+Value that should be append to the array table.
+
+...::
+Additional values that also should be append to the array table.
+
+== Return Values
+
+arr::
+Returns the extended array table.
+
+== Code
+
+[source,lua]
+----
+include::append.lua[]
+----
+
+== Example
+
+[source,lua]
+----
+include::append.ex1.lua[]
+----
+
+== See also
+
+* link:appendall.html[appendall]
+* link:insertall.html[insertall]

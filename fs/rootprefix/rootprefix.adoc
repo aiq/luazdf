@@ -1,0 +1,38 @@
+= rootprefix
+
+[source,lua]
+----
+function rootprefix( path ) --> prefix
+----
+
+== Description
+
+Returns the root element from a path, if exiting.
+
+== Parameters
+
+path::
+The path to query.
+
+== Return Values
+
+prefix::
+The root element in the path.
+
+== Code
+
+[source,lua]
+----
+include::rootprefix.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::rootprefix.ex1.lua[]
+----
+
+== Inspired by
+
+* https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FilenameUtils.html#getPrefix%28java.lang.String%29[Apache FilenameUtils.getPrefix]

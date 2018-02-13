@@ -1,0 +1,40 @@
+= lastchar
+
+[source,lua]
+----
+function lastchar( str ) --> charstr
+----
+
+== Description
+
+Returns the last char in a string.
+If the string is empty returns the function an empty string.
+
+== Parameters
+
+str::
+The source string.
+
+== Return Values
+
+charstr::
+The last char value.
+
+== Code
+
+[source,lua]
+----
+include::lastchar.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::lastchar.ex1.lua[]
+----
+
+== See also
+
+* link:charat.html[charat]
+* link:firstchar.html[firstchar]

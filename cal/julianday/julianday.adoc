@@ -1,0 +1,44 @@
+= julianday
+
+[source,lua]
+----
+function julianday( year, month, day ) --> jd
+----
+
+== Description
+
+Converts a Gregorian date to a Julian Day number.
+
+== Parameters
+
+year::
+The year as a number.
+
+month::
+The month as a number from 1(January) to 12(December).
+
+day::
+The day as a number from 1 to 31
+
+== Return Values
+
+jd::
+The corresponding julian day for the given gregorian date.
+
+== Code
+
+[source,lua]
+----
+include::julianday.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::julianday.ex1.lua[]
+----
+
+== See also
+
+* link:gregdate.html[gregdate]

@@ -1,0 +1,48 @@
+= isdigit
+
+[source,lua]
+----
+function isdigit( str ) --> res, idx
+----
+
+== Description
+
+Checks if all characters in the string are decimal digits and there is at least one character.
+Decimal digits are any of: +0 1 2 3 4 5 6 7 8 9+
+
+== Parameters
+
+str::
+The string that should be checked.
+
+== Return Values
+
+res::
+*true* if all characters in the string are decimal digits and there is at least one character, otherwise *false*.
+
+idx::
+If _res_ is *false* shows _idx_ the first character that is not a decimal digit.
+
+== Code
+
+[source,lua]
+----
+include::isdigit.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isdigit.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/cctype/isdigit/[C++ isdigit]
+* https://docs.python.org/3.5/library/stdtypes.html#str.isdigit[C++ str.isdigit]
+
+== See also
+
+* link:isalnum.html[isalnum]
+* link:isxdigit.html[isxdigit]

@@ -1,0 +1,42 @@
+= shellsplit
+
+[source,lua]
+----
+function shellsplit( line ) --> args
+----
+
+== Description
+
+Splits a string into an array of tokens in the same way the UNIX Bourne shell does.
+
+== Parameters
+
+line::
+Input line with the arguments.
+
+== Return Values
+
+args::
+Array table with the tokens.
+
+== Code
+
+[source,lua]
+----
+include::shellsplit.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::shellsplit.ex1.lua[]
+----
+
+== Inspired by
+
+* http://ruby-doc.org/stdlib-2.0.0/libdoc/shellwords/rdoc/Shellwords.html#method-c-shellsplit[Ruby Shellwords.shellsplit]
+
+== See also
+
+* link:shelljoin.html[shelljoin]

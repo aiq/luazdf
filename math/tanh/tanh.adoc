@@ -1,0 +1,48 @@
+= tanh
+
+[source,lua]
+----
+function tanh( x ) --> res
+----
+
+== Description
+
+Returns the hyperbolic tangent of _x_.
+
+== Paramters
+
+x::
+An angle in radians.
+
+== Return Values
+
+res::
+The hyperbolic tangent of _x_.
+
+== Code
+
+[source,lua]
+----
+include::tanh.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::tanh.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/cmath/tanh/[C/C++ tanh]
+* http://office.microsoft.com/en-us/excel-help/tanh-function-HA102752844.aspx[Excel tanh]
+* https://golang.org/pkg/math/#Tanh[Go Tanh]
+* http://uk.mathworks.com/help/matlab/ref/tanh.html[MATLAB tanh]
+
+== See also
+
+* link:atan2.html[atan2]
+* link:atanh.html[atanh]
+* link:cosh.html[cosh]
+* link:sinh.html[sinh]

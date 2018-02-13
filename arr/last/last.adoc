@@ -1,0 +1,38 @@
+= last
+
+[source,lua]
+----
+function last( arr ) --> val
+----
+
+== Description
+
+Returns the last element of _arr_.
+
+== Parameters
+
+arr::
+An array table where we want the last element.
+
+== Return Values
+
+val::
+The last element of the array table.
+
+== Code
+
+[source,lua]
+----
+include::last.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::last.ex1.lua[]
+----
+
+== Inspired by
+
+* http://ruby-doc.org/core-2.3.1/Array.html#method-i-last[Ruby Array.last]

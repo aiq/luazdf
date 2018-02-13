@@ -1,0 +1,42 @@
+= iscntrl
+
+[source,lua]
+----
+function iscntrl( str ) --> res, idx
+----
+
+== Description
+
+Checks if all characters in the string are control characters that do not occupy a printing position on a display.
+Control characters are the ASCII codes between 0x00(NUL) and 0x1f(US), plus 0x7f(DEL).
+
+== Parameters
+
+str::
+The string that should be checked.
+
+== Return Values
+
+res::
+*true* if all characters in the string are control characters and their is at least one character, otherwise *false*.
+
+idx::
+If _res_ is *false* shows _idx_ the first character that is not a control character.
+
+== Code
+
+[source,lua]
+----
+include::iscntrl.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::iscntrl.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/cctype/iscntrl/[C++ iscntrl]

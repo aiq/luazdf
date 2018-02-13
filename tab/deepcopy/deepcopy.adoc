@@ -1,0 +1,45 @@
+= deepcopy
+
+[source,lua]
+----
+function deepcopy( tab ) --> copy
+----
+
+== Description
+
+Makes a deep copy of the table _tab_, copies all the keys and values.
+The metatable will be adopt.
+
+== Parameters
+
+tab::
+The table that should be copied.
+
+== Return Values
+
+copy::
+A new table.
+
+== Code
+
+[source,lua]
+----
+include::deepcopy.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::deepcopy.ex1.lua[]
+----
+
+== Inspired by
+
+* http://lua-users.org/wiki/CopyTable
+* https://gist.github.com/Deco/3985043
+* https://gist.github.com/tylerneylon/81333721109155b2d244
+
+== See also
+
+* link:shallowcopy.html[shallowcopy]

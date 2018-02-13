@@ -1,0 +1,40 @@
+= values
+
+[source,lua]
+----
+function values( tab ) --> arr
+----
+
+== Description
+
+Return an array table containing all the values in the table.
+
+== Parameters
+
+tab::
+The table from where you want to read the values.
+
+== Return Values
+
+arr::
+An array table with the values.
+
+== Code
+
+[source,lua]
+----
+include::values.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::values.ex1.lua[]
+----
+
+== See also
+
+* link:divorce.html[divorce]
+* link:keys.html[keys]
+* link:marry.html[marry]

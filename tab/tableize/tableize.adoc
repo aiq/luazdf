@@ -1,0 +1,35 @@
+= tableize
+
+[source,lua]
+----
+function tableize( val ) --> tab
+----
+
+== Description
+
+Puts _val_ in a table if it is necessary.
+If _val_ is a table return the function just _val_.
+
+== Parameters
+
+val::
+The value that should be a table.
+
+== Return Values
+
+tab::
+A table with _val_ as value or _val_ itself when it is a table.
+
+== Code
+
+[source,lua]
+----
+include::tableize.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::tableize.ex1.lua[]
+----

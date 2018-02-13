@@ -1,0 +1,44 @@
+= minmax
+
+[source,lua]
+----
+function minmax( x, ... ) --> min, max
+----
+
+== Description
+
+Returns the parameter with the minimum and maxium value, according to the Lua operator *<*.
+
+== Parameters
+
+x::
+Basic value for the comparsion.
+
+...::
+Other values for the comparsion.
+
+== Return Values
+
+min::
+The minimum value.
+
+max::
+The maximum value.
+
+== Code
+
+[source,lua]
+----
+include::minmax.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::minmax.ex1.lua[]
+----
+
+== Inspired By
+
+* http://www.cplusplus.com/reference/algorithm/minmax/[C++ minmax]

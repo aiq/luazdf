@@ -1,0 +1,55 @@
+= argsfilesindir
+
+[source,lua]
+----
+function argsfilesindir( appname [, dir] ) --> defargs, filepaths
+----
+
+== Description
+
+Function that helps to integrate args files in the recommended behaviour.
+
+* able to detect the default args file
+* detects all other relevant args files in the working directory
+
+The optional value _dir_ allows to use this function to locate the args file in a special directory.
+
+== Parameters
+
+appname::
+Defines the current application name that should be used for the scanning.
+
+dir::
+The directory that will be scanned.
+By default uses the function the current working directory.
+
+== Return Values
+
+defargs::
+The default args file for this application in the directory if existing, otherwise *nil*.
+
+filepaths::
+Filepaths to the args file that can be read if existing, otherwise nil.
+
+== Code
+
+[source,lua]
+----
+include::argsfilesindir.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::argsfilesindir.ex1.lua[]
+----
+
+== Inspired by
+
+* https://args.aiq.dk[args Specification]
+
+== See also
+
+* link:argsfileinargs.html[argsfileinargs]
+* link:readargsfile.html[readargsfile]

@@ -1,0 +1,38 @@
+= intersection
+
+[source,lua]
+----
+function intersection( a, b ) --> res
+----
+
+== Description
+
+Computes the values that are the intersection of both array tables.
+Each value in the result is present in both arrays.
+
+== Parameters
+
+a::
+First array table.
+
+b::
+Second array table.
+
+== Return Values
+
+res::
+Values that are in both array tables.
+
+== Code
+
+[source,lua]
+----
+include::intersection.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::intersection.ex1.lua[]
+----

@@ -1,0 +1,46 @@
+= dirhas
+
+[source,lua]
+----
+function dirhas( path, name [, mode] ) --> entrypath
+----
+
+== Description
+
+Checks if the directory behind the path contains an entry with the specified name.
+It allows also to check the mode(file, directory, ...) of the entry.
+
+== Parameters
+
+path::
+Path that should be checked.
+
+name::
+Name of the entry the function looks for.
+
+mode::
+Optional string representing a associated protection mode (the values can be file, directory, link, socket, named pipe, char device, block device or other)
+
+== Return Values
+
+entrypath::
+The path to the entry inside the directory, otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::dirhas.lua[]
+----
+
+== Example
+
+[source,lua]
+----
+include::dirhas.ex1.lua[]
+----
+
+== See also
+
+* link:dirfiles.html[dirfiles]
+* link:subdirs.html[subdirs]

@@ -1,0 +1,33 @@
+= strlstlen
+
+[source,lua]
+----
+function strlstlen( lst ) --> len
+----
+
+== Description
+Receives a string list and returns the accumulated length of all strings.
+
+== Parameters
+
+lst::
+An array table with strings.
+
+== Return Values
+
+len::
+The accumulated length of all strings.
+
+== Code
+
+[source,lua]
+----
+include::strlstlen.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::strlstlen.ex1.lua[]
+----

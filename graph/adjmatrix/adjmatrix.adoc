@@ -1,0 +1,44 @@
+= adjmatrix
+
+[source,lua]
+----
+function adjmatrix( graph, order ) --> matrix
+----
+
+== Description
+
+Return the adjacency _matrix_ of _graph_.
+The row/column order es defined by _order_.
+
+== Parameters
+
+graph::
+A graph structure.
+
+order::
+An array of nodes from _graph_ that defines the row/column of the matrix.
+Can also be used the select just a part of the nodes,
+
+== Return Values
+
+matrix::
+The adjacency matrix representation of _graph_.
+
+== Code
+
+[source,lua]
+----
+include::adjmatrix.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::adjmatrix.ex1.lua[]
+----
+
+== Inspired by
+
+* https://networkx.readthedocs.io/en/stable/reference/generated/networkx.linalg.graphmatrix.adjacency_matrix.html[NetworkX adjacency_matrix]
+* https://uk.mathworks.com/help/matlab/ref/graph.adjacency.html[MATLAB adjacency]

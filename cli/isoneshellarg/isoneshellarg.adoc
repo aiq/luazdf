@@ -1,0 +1,35 @@
+= isoneshellarg
+
+[source,lua]
+----
+function isoneshellarg( str ) --> res
+----
+
+== Description
+
+Checks if the string value represents one valid shell argument.
+Just one, not two or more.
+
+== Parameters
+
+str::
+String that should be checked.
+
+== Return Values
+
+res::
+Is *true* if _str_ is just one shell arg, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::isoneshellarg.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isoneshellarg.ex1.lua[]
+----

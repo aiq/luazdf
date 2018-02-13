@@ -1,0 +1,47 @@
+= acoth
+
+[source,lua]
+----
+function acoth( x ) --> res
+----
+
+== Description
+
+Returns the inverse hyperbolic cotangent of _x_.
+
+== Parameters
+
+x::
+The absoulute value must be greater than 1.
+
+== Return Values
+
+res::
+The inverse hyperbolic cotangent of _x_, or NaN if _x_ is less than 1.
+
+== Code
+
+[source,lua]
+----
+include::acoth.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::acoth.ex1.lua[]
+----
+
+== Inspired by
+
+* http://office.microsoft.com/en-us/excel-help/acoth-function-HA102753257.aspx[Excel acoth]
+* http://uk.mathworks.com/help/matlab/ref/acoth.html[MATLAB acoth]
+
+== See also
+
+* link:acosh.html[acosh]
+* link:acot.html[acot]
+* link:asinh.html[asinh]
+* link:atanh.html[atanh]
+* link:coth.html[coth]

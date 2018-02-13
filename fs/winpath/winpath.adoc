@@ -1,0 +1,39 @@
+= winpath
+
+[source,lua]
+----
+function winpath( path ) --> wpath
+----
+
+== Description
+
+Converts a path to the windows style version.
+
+== Parameters
+
+path::
+A unix or windows style path.
+
+== Return Values
+
+wpath::
+A windows style version of the path.
+
+== Code
+
+[source,lua]
+----
+include::winpath.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::winpath.ex1.lua[]
+----
+
+== See also
+
+* link:syspath.html[syspath]
+* link:unixpath.html[unixpath]

@@ -1,0 +1,55 @@
+= rightpad
+
+[source,lua]
+----
+function rightpad( str, len [, c [, trunc]] ) --> str
+----
+
+== Description
+
+Pads _str_ on the right side if it's shorter than _len_.
+It is possible to truncate string values that are longer than _len_.
+
+== Parameters
+
+str::
+The string to pad.
+
+len::
+The padding length.
+
+c::
+Optional char value used for the padding.
+The default value is a space character(U+0020).
+
+trunc::
+Optional bool parameter that allows to truncate to long result strings.
+The default value is *false*.
+
+== Return Values
+
+str::
+The padded string.
+
+== Code
+
+[source,lua]
+----
+include::rightpad.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::rightpad.ex1.lua[]
+----
+
+== Inspired by
+
+* https://lodash.com/docs#padEnd[lodash padEnd]
+* http://doc.qt.io/qt-5/qstring.html#leftJustified[Qt QString.leftJustified]
+
+== See also
+
+* link:leftpad.html[leftpad]

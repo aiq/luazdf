@@ -1,0 +1,46 @@
+= count
+
+[source,lua]
+----
+function count( arr, fv ) --> res
+----
+
+== Description
+
+Sorts an array table into groups and returns a count for the number of objects in each group.
+Similar to link:group.html[group], but instead of returning a list of values, returns a count for the number of values in that group.
+
+== Parameters
+
+arr::
+Array table where the values should be grouped.
+
+fv::
+Function that takes a value from the array table and decides in which group it belongs.
+
+== Return Values
+
+res::
+Table with count results.
+
+== Code
+
+[source,lua]
+----
+include::count.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::count.ex1.lua[]
+----
+
+== Inspired by
+
+* http://underscorejs.org/#countBy[Underscore.js countBy]
+
+== See also
+
+* link:group.html[group]

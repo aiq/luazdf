@@ -1,0 +1,50 @@
+= fromz85
+
+[source,lua]
+----
+function fromz85( z85str [, ignore] ) --> str, err
+----
+
+== Description
+
+Decodes a Z85 encoded string to a data string.
+It is possible to ignore characters like \n in _z85str_ via the optional _ignore_ string.
+The Z85 without the ignored characters must be divisible by 5.
+
+== Parameters
+
+z85str::
+The Z85 encoded string that should be decoded.
+
+ignore::
+String that represents a optional set of characters that should be ignored in _z85str_.
+
+== Return Values
+
+str::
+The decoded data string or *nil* if an error occurs.
+
+err::
+A message that explains the error, otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::fromz85.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::fromz85.ex1.lua[]
+----
+
+== Inspired by
+
+* https://rfc.zeromq.org/spec:32/Z85/
+
+== See also
+
+* link:toz85.html[toz85]

@@ -1,0 +1,43 @@
+= isabsolute
+
+[source,lua]
+----
+function isabsolute( path ) --> res
+----
+
+== Description
+
+Returns *true* if the _path_ is absolute, otherwise returns *false* if the _path_ is relative.
+
+== Parameters
+
+path::
+Path that should be checked.
+
+== Return Values
+
+res::
+*true* if, and only if, the _path_ is absolute, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::isabsolute.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isabsolute.ex1.lua[]
+----
+
+== Inspired by
+
+* https://golang.org/pkg/path/#IsAbs[Go IsAbs]
+* https://nodejs.org/api/path.html#path_path_isabsolute_path[Node.js path.isAbsolute]
+
+== See also
+
+* link:abspath.html[abspath]

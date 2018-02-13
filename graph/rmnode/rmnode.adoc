@@ -1,0 +1,42 @@
+= rmnode
+
+[source,lua]
+----
+function rmnode( graph, node ) --> graph
+----
+
+== Description
+
+Removes a _node_ from the _graph_ and all edges that are connected with the _node_.
+
+== Parameters
+
+graph::
+The graph that should be modified.
+
+node::
+The node that should be removed.
+
+== Return Values
+
+graph::
+The modified graph.
+
+== Code
+
+[source,lua]
+----
+include::rmnode.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::rmnode.ex1.lua[]
+----
+
+== See also
+
+* link:addedge.html[addedge]
+* link:rmedge.html[rmedge]

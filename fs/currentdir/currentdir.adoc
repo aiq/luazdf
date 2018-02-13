@@ -1,0 +1,22 @@
+= currentdir
+
+[source,lua]
+----
+function currentdir() --> path
+----
+
+== Description
+
+Returns the current working directory with unix style slashes in the path.
+
+== Return Values
+
+path::
+Path to the current working directory.
+
+== Code
+
+[source,lua]
+----
+include::currentdir.lua[]
+----

@@ -1,0 +1,43 @@
+= tobase64
+
+[source,lua]
+----
+function tobase64( str ) --> base64str
+----
+
+== Description
+
+Encodes a data string to a base 64 string.
+
+== Parameters
+
+str::
+The data string that should be encoded.
+
+== Return Values
+
+base64str::
+The base 64 encoded string.
+
+== Code
+
+[source,lua]
+----
+include::tobase64.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::tobase64.ex1.lua[]
+----
+
+== Inspired by
+
+* https://tools.ietf.org/html/rfc4648#section-4[RFC 4648]
+
+== See also
+
+* link:frombase64.html[frombase64]
+* link:frombase64url.html[frombase64url]

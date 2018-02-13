@@ -1,0 +1,50 @@
+= gcd
+
+[source,lua]
+----
+function gcd( x [, ...] ) --> res
+----
+
+== Description
+
+Returns the greatest common divisor of one or more integers.
+The greatest common divisor is the largest integer that divides all numbers without a remainder.
+
+== Parameters
+
+x::
+Required number.
+If the number value is not an integer, it is truncated.
+
+...::
+Optional numbers.
+If any number value is not an integer, it is truncated.
+
+== Return Values
+
+res::
+The greatest common divisor.
+
+== Code
+
+[source,lua]
+----
+include::gcd.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::gcd.ex1.lua[]
+----
+
+== Inspired by
+
+* http://office.microsoft.com/en-us/excel-help/gcd-function-HA102753007.aspx[Excel gcd]
+* http://uk.mathworks.com/help/matlab/ref/gcd.html[MATLAB gcd]
+* http://reference.wolfram.com/language/ref/GCD.html[Wolfram GCD]
+
+== See also
+
+* link:lcm.html[lcm]

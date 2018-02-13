@@ -1,0 +1,34 @@
+= pathedges
+
+[source,lua]
+----
+function pathedges( path ) --> edges
+----
+
+== Description
+
+Splits a `path` into single `edges`.
+
+== Parameters
+
+path::
+A sequence of nodes.
+
+== Return Values
+
+edges::
+An array table with the edges.
+
+== Code
+
+[source,lua]
+----
+include::pathedges.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::pathedges.ex1.lua[]
+----

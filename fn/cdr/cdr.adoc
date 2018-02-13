@@ -1,0 +1,47 @@
+= cdr
+
+[source,lua]
+----
+function cdr( arr ) --> tail
+----
+
+== Description
+
+Returns an array table containing all but the first value of _arr_.
+
+== Parameters
+
+arr::
+An array table with two or more values.
+
+== Return Values
+
+tail::
+An array table containing all values of _arr_, expect the first value.
+For an empty array table and for array tables with just one value returns the function *nil*.
+
+== Code
+
+[source,lua]
+----
+include::cdr.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::cdr.ex1.lua[]
+----
+
+== Inpsired by
+
+* https://en.wikipedia.org/wiki/CAR_and_CDR[Wikipedia CAR/CDR]
+* http://help.autodesk.com/view/ACD/2016/ENU/?guid=GUID-F9CD8FF3-022A-4323-BAE7-390174451537[AutoLISP cdr]
+
+== See also
+
+* link:caddr.html[caddr]
+* link:cadr.html[cadr]
+* link:car.html[car]
+* link:cddr.html[cddr]

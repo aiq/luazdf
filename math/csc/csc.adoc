@@ -1,0 +1,43 @@
+= csc
+
+[source,lua]
+----
+function csc( x ) --> res
+----
+
+== Description
+
+Returns the cosecant of _x_.
+
+== Parameters
+
+x::
+An angle in radians.
+
+== Return Values
+
+res::
+The cosecant of _x_.
+
+== Code
+
+[source,lua]
+----
+include::csc.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::csc.ex1.lua[]
+----
+
+== Inspired by
+
+* http://office.microsoft.com/en-us/excel-help/csc-function-HA102753262.aspx[Excel csc]
+* http://uk.mathworks.com/help/matlab/ref/csc.html[MATLAB csc]
+
+== See also
+
+* link:csch.html[csch]

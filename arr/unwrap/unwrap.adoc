@@ -1,0 +1,41 @@
+= unwrap
+
+[source,lua]
+----
+function unwrap( arr [, i [, j]] ) --> ...
+----
+
+== Description
+
+Returns the elements from the given list.
+Implemented as wrapper function around _unpack_ or _table.unpack_.
+
+== Parameters
+
+arr::
+Source array table with the elements.
+
+i::
+The index of the first element. By default is the value 1.
+
+j::
+The index of the last element. By default is the value _#arr_.
+
+== Return Values
+
+...::
+Elements from the given array table.
+
+== Code
+
+[source,lua]
+----
+include::unwrap.lua[]
+----
+
+== Example
+
+[source,lua]
+----
+include::unwrap.ex1.lua[]
+----

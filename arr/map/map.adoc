@@ -1,0 +1,41 @@
+= map
+
+[source,lua]
+----
+function map( arr, fv ) --> newarr
+----
+
+== Description
+
+Produces a new array table by mapping each value in _arr_ through the function _fv_.
+
+== Parameters
+
+arr::
+Source arrary table with the values that should be mapped.
+
+fv::
+Transformation function to generate the values for the result 
+
+== Return Values
+
+newarr::
+New array table that has the new values.
+
+== Code
+
+[source,lua]
+----
+include::map.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::map.ex1.lua[]
+----
+
+== Inspired by
+
+* http://underscorejs.org/#map[Underscore.js map]

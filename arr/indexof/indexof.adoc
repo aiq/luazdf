@@ -1,0 +1,45 @@
+= indexof
+
+[source,lua]
+----
+function indexof( arr, val [, init] ) --> idx
+----
+
+== Description
+
+Gets the index at which the first occurrence of _val_ is found in _arr_.
+
+== Parameters
+
+arr::
+The array table to search.
+
+val::
+The value to search for.
+
+init::
+The start index to search from, the default value is 1.
+
+== Return Values
+
+idx::
+The index of the matched value, else *nil*.
+
+== Code
+
+[source,lua]
+----
+include::indexof.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::indexof.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/algorithm/find/[C++ find]
+* https://lodash.com/docs#indexOf[lodash indexOf]

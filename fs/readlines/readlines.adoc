@@ -1,0 +1,43 @@
+= readlines
+
+[source,lua]
+----
+function readlines( filename ) --> strlst, err
+----
+
+== Description
+
+Reads the full content of a file into a string list.
+
+== Parameters
+
+filename::
+Path to the file that should be read.
+
+== Return Values
+
+strlst::
+The lines in the file or *nil* if an error occurse.
+
+err::
+A message if an error occurse otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::readlines.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::readlines.ex1.lua[]
+----
+
+== See also
+
+* link:readfile.html[readfile]
+* link:writefile.html[writefile]
+* link:writelines.html[writelines]

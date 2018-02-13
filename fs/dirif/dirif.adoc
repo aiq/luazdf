@@ -1,0 +1,40 @@
+= dirif
+
+[source,lua]
+----
+function dirif( path, f ) --> iter
+----
+
+== Description
+
+Creates a Lua iterator over relevant entries in a directory.
+The relevance will be determined with the function _f_.
+Raises an error if _path_ is not a directory.
+
+== Parameters
+
+path::
+A path to directory in the filesystem.
+
+f::
+Function to identify the relevant entries.
+Must take one parameter and return *true* or *false*.
+
+== Return Values
+
+iter::
+Lua iterator over the relevant entries.
+
+== Code
+
+[source,lua]
+----
+include::dirif.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::dirif.ex1.lua[]
+----

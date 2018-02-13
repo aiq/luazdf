@@ -1,0 +1,39 @@
+= once
+
+[source,lua]
+----
+function once( f ) --> mfunc
+----
+
+== Description
+
+Creates a version of the function that can only be called one time.
+Additional calls of the modified function will have no effect, returning the value from the original call.
+
+== Parameters
+
+f::
+The function that should be wrapped.
+
+== Return Values
+
+mfunc::
+The modified version of the function that can be used just one time.
+
+== Code
+
+[source,lua]
+----
+include::once.lua[]
+----
+
+== Example
+
+[source,lua]
+----
+include::once.ex1.lua[]
+----
+
+== Inspired By
+
+* http://underscorejs.org/#once[Underscore.js once]

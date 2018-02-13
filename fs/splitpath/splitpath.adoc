@@ -1,0 +1,38 @@
+= splitpath
+
+[source,lua]
+----
+function splitpath( path ) --> tab
+----
+
+== Description
+
+Splits a path into its single elements.
+
+== Parameters
+
+path::
+String path that should be split.
+
+== Return Values
+
+tab::
+String path elements.
+
+== Code
+
+[source,lua]
+----
+include::splitpath.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::splitpath.ex1.lua[]
+----
+
+== See also
+
+* link:joinpath.html[joinpath]

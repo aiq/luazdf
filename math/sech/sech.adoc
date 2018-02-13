@@ -1,0 +1,46 @@
+= sech
+
+[source,lua]
+----
+function sech( x ) --> res
+----
+
+== Description
+
+Returns the hyperbolic secant of _x_.
+
+== Parameters
+
+x::
+An angle in radians.
+
+== Return Values
+
+res::
+The hyperbolic secant of _x_.
+
+== Code
+
+[source,lua]
+----
+include::sech.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::sech.ex1.lua[]
+----
+
+== Inspired by
+
+* http://office.microsoft.com/en-us/excel-help/sech-function-HA102753269.aspx[Excel sech]
+* http://uk.mathworks.com/help/matlab/ref/sech.html[MATLAB sech]
+* https://reference.wolfram.com/language/ref/Sech.html[Wolfram Sech]
+
+== See also
+
+* link:cosh.html[cosh]
+* link:sec.html[sec]
+* link:sinh.html[sinh]

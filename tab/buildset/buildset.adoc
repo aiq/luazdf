@@ -1,0 +1,39 @@
+= buildset
+
+[source,lua]
+----
+function buildset( arr ) --> res
+----
+
+== Description
+
+Creates a set with the values in the array table _arr_ as indices.
+All values in the set are *true*.
+
+== Parameters
+
+arr::
+An array table with the indices of the set.
+
+== Return Values
+
+res::
+A dictionary table where all existing values are *true*.
+
+== Code
+
+[source,lua]
+----
+include::buildset.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::buildset.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.lua.org/pil/11.5.html[PiL]

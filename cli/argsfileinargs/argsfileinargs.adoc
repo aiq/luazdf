@@ -1,0 +1,49 @@
+= argsfileinargs
+
+[source,lua]
+----
+function argsfileinargs( args ) --> filepath, idx, rest
+----
+
+== Description
+
+Scans an aruments table for the +--args+ value and returns the _filepath_ that belongs to it.
+
+== Parameters
+
+args::
+The arguments that should be scaned.
+
+== Return Values
+
+filepath::
+Filepath to the args file, otherwise *nil*.
+
+idx::
+The index in args where the arguments should be inserted in _rest_, otherwise *nil*.
+
+rest::
+The remaining entries from args.
+
+== Code
+
+[source,lua]
+----
+include::argsfileinargs.lua[]
+----
+
+== Example
+
+[source,lua]
+----
+include::argsfileinargs.ex1.lua[]
+----
+
+== Inspired by
+
+* https://args.aiq.dk[args Specification]
+
+== See also
+
+* link:argsfilesindir.html[argsfilesindir]
+* link:readargsfile.html[readargsfile]

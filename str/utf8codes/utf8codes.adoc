@@ -1,0 +1,39 @@
+= utf8codes
+
+[source,lua]
+----
+function utf8codes( str ) --> iter
+----
+
+== Description
+
+Creates a Lua iterator over all utf8 chars in a string.
+
+== Parameters
+
+str::
+The utf8 string.
+
+== Return Values
+
+iter::
+Lua iterator that returns each single utf8 character inside a string.
+
+== Code
+
+[source,lua]
+----
+include::utf8codes.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::utf8codes.ex1.lua[]
+----
+
+== Inspired by
+
+* https://www.lua.org/manual/5.3/manual.html#pdf-utf8.codes[Lua5.3 utf8.codes]
+* http://stackoverflow.com/questions/13235091/extract-the-first-letter-of-a-utf-8-string-with-lua[StackOverflow]

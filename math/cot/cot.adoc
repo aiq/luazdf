@@ -1,0 +1,44 @@
+= cot
+
+[source,lua]
+----
+function cot( x ) --> res
+----
+
+== Description
+
+Returns the cotangent of _x_.
+
+== Parameters
+
+x::
+An angle in radians.
+
+== Return Values
+
+res::
+The cotangent of _x_.
+
+== Code
+
+[source,lua]
+----
+include::cot.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::cot.ex1.lua[]
+----
+
+== Inspired by
+
+* http://office.microsoft.com/en-us/excel-help/cot-function-HA102753260.aspx[Excel cot]
+* http://uk.mathworks.com/help/matlab/ref/cot.html[MATLAB cot]
+
+== See also
+
+* link:acoth.html[acoth]
+* link:coth.html[coth]

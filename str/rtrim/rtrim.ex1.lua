@@ -1,0 +1,15 @@
+local t = require( "tapered" )
+local rtrim = require( "rtrim" )
+
+t.is( "", rtrim( "" ) )
+t.is( "", rtrim( " " ) )
+t.is( "", rtrim( "  " ) )
+t.is( "a", rtrim( "a" ) )
+t.is( " a", rtrim( " a" ) )
+t.is( "a", rtrim( "a " ) )
+t.is( " a", rtrim( " a " ) )
+t.is( "  a", rtrim( "  a  " ) )
+t.is( " ab cd", rtrim( " ab cd " ) )
+t.is( " \t\r\n\f\va\00b", rtrim( " \t\r\n\f\va\00b \r\t\n\f\v" ) )
+
+t.done()

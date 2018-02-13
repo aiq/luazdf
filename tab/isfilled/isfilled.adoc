@@ -1,0 +1,38 @@
+= isfilled
+
+[source,lua]
+----
+function isfilled( tab ) --> res
+----
+
+== Description
+
+Returns *true* if a table contains values.
+
+== Parameters
+
+tab::
+Table that should be checked.
+
+== Return Values
+
+res::
+*true* if the table contains values, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::isfilled.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isfilled.ex1.lua[]
+----
+
+== See also
+
+* link:isempty.html[isempty]

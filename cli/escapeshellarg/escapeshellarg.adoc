@@ -1,0 +1,39 @@
+= escapeshellarg
+
+[source,lua]
+----
+function escapeshellarg( str ) --> esc
+----
+
+== Description
+
+Adds double quotes around a string and quotes/escapes any existing double quotes allowing you to pass a string directly to a shell function and having it be treated as a single safe argument.
+This function should be used to escape individual arguments to shell functions coming from user input.
+
+== Parameters
+
+str::
+The string that will be escaped into a safe shell argument. 
+
+== Return Values
+
+esc::
+The escaped string.
+
+== Code
+
+[source,lua]
+----
+include::escapeshellarg.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::escapeshellarg.ex1.lua[]
+----
+
+== Inspired by
+
+* http://php.net/manual/en/function.escapeshellarg.php[PHP escapeshellarg]

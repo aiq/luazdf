@@ -1,0 +1,41 @@
+= gregdate
+
+[source,lua]
+----
+function gregdate( julianday ) --> greg
+----
+
+== Description
+
+Converts an Julian Day number to a table containing the Gregorian date values year, month and day.
+
+== Parameters
+
+julianday::
+A julian day number as integer. A float value will be truncated.
+
+== Return Values
+
+greg::
+A table containing the Gregorian date values year, month and day.
+* The year as a number.
+* The month as a number from 1(January) to 12(December).
+* The day as a number from 1 to 31
+
+== Code
+
+[source,lua]
+----
+include::gregdate.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::gregdate.ex1.lua[]
+----
+
+== See also
+
+* link:julianday.html[julianday]

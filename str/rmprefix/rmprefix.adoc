@@ -1,0 +1,41 @@
+= rmprefix
+
+[source,lua]
+----
+function rmprefix( str, prefix ) --> nstr
+----
+
+== Description
+
+If _str_ starts with _prefix_ returns the function a new string without the _prefix_, otherwise _str_ itself.
+
+== Parameters
+
+str::
+The string that should lose the prefix.
+
+prefix::
+The prefix that should be removed.
+
+== Return Values
+
+nstr::
+A new string without the prefix.
+
+== Code
+
+[source,lua]
+----
+include::rmprefix.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::rmprefix.ex1.lua[]
+----
+
+== See also
+
+* link:rmsuffix.html[rmsuffix]

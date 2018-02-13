@@ -1,0 +1,52 @@
+= explode
+
+[source,lua]
+----
+function explode( str, delimiter [, limit] ) --> strlst
+----
+
+== Description
+
+Returns an array table of strings, each of which is a substring of string formed by splitting it on boundaries formed by the string delimiter.
+
+== Parameters
+
+str::
+The string that should be split.
+
+delimiter::
+The boundary string.
+
+limit::
+If _limit_ is set and positive, the returned array table will contain a maximum of limit elements with the last element containing the rest of string.
+If the limit parameter is negative, all components except the last -limit are returned.
+If the limit parameter is zero, then this is treated as 1.
+If _limit_ is not defined uses the function 4294947296.
+
+== Return Values
+
+strlst::
+An array table of strings created by splitting the string parameter on boundaries formed by the delimiter.
+If _delimiter_ is an empty string (""), will the function return *false*.
+
+== Code
+
+[source,lua]
+----
+include::explode.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::explode.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.php.net/explode[PHP explode]
+
+== See also
+
+* link:split.html[split]

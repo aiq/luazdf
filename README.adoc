@@ -1,1 +1,68 @@
-= LuaZDF
+= LuaZDF - Lua Zero Dependency Functions
+
+LuaZDF is a collection of independet functions that have zero dependencies among
+themselves.
+A function in LuaZDF can be based on
+http://www.inf.puc-rio.br/~roberto/lpeg/lpeg.html[lpeg],
+http://keplerproject.github.io/luafilesystem/[LuaFileSystem] or other Lua
+modules but each function inside LuaZDF works on its own.
+That means you can copy the source code and run it in your project without the
+need to include LuaZDF for this functionality.
+
+== Motivation
+
+Lua itself has just a little standard library without many small utility
+functions that you know from other languages and envoirments.
+For example has Lua no _trim_ function for strings, no _trunc_ function for
+numbers and no _slice_ function for tables in the
+https://www.lua.org/manual/5.3/manual.html#6[standard library].
+This are not complicated functions that you are able to write yourself without
+much effort, find an implementation on the internet or you can include a utility
+library that has this functions, but each of the three possibilities has a
+drawback.
+
+* Simple functions that you write yourself can have flavours that you miss and
+not test.
+* A solution that you find in the internet can be outdated for the current
+version.
+* Sometimes you don't want to add additional dependencies just to get one or two
+simple functions.
+
+LuaZDF has the goal to collect and provide this kind of functions.
+
+== Approach
+
+The LuaZDF approach to solve this problem differs to existing solution like
+https://www.npmjs.com/[npm].
+Instead of adding dependencies that need to be
+http://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm[maintained] 
+follows LuaZDF a paradigm that is like the Go Programming Language
+https://go-proverbs.github.io/[proverb]:
+
+....
+A little copying is better than a little dependency.
+....
+
+You still need to maintain your code, but not the dependencies.
+A small looking difference but hugh difference how your workflow will work.
+
+== License
+
+LuaZDF uses the BSD 0-Clause License (0BSD) from the
+http://www.landley.net/toybox/license.html[Toybox] project.
+
+== More Stuff
+
+You can explore and use existing functions as a consumer or you can add new
+functions as a creator.
+
+You can explore all functions on the https://luazdf.aiq.dk/[website].
+
+Check the information about https://luazdf.aiq.dk/contributing.html[contribution] 
+if you want to add or modify a function.
+
+For both use cases is it recommended to use to the command line tool
+https://github.com/aiq/lzt[lzt].
+
+The user discussion about LuaZDF in general and the functions takes place on
+https://www.reddit.com/r/LuaZDF/[reddit].

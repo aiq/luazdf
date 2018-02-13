@@ -1,0 +1,34 @@
+= isdodd
+
+[source,lua]
+----
+function isdodd( e ) --> res
+----
+
+== Description
+
+The function name stands for "is dot or dot dot" and helps to keep your code small in cases where you want to detect the default hardlinks "." and "..".
+
+== Parameters
+
+e::
+Dir entry value that should be checked.
+
+== Return Values
+
+res::
+*true* if the entry value is "." or "..", otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::isdodd.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isdodd.ex1.lua[]
+----

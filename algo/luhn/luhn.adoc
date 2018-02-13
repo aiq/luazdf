@@ -1,0 +1,39 @@
+= luhn
+
+[source,lua]
+----
+function luhn( numstr ) --> res
+----
+
+== Description
+
+Simple checksum formula to validate number strings, like credit card numbers.
+
+== Parameters
+
+numstr::
+The number that should be checked as string.
+
+== Return Values
+
+res::
+*true* if the number is valid, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::luhn.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::luhn.ex1.lua[]
+----
+
+== Inspired by
+
+* http://en.wikipedia.org/wiki/Luhn_algorithm[Wikipedia Luhn]
+* http://rosettacode.org/wiki/Luhn_test[RosettaCode Luhn]

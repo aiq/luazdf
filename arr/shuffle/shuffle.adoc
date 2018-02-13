@@ -1,0 +1,42 @@
+= shuffle
+
+[source,lua]
+----
+function shuffle( arr [, seed] ) --> rar
+----
+
+== Description
+
+Returns a shuffled copy of the array table, using a version of the https://en.wikipedia.org/wiki/Fisher–Yates_shuffle[Fisher-Yates shuffle].
+The function accepts an optional seed value to get a better randomness.
+
+== Parameters
+
+arr::
+Array table with values that should be shuffled.
+
+seed::
+Optional seed value for the algorithm.
+
+== Return Values
+
+rar::
+Shuffled copy.
+
+== Code
+
+[source,lua]
+----
+include::shuffle.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::shuffle.ex1.lua[]
+----
+
+== Inspired by
+
+* http://underscorejs.org/#shuffle[Underscore.js shuffle]

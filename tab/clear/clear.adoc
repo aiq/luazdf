@@ -1,0 +1,38 @@
+= clear
+
+[source,lua]
+----
+function clear( tab ) --> slimtab
+----
+
+== Description
+
+Removes all elements from the table _tab_.
+
+== Parameters
+
+tab::
+The table you want to clear.
+
+== Return Values
+
+slimtab::
+The same table where all elements are removed.
+
+== Code
+
+[source,lua]
+----
+include::clear.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::clear.ex1.lua[]
+----
+
+== Inspired by
+
+* http://ruby-doc.org/core-2.2.0/Array.html#method-i-clear[Ruby Array.clear]

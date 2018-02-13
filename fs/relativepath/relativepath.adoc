@@ -1,0 +1,45 @@
+= relativepath
+
+[source,lua]
+----
+function relativepath( from, to ) --> path
+----
+
+== Description
+
+Returns a relative path between the paths _from_ and _to_.
+
+== Parameters
+
+from::
+The source path.
+
+to::
+The destination path.
+
+== Return Values
+
+path::
+The relative path between _from_ and _to_.
+
+== Code
+
+[source,lua]
+----
+include::relativepath.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::relativepath.ex1.lua[]
+----
+
+== Inspired by
+
+* https://nodejs.org/docs/latest-v5.x/api/path.html#path_path_relative_from_to[Node.js path.relativepath]
+
+== See also
+
+* link:abspath.html[abspath]

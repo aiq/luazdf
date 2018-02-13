@@ -1,0 +1,49 @@
+= normpath
+
+[source,lua]
+----
+function normpath( dirty ) --> clean
+----
+
+== Description
+
+Returns the shortest _clean_ path name equivalent to _dirty_ path.
+It applies the following rules iteratively until no further processing can be done:
+
+1. Multiple Separator elements will be replaced with a single one.
+2. Each "." path name element (the current directory) will be removed.
+3. Removes each inner ".." path element (the parent directory)
+   along with the non-".." element that precedes it.
+4. Removes ".." elements that begin a rooted path:
+   that is, replace "/.." by "/" at the beginning of a path,
+   assuming Separator is "/".
+
+== Parameters
+
+dirty::
+Path with that can have redundand elements.
+
+== Return Values
+
+clean::
+Normalized path without redundant elements.
+If the result of this process is an empty string, returns the function string ".".
+
+== Code
+
+[source,lua]
+----
+include::normpath.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::normpath.ex1.lua[]
+----
+
+== Inspired by
+
+* https://golang.org/pkg/path/filepath/#Clean[Go Clean]
+* https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#normalize[Java Path.normalize]

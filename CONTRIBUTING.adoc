@@ -1,0 +1,141 @@
+= Contributing
+
+Feel free to contribute to the project.
+Check before starting on https://www.reddit.com/r/LuaZDF/[reddit] for discussion
+that allready deal with the problem.
+To contribute, https://help.github.com/articles/fork-a-repo/[fork] the
+repository, commit your changes and send a
+https://help.github.com/articles/about-pull-requests/[pull request].
+
+== Guidelines
+
+A new function requires a unique name and consists of three parts, the code, a
+documentation and a test.
+
+=== The Name
+Function names are written in lower case
+A function name consisting of multiple words will just be connected like the
+functions in the the standard Lua library, for example getmetatable.
+All three files use the same filename with a different extension.
+
+=== Code
+
+It is just a Lua module file that returns a function. We use just _.lua_ as the
+extension. The Function must have a function tag one line above the function.
+The tag is a comment that has ZFUNC-prefix, function name and the version of the
+function.
+If external packages are used is it required to tag them with a ZREQ-prefix and
+package name.
+
+[source,lua]
+----
+local lfs = require( "lfs" ) --ZREQ-lfs
+--ZFUNC-isfile-v1
+local function isfile( path ) --> res
+   local attr = lfs.attributes( path )
+   if attr.mode == "file" then return true
+   else return false end
+end
+
+return isfile
+----
+
+=== Documentation
+
+The Documentation must be written in
+http://www.methods.co.nz/asciidoc/[asciidoc].
+We use the _.adoc_ as the file extension for the documentation file.
+Just check the example to see more rules.
+
+....
+= examplefunc
+[source,lua]
+----
+function examplefunc( par1, par2 [, optpar] ) --> res1, res2
+----
+
+== Description
+
+A short or long description for the function.
+Mark parameters and return values in italic, like _par1_ or _res1_.
+Lua keywords like *nil*, *true* or *nil* are bold.
+Each parameter and return value will be mentioned in a labeled list.
+
+== Parameters
+
+par1::
+Information for the first parameter of the function.
+
+par2::
+Information for the second parameter of the function.
+
+optpar::
+Some information for the optional parameter, like the default value.
+
+== Return Values
+
+res1::
+The first return parameter.
+
+res2::
+The second return parameter.
+
+== Code
+
+[source,lua]
+----
+ include::examplefunc.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+ include::examplefunc.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/vector/vector/insert/[C++ vecter::insert]
+* http://php.net/manual/en/function.levenshtein.php[PHP levenshtein]
+* https://lodash.com/docs/4.17.4#slice[Lodash slice]
+
+== See also
+
+* link:otherfunc.html[otherfunc]
+....
+
+=== Test
+
+Tests are Lua scripts that include the function module and are using
+https://github.com/telemachus/tapered[tapered].
+The code is also an example that will be used for tests.
+The first test has the extension _.ex1.lua_, all other test increment the number
+in the extension.
+
+[source,lua]
+----
+local t = require( "tapered" )
+local {{func}} = require( "{{func}}" )
+-- util functions
+local otherfunc = require( "otherfunc" )
+--TODO
+-- setup
+-- test
+t.nok( true )
+-- teardown
+t.done()
+----
+
+With the help of https://github.com/aiq/lzt[lzt] and
+https://github.com/python-tap/tappy[tappy] is it easy to test all functions.
+Just run the following commands in the project root directory:
+
+[source,lua]
+----
+$ lzt luapath > setluapath.sh
+$ lzt testenv > runtests.sh
+$ . setluapath
+$ . runtests.sh
+$ tappy *.tap
+----

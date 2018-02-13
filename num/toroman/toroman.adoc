@@ -1,0 +1,49 @@
+= toroman
+
+[source,lua]
+----
+function toroman( num [, mode] ) --> roman
+----
+
+== Description
+
+Converts the number _num_ to a _roman_ string.
+The number value must be positive.
+
+== Parameters
+
+num::
+A number that should be convert.
+
+mode::
+A number that specifies the type roman number that should be returned.
+* 0 for a classic roman number, this is also the default variant.
+* 1/2/3 for a more concise variants, check the examples to see the difference.
+* 4 for a simplified roman number.
+
+== Return Values
+
+roman::
+A roman number as string.
+
+== Code
+
+[source,lua]
+----
+include::toroman.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::toroman.ex1.lua[]
+----
+
+== Inspired by 
+
+* http://office.microsoft.com/en-us/excel-help/roman-function-HA102752883.aspx[Excel roman]
+
+== See also
+
+* link:toarabic.html[toarabic]

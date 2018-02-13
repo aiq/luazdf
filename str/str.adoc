@@ -1,0 +1,4 @@
+= str
+
+String manipulation functions.
+

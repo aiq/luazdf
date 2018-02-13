@@ -1,0 +1,44 @@
+= compose
+
+[source,lua]
+----
+function compose( ... ) --> func
+----
+
+== Description
+
+Returns the composition of a list of functions, where each function consumes the return value of the function that follows.
+In math terms, composing the functions _f()_, _g()_, and _h()_ produces _f(g(h()))_. 
+
+== Parameters
+
+...::
+A variable number of functions that should be composed.
+
+== Return Values
+
+func::
+The composition of the functions.
+
+== Code
+
+[source,lua]
+----
+include::compose.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::compose.ex1.lua[]
+----
+
+== Inspired By
+
+* http://clojuredocs.org/clojure_core/clojure.core/comp[Clojure comp]
+
+== See also
+
+* link:juxt.html[juxt]
+* link:partial.html[partial]

@@ -1,0 +1,32 @@
+= syspath
+
+[source,lua]
+----
+function syspath( path ) --> spath
+----
+
+== Description
+
+Converts a path to the style of the current system, windows or unix.
+
+== Parameters
+
+path::
+A unix or windows style path.
+
+== Return Values
+
+spath::
+A path in the style of the current system.
+
+== Code
+
+[source,lua]
+----
+include::syspath.lua[]
+----
+
+== See also
+
+* link:unixpath.html[unixpath]
+* link:winpath.html[winpath]

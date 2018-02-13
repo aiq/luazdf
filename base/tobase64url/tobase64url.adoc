@@ -1,0 +1,43 @@
+= tobase64url
+
+[source,lua]
+----
+function tobase64url( str ) --> url64str
+----
+
+== Description
+
+Encodes a data string to a base 64 string with URL and filename safe alphabet.
+
+== Parameters
+
+str::
+The data string that should be encoded.
+
+== Return Values
+
+url64str::
+The with URL and filename safe alphabet encoded base 64 string.
+
+== Code
+
+[source,lua]
+----
+include::tobase64url.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include tobase64url.ex1.lua[]
+----
+
+== Inspired by
+
+* https://tools.ietf.org/html/rfc4648#section-5[RFC 4648]
+
+== See also
+
+* link:frombase64url.html[frombase64url]
+* link:tobase64.html[tobase64]

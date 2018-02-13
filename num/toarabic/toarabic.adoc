@@ -1,0 +1,44 @@
+= toarabic
+
+[source,lua]
+----
+function toarabic( roman ) --> num
+----
+
+== Description
+
+Tries to convert the _roman_ string to a number.
+If the string is not a valid roman value returns the function *nil*.
+
+== Parameters
+
+roman::
+A roman number as string.
+
+== Return Values
+
+num::
+The number value of the roman string or *nil*.
+
+== Code
+
+[source,lua]
+----
+include::toarabic.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::toarabic.ex1.lua[]
+----
+
+== Inspired by
+
+* http://office.microsoft.com/en-us/excel-help/arabic-function-HA102753258.aspx[Excel arabic]
+* http://rosettacode.org/wiki/Roman_numerals/Decode#Lua[RosettaCode Roman_numerals]
+
+== See also
+
+* link:toroman.html[toroman]

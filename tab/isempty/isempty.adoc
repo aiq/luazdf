@@ -1,0 +1,42 @@
+= isempty
+
+[source,lua]
+----
+function isempty( tab ) --> res
+----
+
+== Description
+
+Returns *true* if a table contains values.
+
+== Parameters
+
+tab::
+Table that should be checked.
+
+== Return Values
+
+res::
+*true* if the table contains no values, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::isempty.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isempty.ex1.lua[]
+----
+
+== Inspired by
+
+* https://lodash.com/docs#isEmpty[lodash isEmpty]
+
+== See also
+
+* link:isfilled.html[isfilled]

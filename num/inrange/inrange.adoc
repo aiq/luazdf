@@ -1,0 +1,45 @@
+= inrange
+
+[source,lua]
+----
+function inrange( num, min, max ) --> res
+----
+
+== Description
+
+Checks if the number _num_ is inside the with _min_ and _max_ defined number range.
+The number must be greater or equal _min_ and lower or equal _max_.
+
+== Parameters
+
+min::
+The lower border for the number.
+
+num::
+The number that is checked.
+
+max::
+The upper border for the number.
+
+== Return Values
+
+res::
+*true* if _num_ is greater or equal _min_ and lower or equal _max_, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::inrange.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::inrange.ex1.lua[]
+----
+
+== See also
+
+* link:clamp.html[clamp]

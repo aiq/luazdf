@@ -1,0 +1,42 @@
+= rmdirtree
+
+[source,lua]
+----
+function rmdirtree( path ) --> res, err
+----
+
+== Description
+
+Removes a directory with all the files and subdirectires inside.
+
+== Parameters
+
+path::
+The directory that should be removed.
+
+== Return Values
+
+res::
+*true* or *nil* if an error occurse.
+
+err::
+A message if an error occurse otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::rmdirtree.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::rmdirtree.ex1.lua[]
+----
+
+== See also
+
+* link:dirtree.html[dirtree]
+* link:mkdirtree.html[mkdirtree]

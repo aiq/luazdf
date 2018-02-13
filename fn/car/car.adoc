@@ -1,0 +1,46 @@
+= car
+
+[source,lua]
+----
+function car( arr ) --> val
+----
+
+== Description
+
+Returns the first element of an array table.
+
+== Parameters
+
+arr::
+An array table with one or more values.
+
+== Return Values
+
+val::
+The first value from _arr_, if _arr_ is empty returns the function *nil*.
+
+== Code
+
+[source,lua]
+----
+include::car.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::car.ex1.lua[]
+----
+
+== Inspired by
+
+* https://en.wikipedia.org/wiki/CAR_and_CDR[Wikipedia CAR/CDR]
+* http://help.autodesk.com/view/ACD/2016/ENU/?guid=GUID-2DD1AF33-415C-4C1A-9631-DA958134C53A[AutoLISP car]
+
+== See also
+
+* link:caddr.html[caddr]
+* link:cadr.html[cadr]
+* link:cddr.html[cddr]
+* link:cdr.html[cdr]

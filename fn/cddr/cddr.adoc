@@ -1,0 +1,41 @@
+= cddr
+
+[source,lua]
+----
+function cddr( arr ) --> tail
+----
+
+== Description
+
+Returns an array table containing all but the first both values of _arr_.
+
+== Parameters
+
+arr::
+An array table with three or more values.
+
+== Return Values
+
+An array table containing all values of _arr_, expect the first both values.
+For array tables with two or less values returns the function *nil*.
+
+== Code
+
+[source,lua]
+----
+include::cddr.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::cddr.ex1.lua[]
+----
+
+== See also
+
+* link:caddr.html[caddr]
+* link:cadr.html[cadr]
+* link:car.html[car]
+* link:cdr.html[cdr]

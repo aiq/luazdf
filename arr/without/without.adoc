@@ -1,0 +1,43 @@
+= without
+
+[source, lua]
+----
+function without( tab, ... ) --> reduced
+----
+
+== Description
+
+Returns a copy of the array table without the assigned elements. 
+_without_ does not affect the table itself.
+
+== Parameters
+
+tab::
+The source array tables where you want to remove elements.
+
+...::
+The elements you want to remove from the array table.
+
+== Return Values
+
+reduced::
+A copy of the array the without all instances of the elements removed. 
+
+== Code
+
+[source,lua]
+----
+include::without.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::without.ex1.lua[]
+----
+
+== Inspired by
+
+* http://underscorejs.org/#without[Underscore.js without]
+

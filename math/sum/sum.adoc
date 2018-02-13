@@ -1,0 +1,37 @@
+= sum
+
+[source,lua]
+----
+function sum( x, ... ) --> res
+----
+
+== Description
+
+Computes the sum of _x_ with all the additional values (_..._).
+
+== Parameters
+
+x::
+The first number you want to add to the sum.
+
+...::
+An variable number of values that will be added to _x_.
+
+== Return Values
+
+res::
+The calculated sum value.
+
+== Code
+
+[source,lua]
+----
+include::sum.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::sum.ex1.lua[]
+----

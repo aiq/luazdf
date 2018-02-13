@@ -1,0 +1,42 @@
+= constantly
+
+[source,lua]
+----
+function constantly( ... ) --> func
+----
+
+== Description
+
+Returns a function that returns allways _..._ as result.
+
+== Parameters
+
+...::
+A variable number of values that should be the return values of the function.
+
+== Return Values
+
+func::
+A function that returns the defined values.
+
+== Code
+
+[source,lua]
+----
+include::constantly.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::constantly.ex1.lua[]
+----
+
+== Inspired By
+
+* http://clojuredocs.org/clojure_core/clojure.core/constantly[Clojure constantly]
+
+== See also
+
+* link:repeatedly.html[repeatedly]

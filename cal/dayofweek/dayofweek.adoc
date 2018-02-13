@@ -1,0 +1,45 @@
+= dayofweek
+
+[source,lua]
+----
+function dayofweek( year, month, day ) --> dow
+----
+
+== Description
+
+Returns the day of the week corresponding to a date.
+The result is given as an integer from 1(Monday) to 7(Sunday).
+
+== Parameters
+
+year::
+The year as a number.
+
+month::
+The month as a number from 1(January) to 12(December).
+
+day::
+The day as a number from 1 to 31
+
+== Return Values
+
+dow::
+The weekday as integer ranging from 1 (Monday) to 7 (Sunday).
+
+== Code
+
+[source,lua]
+----
+include::dayofweek.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::dayofweek.ex1.lua[]
+----
+
+== See also
+
+* link:tilldayofweek.html[tilldayofweek]

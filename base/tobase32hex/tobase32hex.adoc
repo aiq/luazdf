@@ -1,0 +1,44 @@
+= tobase32hex
+
+[source,lua]
+----
+function tobase32hex( str ) --> hex32str
+----
+
+== Description
+
+Encodes a data string to a base 32 string with extended hex alphabet.
+
+== Parameters
+
+str::
+The data string that should be encoded.
+
+== Return Values
+
+hex32str::
+The with extended hex alphabet encoded base 32 string.
+
+== Code
+
+[source,lua]
+----
+include::tobase32hex.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::tobase32hex.ex1.lua[]
+----
+
+== Inspired by
+
+* https://tools.ietf.org/html/rfc4648#section-7[RFC 4648]
+
+== See also
+
+* link:frombase32hex.html[frombase32hex]
+* link:tobase32.html[tobase32]
+* link:tocrockford32.html[tocrockford32]

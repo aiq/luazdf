@@ -1,0 +1,34 @@
+= matches
+
+[source,lua]
+----
+function matchesf( pattern ) --> func
+----
+
+== Description
+
+Creates a function that takes one string parameter and checks if the _pattern_ matches.
+
+== Parameters
+
+pattern::
+Lua pattern to check the string.
+
+== Return Values
+
+func::
+A new function that takes one parameter and returns *true* or *false*.
+
+== Code
+
+[source,lua]
+----
+include::matchesf.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::matchesf.ex1.lua[]
+----

@@ -1,0 +1,44 @@
+= asindex
+
+[source,lua]
+----
+function asindex( i, length [, fit] ) --> idx
+----
+
+== Description
+
+Allows to convert a negative index to a valid positive index.
+The optional _fit_ parameter adds the following manipulation:
+* If, after the translation of a negative indix, _idx_ is less than 1, it is corrected to 1.
+*If `idx` is greater than the string length, it is corrected to _length_.
+
+== Parameters
+
+i::
+The index value that should be translated.
+
+length::
+The length of the structure on which the index is used.
+
+fit::
+Optional boolean parameter that activates with a *true* value additional manipulation.
+The default value is *false*.
+
+== Return Values
+
+idx::
+The translated index value.
+
+== Code
+
+[source,lua]
+----
+include::asindex.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::asindex.ex1.lua[]
+----

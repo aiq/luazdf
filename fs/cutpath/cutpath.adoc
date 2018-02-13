@@ -1,0 +1,47 @@
+= cutpath
+
+[source,lua]
+----
+function cutpath( path ) --> dirname, basename
+----
+
+== Description
+
+Splits _path_ into a directory(_dirname_) and file name(_basename_) component.
+If there is no Separator in path, returns the function an empty dir and file set to path.
+
+== Parameters
+
+path::
+Unix like string path that should be cut into pieces.
+
+== Return Values
+
+dirname::
+Directory sub path in the full path.
+
+basename::
+File name component of the path.
+
+== Code
+
+[source,lua]
+----
+include::cutpath.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::cutpath.ex1.lua[]
+----
+
+== Inspired by
+
+* https://golang.org/pkg/path/filepath/#Split[Go Split]
+
+== See also
+
+* link:basename.html[basename]
+* link:dirname.html[dirname]

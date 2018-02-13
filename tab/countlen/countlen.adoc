@@ -1,0 +1,34 @@
+= countlen
+
+[source,lua]
+----
+function countlen( tab ) --> len
+----
+
+== Description
+
+Counts the number of top level entries in a table.
+
+== Parameters
+
+tab::
+Table where the length should be counted.
+
+== Return Values
+
+len::
+Length of the table.
+
+== Code
+
+[source,lua]
+----
+include::countlen.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::countlen.ex1.lua[]
+----

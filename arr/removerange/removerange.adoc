@@ -1,0 +1,45 @@
+= removerange
+
+[source,lua]
+----
+function removerange( arr, first [, last] ) --> removed
+----
+
+== Description
+
+Removes from _arr_ the elements between the positions _first_ and _last_, shifting down the following elements to close the space, if necessary.
+The removed elements will be returned inside an array table.
+
+== Parameters
+
+arr::
+The array table where you want to remove elements.
+
+first::
+The position of the first element that should be removed.
+
+last::
+The position of the last element that should be removed., the default value is _#arr_.
+
+== Return Values
+
+removed::
+An array table with all removed elements.
+
+== Code
+
+[source,lua]
+----
+include::removerange.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::removerange.ex1.lua[]
+----
+
+== See also
+
+* link:slice.html[slice]

@@ -1,0 +1,4 @@
+
+= algo
+
+General algorithms that can be usefull or funny.

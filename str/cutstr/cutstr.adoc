@@ -1,0 +1,41 @@
+= cutstr
+
+[source,lua]
+----
+function cutstr( str, n ) --> left, right
+----
+
+== Description
+
+The functions splits a string at postion _n_ in two pieces.
+The element at _n_ will be part of the left sub string.
+
+== Parameters
+
+str::
+The string that should be split.
+
+n::
+The postion in the string where the cut happens.
+
+== Return Values
+
+left::
+The left part of the string.
+
+right::
+The right part of the string.
+
+== Code
+
+[source,lua]
+----
+include::cutstr.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::cutstr.ex1.lua[]
+----

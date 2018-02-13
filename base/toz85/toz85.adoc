@@ -1,0 +1,46 @@
+= toz85
+
+[source,lua]
+----
+function toz85( str ) --> z85str, err
+----
+
+== Description
+
+Encodes a data string to a Z85 string.
+The data string must be divisible by 4.
+
+== Parameters
+
+z85str::
+The data string that should be encoded.
+
+== Return Values
+
+str::
+The Z85 encoded string.
+
+err::
+A message that explains the error, otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::toz85.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::toz85.ex1.lua[]
+----
+
+== Inspired by
+
+* https://rfc.zeromq.org/spec:32/Z85/
+
+== See also
+
+* link:fromz85.html[fromz85]

@@ -1,0 +1,54 @@
+= getoptpair
+
+[source,lua]
+----
+function getoptpair( args [, name] ) --> opt, val, rest
+----
+
+== Description
+
+Parses an option pair.
+A pair has a option and a value and are conected via "=".
+For example:
+----
+--mode=safe
+----
+
+== Parameters
+
+args::
+The cli arguments that shoult be parsed.
+
+name::
+An optional expected option name.
+The default name must just start with a "-".
+
+== Return Values
+
+opt::
+The identified option value, or *nil* if the first value in _args_ does not start with _name_ or does not start with "-".
+
+val::
+The value of the option pair.
+If _opt_ is *nil* is _val_ also *nil*.
+
+rest::
+The remaining entries from _args_.
+
+== Code
+
+[source,lua]
+----
+include::getoptpair.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::getoptpair.ex1.lua[]
+----
+
+== See also
+
+* link:getoptvalues.html[getoptvalues]

@@ -1,0 +1,47 @@
+= mkdirtree
+
+[source,lua]
+----
+function mkdirtree( tree [,root] ) --> res, err
+----
+
+== Description
+
+Allows to create multiple files and directories.
+
+== Parameters
+
+tree::
+Lua table where keys represent the names and the following two value types are allowed:
+* table = dictionaries
+* string = content of the file
+
+root::
+Optional root directory where the tree will be created.
+
+== Return Values
+
+res::
+*true* or *nil* if an error occurse.
+
+err::
+A message if an error occurse otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::mkdirtree.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::mkdirtree.ex1.lua[]
+----
+
+== See also
+
+* link:mkpath.html[mkpath]
+* link:rmdirtree.html[rmdirtree]

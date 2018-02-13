@@ -1,0 +1,43 @@
+= kebabcase
+
+[source,lua]
+----
+function kebabcase( strlst ) --> str
+----
+
+== Description
+
+Concatenate the assigned words in the array table to a kebab case string.
+
+== Parameters
+
+strlst::
+An array table with strings.
+
+== Return Values
+
+str::
+The generated kebab case string.
+
+== Code
+
+[source,lua]
+----
+include::kebabcase.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::kebabcase.ex1.lua[]
+----
+
+== Inspired by
+
+* https://lodash.com/docs#kebabCase[lodash kebabCase]
+
+== See also
+
+* link:camelcase.html[camelcase]
+* link:snakecase.html[snakecase]

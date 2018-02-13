@@ -1,0 +1,43 @@
+= endswithany
+
+[source,lua]
+----
+function endswithany( str, tab ) --> res
+----
+
+== Description
+
+Checks if _str_ ends with one of the values in _tab_.
+
+== Parameters
+
+str::
+The string that should be checked.
+
+tab::
+An array table with strings.
+
+== Return Values
+
+res::
+Is *true* if the string ends with one of the values in _tab_, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::endswithany.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::endswithany.ex1.lua[]
+----
+
+== See also
+
+* link:endswith.html[endswith]
+* link:startswith.html[startswith]
+* link:startswithany.html[startswithany]

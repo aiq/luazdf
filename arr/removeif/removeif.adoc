@@ -1,0 +1,49 @@
+= removeif
+
+[source,lua]
+----
+function removeif( arr, fv, init ) --> removed
+----
+
+== Description
+
+Looks through an array table and removes each element that matches the truth function.
+The function returns all removed elements.
+
+== Parameters
+
+arr::
+The array table where you want to remove elements.
+
+fv::
+Check function that checks the values.
+
+init::
+Specifies where to start the removing of elements, the default value is 1.
+
+== Return Values
+
+removed::
+An array table with all removed elements.
+
+== Code
+
+[source,lua]
+----
+include::removeif.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::removeif.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/algorithm/remove_if/[C++ remove_if]
+
+== See also
+
+* link:findif.html[findif]

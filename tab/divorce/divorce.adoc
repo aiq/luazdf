@@ -1,0 +1,43 @@
+= divorce
+
+[source,lua]
+----
+function divorce( tab ) --> keys, values
+----
+
+== Description
+
+Return an array table containing all the keys in the table, and an array table containing all the values in the table.
+
+== Parameters
+
+tab::
+The table you want to split the keys and values
+
+== Return Values
+
+keys::
+An array table with the keys
+
+values::
+An array table with the values
+
+== Code
+
+[source,lua]
+----
+include::divorce.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::divorce.ex1.lua[]
+----
+
+== See also
+
+* link:keys.html[keys]
+* link:marry.html[marry]
+* link:values.html[values]

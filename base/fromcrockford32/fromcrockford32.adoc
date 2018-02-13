@@ -1,0 +1,49 @@
+= fromcrockford32
+
+[source,lua]
+----
+function fromcrockford32( crock32str [, ignore] ) --> str, err
+----
+
+== Description
+
+Decodes a base 32 encoded string that uses the Crockford-Alphabet to a data string.
+It is possible to ignore characters like \n in _crock32str_ via the optional _ignore_ string.
+
+== Parameters
+
+crock32str::
+The base 32 encoded string(Crockford-Alphabet) that should be decoded.
+
+ignore::
+String that represents a optional set of characters that should be ignored in _crock32str_.
+
+== Return Values
+
+str::
+The decoded data string or *nil* if an error occurs.
+
+err::
+A message that explains the error, otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::fromcrockford32.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::fromcrockford32.ex1.lua[]
+----
+
+== Inspired by
+
+* http://crockford.com/wrmg/base32.html
+
+== See also
+
+* link:tocrockford32.html[tocrockford32]

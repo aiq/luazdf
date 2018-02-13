@@ -1,0 +1,43 @@
+= like
+
+[source,lua]
+----
+function like( arr, other ) --> res
+----
+
+== Description
+
+Check if both array tables are likewise.
+Tables are likewise than they have the identical number of the same values.
+The positons of the values can be different.
+
+== Parameters
+
+arr::
+An array table you want to compare.
+
+other::
+An array table you want to compare.
+
+== Return Values
+
+res::
+*true* if the both array tables are likely, and *false* then they are to different.
+
+== Code
+
+[source,lua]
+----
+include::like.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::like.ex1.lua[]
+----
+
+== See also
+
+* link:occurasc.html[occurasc]

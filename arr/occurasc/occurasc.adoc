@@ -1,0 +1,41 @@
+= occurasc
+
+[source,lua]
+----
+function occurasc( arr, ... ) --> res
+----
+
+== Description
+
+Checks if the assigned elements occur in ascending order in the array.
+
+== Parameters
+
+arr::
+Array table that will be checked.
+
+...::
+The values that should appear in ascending order in the array.
+
+== Return Values
+
+res::
+*true* if all values occur in the array table in ascending order, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::occurasc.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::occurasc.ex1.lua[]
+----
+
+== See also
+
+* link:like.html[like]

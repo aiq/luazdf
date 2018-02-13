@@ -1,0 +1,39 @@
+= subdirs
+
+[source,lua]
+----
+function subdirs( path ) --> iter
+----
+
+== Description
+
+Creates a Lua iterator over the sub directories of a given directory, except "." and "..".
+Raises an error if _path_ is not a directory.
+
+== Parameters
+
+path::
+A path to a directory in the filesystem.
+
+== Return Values
+
+iter::
+Lua iterator for the sub directories in a directory.
+
+== Code
+
+[source,lua]
+----
+include::subdirs.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::subdirs.ex1.lua[]
+----
+
+== See also
+
+* link:dirfiles.html[dirfiles]

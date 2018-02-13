@@ -1,0 +1,47 @@
+= startswith
+
+[source,lua]
+----
+function startswith( str, prefix ) --> res
+----
+
+== Description
+
+Checks if _str_ starts with _prefix_.
+
+== Parameters
+
+str::
+The string that should be checked.
+
+prefix::
+The string to search for.
+
+== Return Values
+
+res::
+Is *true* if the string starts with _prefix_, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::startswith.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::startswith.ex1.lua[]
+----
+
+== Inspired by
+
+* https://lodash.com/docs#startsWith[lodash startsWith]
+
+== See also
+
+* link:endswith.html[endswith]
+* line:endswithany.html[endswithany]
+* link:startswithany.html[startswithany]

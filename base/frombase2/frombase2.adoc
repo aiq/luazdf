@@ -1,0 +1,48 @@
+= frombase2
+
+[source,lua]
+----
+function frombase2( base2str [, ignore] ) --> str, err
+----
+
+== Description
+
+Decodes a base 2 encoded string(bitfield) to a data string.
+It is possible to ignore characters like \n in _base2str_ via the optional _ignore_ string.
+
+* 0, O and o are valid values for 0
+* 1, I, i, L and l are valid values for 1
+
+== Parameters
+
+base2str::
+The bitfield that should be decoded.
+
+ignore::
+String that represents a optional set of characters that should be ignored in _base2str_.
+
+== Return Values
+
+str::
+The decoded data string or *nil* if an error occurs.
+
+err::
+A message that explains the error, otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::frombase2.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::frombase2.ex1.lua[]
+----
+
+== See also
+
+* link:tobase2.html[tobase2]

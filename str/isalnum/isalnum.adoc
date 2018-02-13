@@ -1,0 +1,46 @@
+= isalnum
+
+[source,lua]
+----
+function isalnum( str ) --> res, idx
+----
+
+== Description
+
+Checks if all characters in the string are alphanumerical ASCII characters and there is at least one character.
+
+== Parameters
+
+str::
+The string that should be checked.
+
+== Return Values
+
+res::
+*true* if all characters in the string are alphabetical ASCII characters or decimal digits and ther is at least one character, otherwise *false*.
+
+idx::
+If _res_ is *false* shows _idx_ the first character that is not an alphanumerical character.
+
+== Code
+
+[source,lua]
+----
+include::isalnum.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isalnum.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/cctype/isalnum/[C++ isalnum]
+
+== See also
+
+* link:isalpha.html[isalpha]
+* link:isdigit.html[isdigit]

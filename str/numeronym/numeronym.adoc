@@ -1,0 +1,39 @@
+= numeronym
+
+[source,lua]
+----
+function numeronym( str ) --> nstr
+----
+
+== Description
+
+Counts the letters between the first and last and replaces the characters with a number representing the number of letters omitted, such as i18n for internationalization.
+Whitespaces will be ignored.
+
+== Parameters
+
+str::
+String that should get a alphanumeric abbreviation.
+
+== Return Values
+
+nstr::
+The created numeronym.
+
+== Code
+
+[source,lua]
+----
+include::numeronym.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::numeronym.ex1.lua[]
+----
+
+== Inspired by
+
+* https://en.wikipedia.org/wiki/Numeronym[Wikipedia Numeronym]

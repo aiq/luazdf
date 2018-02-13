@@ -1,0 +1,41 @@
+= rmsuffix
+
+[source,lua]
+----
+function rmsuffix( str, suffix ) --> nstr
+----
+
+== Description
+
+If _str_ ends with _suffix_ returns the function a new string without the _suffix_, otherwise _str_ itself.
+
+== Parameters
+
+str::
+The string that should lose the suffix.
+
+suffix::
+The suffix that should be removed.
+
+== Return Values
+
+nstr::
+A new string without the suffix.
+
+== Code
+
+[source,lua]
+----
+include::rmsuffix.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::rmsuffix.ex1.lua[]
+----
+
+== See also
+
+* link:rmprefix.html[rmsuffix]

@@ -1,0 +1,46 @@
+= charat
+
+[source,lua]
+----
+function charat( str, i ) --> charstr
+----
+
+== Description
+
+Returns a substring from _str_ that contains one character at the index _i_.
+
+== Parameters
+
+str::
+The full string.
+
+i::
+The index 
+
+== Return Values
+
+charstr::
+A substring with the length 1 or an empty string if the index is out of range.
+
+== Code
+
+[source,lua]
+----
+include::charat.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::charat.ex1.lua[]
+----
+
+== Inspired by
+
+* http://stevedonovan.github.io/Penlight/api/libraries/pl.stringx.html#at
+
+== See also
+
+* link:firstchar.html[firstchar]
+* link:lastchar.html[lastchar]

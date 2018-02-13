@@ -1,0 +1,42 @@
+= some
+
+[source,lua]
+----
+function some( arr, fv ) --> res
+----
+
+== Description
+
+Returns *true* if _fv( v )_ returns *true* for any item in _arr_.
+
+== Parameters
+
+arr::
+Array table with items that will be checked.
+
+fv::
+Function that get one item and returns *true* or *false*.
+
+== Return Values
+
+res::
+True if any item returns *true* with function _fv_, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::some.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::some.ex1.lua[]
+----
+
+== Inspired by
+
+* https://clojuredocs.org/clojure.core/some[Clojure some]
+* http://mirven.github.io/underscore.lua/#any[Underscore.lua any]

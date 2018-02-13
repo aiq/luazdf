@@ -1,0 +1,43 @@
+= shelljoin
+
+[source,lua]
+----
+function shelljoin( args ) --> line
+----
+
+== Description
+
+Builds a command line string from an array table with the arguments.
+All elements are joined into a single string with fields separated by a space, where each element is escaped with escapeshellarg.html[escapeshellarg].
+
+== Parameters
+
+argtab::
+Array table with the single arguments.
+
+== Return Values
+
+line::
+A safe command line string.
+
+== Code
+
+[source,lua]
+----
+include::shelljoin.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::shelljoin.ex1.lua[]
+----
+
+== Inspired by
+
+* http://ruby-doc.org/stdlib-2.0.0/libdoc/shellwords/rdoc/Shellwords.html#method-c-shelljoin[Ruby Shellwords.shelljoin]
+
+== See also
+
+* link:shellsplit.html[shellsplit]

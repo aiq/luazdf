@@ -1,0 +1,34 @@
+= digitsum
+
+[source,lua]
+----
+function digitsum( num ) --> sum
+----
+
+== Description
+
+Returns the _sum_ of all digits of the given integer _num_.
+
+== Parameters
+
+num::
+The integer where we want to build the _sum_.
+
+== Return Values
+
+sum::
+The _sum_ of all digits of the given integer _num_.
+
+== Code
+
+[source,lua]
+----
+include::digitsum.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::digitsum.ex1.lua[]
+----

@@ -1,0 +1,45 @@
+= fact
+
+[source,lua]
+----
+function fact( x ) --> res
+----
+
+== Description
+
+Returns the factorial of _x_.
+The factorial of _x_ is equal to +1*2*3*...* x+.
+
+== Parameters
+
+x::
+The nonnegative number for which you want the factorial.
+If number is not an integer, it is truncated.
+
+== Return Values
+
+res::
+The factorial of _x_.
+
+== Code
+
+[source,lua]
+----
+include::fact.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::fact.ex1.lua[]
+----
+
+== Inspired by
+
+* http://office.microsoft.com/en-us/excel-help/fact-function-HA102753024.aspx[Excel fact]
+* http://uk.mathworks.com/help/matlab/ref/factorial.html[MATLAB factorial]
+
+== See also
+
+* link:fact2.html[fact2]

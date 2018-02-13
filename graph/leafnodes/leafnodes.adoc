@@ -1,0 +1,40 @@
+= leafnodes
+
+[source,lua]
+----
+function leafnodes( graph ) --> nodes
+----
+
+== Description
+
+Returns all nodes of _graph_ that have one incoming edge and no outcoming edges.
+
+== Parameters
+
+graph::
+The graph where the function looks for leaf nodes.
+The graph itself will not be modified.
+
+== Return Values
+
+nodes::
+The leaf nodes of _graph_.
+
+== Code
+
+[source,lua]
+----
+include::leafnodes.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::leafnodes.ex1.lua[]
+----
+
+== See Also
+
+* link:isolatednodes.html[isolatednodes]
+* link:sinknodes.html[sinknodes]

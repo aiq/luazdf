@@ -1,0 +1,41 @@
+= longextname
+
+[source,lua]
+----
+function longextname( path ) --> ext
+----
+
+== Description
+
+Returns the longest file name extension used by the _path_.
+The extension is the suffix beginning at the first dot in in the final slash-separated element of path.
+
+== Parameters
+
+path::
+Path with file name.
+
+== Return Values
+
+ext::
+Longest file name extension.
+
+== Code
+
+[source,lua]
+----
+include::longextname.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::longextname.ex1.lua[]
+----
+
+== See also
+
+* link:extname.html[extname]
+* link:filename.html[filename]
+* link:shortfilename.html[shortfilename]

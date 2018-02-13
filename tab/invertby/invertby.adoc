@@ -1,0 +1,43 @@
+= invertby
+
+[source,lua]
+----
+function invertby( tab [, fv] ) --> itab
+----
+
+== Description
+
+Creates a table composed of the inverted keys and values of _tab_.
+The inverted table is generated from the results of running each value of _tab_ thru _fv_.
+The corresponding inverted value of each inverted key is an array table of keys responsible for generating the inverted value.
+
+== Parameters
+
+tab::
+The table that should be inverted.
+
+fv::
+Function that defines the key by the value. By default is the value the key.
+
+== Return Values
+
+itab::
+Inverted version of +tab+.
+
+== Code
+
+[source,lua]
+----
+include::invertby.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::invertby.ex1.lua[]
+----
+
+== Inspired by
+
+* https://lodash.com/docs#invertBy[lodash invertby]

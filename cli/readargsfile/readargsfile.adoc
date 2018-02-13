@@ -1,0 +1,46 @@
+= readargsfile
+
+[source,lua]
+----
+function readargsfile( filepath ) --> args, err
+----
+
+== Description
+
+Reads and parses a file that is formated with the args file format.
+
+== Parameters
+
+filepath::
+Path to the file that should be read.
+
+== Return Values
+
+args::
+The defined aurgument values in the file.
+
+err::
+A message if an error occurse otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::readargsfile.lua[]
+----
+
+== Example
+
+[source,lua]
+----
+include::readargsfile.ex1.lua[]
+----
+
+== Inspired by
+
+* https://args.aiq.dk[args Specification]
+
+== See also
+
+* link:argsfileinargs.html[argsfileinargs]
+* link:argsfilesindir.html[argsfilesindir]

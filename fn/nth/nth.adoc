@@ -1,0 +1,38 @@
+= nth
+
+[source,lua]
+----
+function nth( n ) --> func
+----
+
+== Description
+
+Creates a function that returns the argument that is on position _n_.
+
+== Parameters
+
+n::
+The index of the parameter that will be returned.
+
+== Return Values
+
+func::
+A new function to extract the value from the parameters.
+
+== Code
+
+[source,lua]
+----
+include::nth.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::nth.ex1.lua[]
+----
+
+== Inspired by
+
+* https://lodash.com/docs#nthArg[lodash nthArg]

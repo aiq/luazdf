@@ -1,0 +1,44 @@
+
+= rmcmdline
+
+[source,lua]
+----
+function rmcmdline( system [, options] ) --> cmdline
+----
+
+== Description
+
+Creates a correct command to remove a file or a folder.
+
+== Parameters
+
+system::
+A sysinfo table.
+
+options::
+The options for the command.
+* force
+* recursive
+
+== Return Values
+
+cmdline::
+A valid command string.
+
+== Code
+
+[source,lua]
+----
+include::rmcmdline.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::rmcmdline.ex1.lua[]
+----
+
+== See also
+
+* link:sysinfo.html[sysinfo]

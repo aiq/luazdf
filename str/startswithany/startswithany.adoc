@@ -1,0 +1,43 @@
+= startswithany
+
+[source,lua]
+----
+function startswithany( str, tab ) --> res
+----
+
+== Description
+
+Checks if _str_ starts with one of the values in _tab_.
+
+== Parameters
+
+str::
+The string that should be checked.
+
+tab::
+An array table with strings.
+
+== Return Values
+
+res::
+Is *true* if the string starts with one of the values in _tab_, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::startswithany.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::startswithany.ex1.lua[]
+----
+
+== See also
+
+* link:endswith.html[endswith]
+* link:endswithany.html[endswithany]
+* link:startswith.html[startswith]

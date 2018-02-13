@@ -1,0 +1,47 @@
+= isxdigit
+
+[source,lua]
+----
+function isxdigit( str ) --> res, idx
+----
+
+== Description
+
+Checks if all characters in the string are hexdecimal digits and there is at least one character.
+Decimal digits are any of: +0 1 2 3 4 5 6 7 8 9 a b c d e f A B C D E D+
+
+== Parameters
+
+str::
+The string that should be checked.
+
+== Return Values
+
+res::
+*true* if all characters in the string are decimal digits and there is at least one character, otherwise *false*.
+
+idx::
+If _res_ is *false* shows _idx_ the first character that is not a hexdecimal digit.
+
+== Code
+
+[source,lua]
+----
+include::isxdigit.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isxdigit.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/cctype/isxdigit/[C++ isxdigit]
+
+== See also
+
+* link:isalnum.html[isalnum]
+* link:isdigit.html[isdigit]

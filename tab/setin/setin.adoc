@@ -1,0 +1,46 @@
+= setin
+
+[source,lua]
+----
+function setin( tab, val, ... )
+----
+
+== Description
+
+Sets a value in a nested table, where _val_ is the new value and _..._ a sequence of keys.
+If any level do not exist, a table will be created.
+
+== Parameters
+
+tab::
+The table that should get the new value.
+
+val::
+The new value.
+
+...::
+A sequence of keys.
+
+== Code
+
+[source,lua]
+----
+include::setin.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::setin.ex1.lua[]
+----
+
+== Inspired by
+
+* http://clojuredocs.org/clojure.core/assoc-in[Clojure assoc-in]
+
+== See also
+
+* link:accessor.html[accessor]
+* link:getin.html[getin]
+* link:updatein.html[updatein]

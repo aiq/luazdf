@@ -1,0 +1,44 @@
+= tobase32
+
+[source,lua]
+----
+function tobase32( str ) --> base32str
+----
+
+== Description
+
+Encodes a data string to a base 32 string.
+
+== Parameters
+
+str::
+The data string that should be encoded.
+
+== Return Values
+
+base32str::
+The base 32 encoded string.
+
+== Code
+
+[source,lua]
+----
+include::tobase32.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::tobase32.ex1.lua[]
+----
+
+== Inspired by
+
+* https://tools.ietf.org/html/rfc4648#section-6[RFC 4648]
+
+== See also
+
+* link:frombase32.html[frombase32]
+* link:tobase32hex.html[tobase32hex]
+* link:tocrockford32.html[tocrockford32]

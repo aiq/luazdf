@@ -1,0 +1,4 @@
+
+= base
+
+Functions that allow to convert data from and to different bases.

@@ -1,0 +1,42 @@
+= matrixtostrlst
+
+[source,lua]
+----
+function matrixtostrlst( matrix [, format [, sep]] ) --> strlst
+----
+
+== Description
+
+Converts a _matrix_ to a string list where each entry represe_ts a row.
+The represantation of each entry can be definied with _format`.
+The string between each entry can be definied with _sep_, in this case must _format_ also be definied.
+
+== Parameters
+
+matrix::
+The matrix that should be converted.
+
+format::
+The format from _string.format_ that should be used, by default uses the function %d.
+
+sep::
+The string that should be inserted between each entry in a row, by default uses the function \t.
+
+== Return Values
+
+strlst::
+The matrix a string list where each entry represents a row from the _matrix_.
+
+== Code
+
+[source,lua]
+----
+include::matrixtostrlst.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::matrixtostrlst.ex1.lua[]
+----

@@ -1,0 +1,42 @@
+= numseq
+
+[source,lua]
+----
+function numseq( n [, init [, f]] ) --> seq
+----
+
+== Description
+
+Returns a sequence of numbers.
+
+== Parameters
+
+n::
+Defines the number of values that should be generated.
+
+init::
+Optional start value of the sequence, the default is 0.
+
+f::
+Optional function to generate the values for the sequence.
+It gets the last value as input and must return a new one.
+The default function increments the last value with 1.
+
+== Return Values
+
+seq::
+Array table with the generated sequence of numbers.
+
+== Code
+
+[source,lua]
+----
+include::numseq.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::numseq.ex1.lua[]
+----

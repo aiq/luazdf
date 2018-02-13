@@ -1,0 +1,36 @@
+= dump
+
+[source,lua]
+----
+function dump( tab [, format] )
+----
+
+== Description
+
+The dumps a table.
+By default will the table be writen to _io.stdout_, but with the optional format table can the user configure the function.
+
+== Parameters
+
+tab::
+The table to write.
+
+format::
+A optional table with the optional fields
+* _indent_ with default value 3
+* _level_ with default value 0
+* _file_ with _io.stdout_ as default value
+
+== Code
+
+[source,lua]
+----
+include::dump.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::dump.ex1.lua[]
+----

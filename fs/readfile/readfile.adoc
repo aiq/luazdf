@@ -1,0 +1,44 @@
+= readfile
+
+[source,lua]
+----
+function readfile( filename ) --> str, err
+----
+
+== Description
+
+Reads an entire file(_filename_) into a string(_str_).
+If an error occurse returns the function *nil* and an error message.
+
+== Parameters
+
+filename::
+Path to the file that should be read.
+
+== Return Values
+
+str::
+The file as string or *nil* if an error occurse.
+
+err::
+A message if an error occurse otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::readfile.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::readfile.ex1.lua[]
+----
+
+== See also
+
+* link:readlines.html[readlines]
+* link:writefile.html[writefile]
+* link:writelines.html[writelines]

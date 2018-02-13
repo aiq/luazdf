@@ -1,0 +1,46 @@
+= asinh
+
+[source,lua]
+----
+function asinh( x ) --> res
+----
+
+== Description
+
+Returns the inverse hyperbolic sine of _x_.
+
+== Parameters
+
+x::
+Number that is computed.
+
+== Return Values
+
+res::
+Inverse hyperbolic sine of _x_ in radians.
+
+== Code
+
+[source,lua]
+----
+include::asinh.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::asinh.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/cmath/asinh/[C++ asinh]
+* http://office.microsoft.com/en-us/excel-help/asinh-function-HA102753113.aspx[Excel asinh]
+* https://golang.org/pkg/math/#Asinh[Go Asinh]
+* http://uk.mathworks.com/help/matlab/ref/asinh.html[MATLAB asinh]
+
+== See also
+
+* link:acosh.html[acosh]
+* link:sinh.html[sinh]

@@ -1,0 +1,58 @@
+= slice
+
+[source,lua]
+----
+function slice( tab [, first [, last]] ) --> sub
+----
+
+== Description
+
+Returns a sub-array(slice) of an array table.
+_slice_ does not affect the table itself.
+It is possible to use negative numbers to identifie the first and last element of the sub-array.
+This functions works like the lua standard function _string.sub_.
+
+== Parameters
+
+tab::
+The array table from where we want a slice.
+The content of _tab_ itself will not be changed.
+
+first::
+Index where the sub-array starts in the table.
+As a negative index, begin indicates an offset from the end of the sequence.
+The value -2 means that the subarray starts with the penultimate element of the table.
+If first is omitted starts the sub-array from index 1.
+
+last::
+Index where the sub-array ends in the table.
+As a negative index, begin indicates an offset from the end of the sequence.
+The value -2 means that the subarray ends with the penultimate element of the table.
+If last is omitted ends the sub-array at index _#tab_.
+
+== Return Values
+
+sub::
+The sub-array of the assigned array table
+
+== Code
+
+[source,lua]
+----
+include::slice.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::slice.ex1.lua[]
+----
+
+== Inspired by
+
+* https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/slice[JavaScript slice]
+
+== See also
+
+* link:removerange.html[removerange]

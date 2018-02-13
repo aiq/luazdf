@@ -1,0 +1,43 @@
+= camelcase
+
+[source,lua]
+----
+function camelcase( strlst ) --> str
+----
+
+== Description
+
+Concatenate the assigned words in the array table to a camel case string.
+
+== Parameters
+
+strlst::
+An array table with strings.
+
+== Return Values
+
+str::
+The generated camel case string.
+
+== Code
+
+[source,lua]
+----
+include::camelcase.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::camelcase.ex1.lua[]
+----
+
+== Inspired by
+
+* https://lodash.com/docs#camelCase[lodash camelCase]
+
+== See also
+
+* link:kebabcase.html[kebabcase]
+* link:snakecase.html[snakecase]

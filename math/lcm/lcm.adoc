@@ -1,0 +1,50 @@
+= lcm
+
+[source,lua]
+----
+function lcm( x [, ...] ) --> res
+----
+
+== Description
+
+Returns the least common multiple of one or more integers.
+The least common multiple is the smallest integer that is a multiple of all numbers.
+
+== Parameters
+
+x::
+Required number.
+If the number value is not an integer, it is truncated.
+
+...::
+Optional numbers.
+If any number value is not an integer, it is truncated.
+
+== Return Values
+
+res::
+The least common multiple.
+
+== Code
+
+[source,lua]
+----
+include::lcm.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::lcm.ex1.lua[]
+----
+
+== Inspired by
+
+* http://office.microsoft.com/en-us/excel-help/lcm-function-HA102752959.aspx[Excel lcm]
+* http://uk.mathworks.com/help/matlab/ref/lcm.html[MATLAB lcm]
+* http://reference.wolfram.com/language/ref/LCM.html[Wolfram LCM]
+
+== See also
+
+* link:gcd.html[gcd]

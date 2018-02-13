@@ -1,0 +1,40 @@
+= firstchar
+
+[source,lua]
+----
+function firstchar( str ) --> charstr
+----
+
+== Description
+
+Returns the first char in a string.
+If the string is empty returns the function an empty string.
+
+== Parameters
+
+str::
+The source string.
+
+== Return Values
+
+charstr::
+The first char value.
+
+== Code
+
+[source,lua]
+----
+include::firstchar.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::firstchar.ex1.lua[]
+----
+
+== See also
+
+* link:charat.html[charat]
+* link:lastchar.html[lastchar]

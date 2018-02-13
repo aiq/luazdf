@@ -1,0 +1,41 @@
+= pluck
+
+[source,lua]
+----
+function pluck( tabs, key ) --> tab
+----
+
+== Description
+
+Extracts a array table with values from each sub-table with the same index/key.
+
+== Parameters
+
+tabs::
+The table with sub-tables.
+
+key::
+The index/key of each element that should be cliped.
+
+== Return Values
+
+tab::
+An array table with the extracted values from the sub-tables.
+
+== Code
+
+[source,lua]
+----
+include::pluck.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::pluck.ex1.lua[]
+----
+
+== Inspired by
+
+* http://underscorejs.org/#pluck[Underscore.js pluck]

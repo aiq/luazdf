@@ -1,0 +1,45 @@
+= split
+
+[source,lua]
+----
+function split( str, pattern ) --> strlst
+----
+
+== Description
+
+Splits _str_ around matches of the given _pattern_.
+
+== Parameters
+
+str::
+The string that should be split.
+
+pattern::
+Lua pattern to identify the delimiter.
+
+== Return Values
+
+strlst::
+Array table of strings computed by splitting this string around matches of the given _pattern_.
+
+== Code
+
+[source,lua]
+----
+include::split.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::split.ex1.lua[]
+----
+
+== Inspired by
+
+* http://docs.oracle.com/javase/8/docs/api/java/lang/String.html#split[Java String.split]
+
+== See also
+
+* link:explode.html[explode]

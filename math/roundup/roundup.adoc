@@ -1,0 +1,46 @@
+= roundup
+
+[source,lua]
+----
+function roundup( x, n ) --> res
+----
+
+== Description
+
+Rounds _x_ up, away from 0.
+
+== Parameters
+
+x::
+The number that should be rounded up.
+
+n::
+The number of digits to which _x_ should be rounded.
+
+== Return Values
+
+res::
+lorem ipsum
+
+== Code
+
+[source,lua]
+----
+include::roundup.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::roundup.ex1.lua[]
+----
+
+== Inspired by
+
+* http://office.microsoft.com/en-us/excel-help/roundup-function-HA102752880.aspx[Excel roundup]
+
+== See also
+
+* link:round.html[round]
+* link:rounddown.html[rounddown]

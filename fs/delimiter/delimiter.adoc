@@ -1,0 +1,26 @@
+= sysdelimiter
+
+[source,lua]
+----
+function delimiter() --> deli
+----
+
+== Description
+
+Returns the platform-specific path delimiter, ";" or ":".
+
+== Return Values
+
+deli::
+Platform-specific path delimiter, ";" or ":".
+
+== Code
+
+[source,lua]
+----
+include::delimiter.lua[]
+----
+
+== Inspired by
+
+* https://nodejs.org/api/path.html#path_path_delimiter[Node.js path.delimiter] 

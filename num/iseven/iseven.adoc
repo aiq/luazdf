@@ -1,0 +1,34 @@
+= iseven
+
+[source,lua]
+----
+function iseven( num ) --> res
+----
+
+== Description
+
+Checks if the number _num_ is even or odd.
+
+== Parameters
+
+num::
+The number that is checked.
+
+== Return Values
+
+res::
+Returns *true* if the number is even, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::iseven.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::iseven.ex1.lua[]
+----

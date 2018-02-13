@@ -1,0 +1,40 @@
+= cbrt
+
+[source,lua]
+----
+function cbrt( x ) --> res
+----
+
+== Description
+
+Returns the cubic root of _x_.
+
+== Parameters
+
+x::
+The value the cubic root is computed.
+
+== Return Values
+
+res::
+The cubic root of _x_.
+
+== Code
+
+[source,lua]
+----
+include::cbrt.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::cbrt.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/cmath/cbrt/[C++ cbrt]
+* https://golang.org/pkg/math/#Cbrt[Go Cbrt]
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cbrt[JavaScript cbrt]

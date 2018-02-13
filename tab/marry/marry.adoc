@@ -1,0 +1,44 @@
+= marry
+
+[source,lua]
+----
+function marry( keys, values ) --> tab
+----
+
+== Description
+
+Merges keys with values.
+The both array tables, keys and values, must have the same length, otherwise returns the function *nil*.
+
+== Parameters
+
+keys::
+An array table where the elements will be interpretet as the keys of the resulting table.
+
+values::
+An array table where the elements will be interpetet as the values of the resulting table.
+
+== Return Values
+
+tab::
+A merged table.
+
+== Code
+
+[source,lua]
+----
+include::marry.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::marry.ex1.lua[]
+----
+
+== See also
+
+* link:divorce.html[divorce]
+* link:keys.html[keys]
+* link:values.html[values]

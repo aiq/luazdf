@@ -1,0 +1,39 @@
+= collectk
+
+[source,lua]
+----
+function collectk( ... ) --> arr
+----
+
+== Description
+
+Util function to collect all keys during the generic for loop for the list of expressions(_..._).
+The key is the first value inside the generic for loop.
+
+== Parameters
+
+...::
+One or more expressions that will be passed to the generic for loop.
+
+== Return Values
+
+arr::
+Array table that contains all the keys.
+
+== Code
+
+[source,lua]
+----
+include::collectk.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::collectk.ex1.lua[]
+----
+
+== See also
+
+* link:collectv.html[collectv]

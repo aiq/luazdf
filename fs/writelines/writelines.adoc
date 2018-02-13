@@ -1,0 +1,46 @@
+= writelines
+
+[source,lua]
+----
+function writelines( filename, strlst ) --> res, err
+----
+
+== Description
+
+Writes each string list entry as line to a file.
+
+== Parameters
+
+filename::
+Path to the file that should be created.
+
+strlst::
+String list where strings are allowed.
+
+== Return Values
+
+res::
+*true* or *nil* if an error occurse.
+
+err::
+A message if an error occurse otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::writelines.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::writelines.ex1.lua[]
+----
+
+== See also
+
+* link:readfile.html[readfile]
+* link:readlines.html[readlines]
+* link:writefile.html[writefile]

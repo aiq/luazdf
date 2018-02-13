@@ -1,0 +1,42 @@
+= chunk
+
+[source,lua]
+----
+function chunk( arr, size ) --> chunks
+----
+
+== Description
+
+Creates an array table of elements split into groups the length of _size_.
+If _arr_ can’t be split evenly, the final chunk will be the remaining elements.
+
+== Parameters
+
+arr::
+The array table that should be split into chunks.
+
+size::
+The maximum size of the sub-arrays.
+
+== Return Values
+
+chunks::
+A array table with the chunks.
+
+== Code
+
+[source,lua]
+----
+include::chunk.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::chunk.ex1.lua[]
+----
+
+== Inspired by
+
+* https://lodash.com/docs#chunk[lodash chunk]

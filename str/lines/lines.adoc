@@ -1,0 +1,34 @@
+= lines
+
+[source,lua]
+----
+function lines( str ) --> iter
+----
+
+== Description
+
+Returns an interator over all lines in a string.
+
+== Parameters
+
+str::
+Multi-line string.
+
+== Return Values
+
+iter::
+Iterator over all lines in a string that returns a line.
+
+== Code
+
+[source,lua]
+----
+include::lines.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::lines.ex1.lua[]
+----

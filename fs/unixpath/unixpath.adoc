@@ -1,0 +1,39 @@
+= unixpath
+
+[source,lua]
+----
+function unixpath( path ) --> upath
+----
+
+== Description
+
+Converts a path to the unix style version.
+
+== Parameters
+
+path::
+A unix or windows style path.
+
+== Return Values
+
+upath::
+A unix style version of the path.
+
+== Code
+
+[source,lua]
+----
+include::unixpath.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::unixpath.ex1.lua[]
+----
+
+== See also
+
+* link:syspath.html[syspath]
+* link:winpath.html[winpath]

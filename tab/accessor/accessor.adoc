@@ -1,0 +1,47 @@
+= accessor
+
+[source,lua]
+----
+function accessor( tab, mkpath, ... ) --> acsr
+----
+
+== Description
+
+Returns a pointer to a value in a nested table _tab_, where _..._ are a sequence of keys.
+The _mkpath_ allows to create a path to the value.
+
+== Parameters
+
+tab::
+The table with the value.
+
+mkpath::
+Boolean that allows to create the path.
+
+...::
+A sequence of keys.
+
+== Return Values
+
+acsr::
+A pointer to a value inside the table.
+
+== Code
+
+[source,lua]
+----
+include::accessor.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::accessor.ex1.lua[]
+----
+
+== See also
+
+* link:getin.html[getin]
+* link:updatein.html[updatein]
+* link:setin.html[setin]

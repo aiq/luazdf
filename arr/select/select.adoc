@@ -1,0 +1,37 @@
+= select
+
+[source,lua]
+----
+function select( arr, fv ) --> selection
+----
+
+== Description
+
+Looks through a array table and returning all values that matches a truth function.
+
+== Parameters
+
+arr::
+Array table where we search for the values.
+
+fv::
+Check function that checks a single value.
+
+== Return Values
+
+selection::
+Array table with all values that matches the truth function _fv_.
+
+== Code
+
+[source,lua]
+----
+include::select.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::select.ex1.lua[]
+----

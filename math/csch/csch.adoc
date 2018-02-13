@@ -1,0 +1,46 @@
+= csch
+
+[source,lua]
+----
+function csch( x ) --> res
+----
+
+== Description
+
+Return the hyperbolic cosecant of _x_.
+
+== Parameters
+
+x::
+An angle in radians.
+
+== Return Values
+
+res::
+The hyperbolic cosecant of _x_.
+
+== Code
+
+[source,lua]
+----
+include::csch.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::csch.ex1.lua[]
+----
+
+== Inspired by
+
+* http://office.microsoft.com/en-us/excel-help/csch-function-HA102753263.aspx[Excel csch]
+* http://uk.mathworks.com/help/matlab/ref/csch.html[MATLAB csch]
+
+== See also
+
+* link:acsch.html[acsch]
+* link:cosh.html[cosh]
+* link:csc.html[csc]
+* link:sinh.html[sinh]

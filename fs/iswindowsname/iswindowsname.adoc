@@ -1,0 +1,62 @@
+= iswindowsname
+
+[source,lua]
+----
+function iswindowsname( name ) --> res, i
+----
+
+== Description
+
+Checks if _name_ matches the following rules:
+
+* Does not contain one of the following reserved characters:
+** < (less than)
+** > (greater than)
+** : (colon)
+** " (double quote)
+** / (forward slash)
+** \ (backslash)
+** | (vertical bar or pipe)
+** ? (question mark)
+** * (asterisk)
+* Characters whose integer representations are in the range from 1 through 31, except for alternate data streams where these characters are allowed. For more information about file streams, see File Streams.
+Any other character that the target file system does not allow.
+* Do not use the following reserved names for the name of a file:
+CON, PRN, AUX, NUL, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, and LPT9. Also avoid these names followed immediately by an extension; for example, NUL.txt is not recommended. For more information, see Namespaces.
+* Do not end a file or directory name with a space or a period. Although the underlying file system may support such names, the Windows shell and user interface does not. However, it is acceptable to specify a period as the first character of a name. For example, ".temp".
+
+== Parameters
+
+name::
+The name that should be checked.
+
+== Return Values
+
+res::
+*true* if the value is not empty and contains only allowed characters, otherwise *false*.
+
+i::
+The position of the first not allowed character in the name, otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::iswindowsname.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::iswindowsname.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.boost.org/doc/libs/1_60_0/libs/filesystem/doc/portability_guide.htm#windows_name[boost windows_name]
+* https://msdn.microsoft.com/en-us/library/aa365247.aspx#naming_conventions[MSDN Naming Conventions]
+
+== See also
+
+* link:isposixname.html[isposixname]

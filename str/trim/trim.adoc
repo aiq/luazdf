@@ -1,0 +1,44 @@
+= trim
+
+[source,lua]
+----
+function trim( str ) --> nstr
+----
+
+== Description
+
+Returns the string stripped of whitespace from both ends.
+
+== Parameters
+
+str::
+The string that should be trimmed.
+
+== Return Values
+
+nstr::
+A trimmed version of the assigned parameter string.
+
+== Code
+
+[source,lua]
+----
+include::trim.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::trim.ex1.lua[]
+----
+
+== Inspired by
+
+* http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#trim%28%29[Java String.trim]
+* https://golang.org/pkg/strings/#TrimSpace[Go TrimSpace]
+* http://ruby-doc.org/core-2.2.0/String.html#method-i-strip[Ruby String.strip]
+
+* link:chomp.html[chomp]
+* link:ltrim.html[ltrim]
+* link:rtrim.html[rtrim]

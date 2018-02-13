@@ -1,0 +1,46 @@
+= extname
+
+[source,lua]
+----
+function extname( path ) --> ext
+----
+
+== Description
+
+Returns the file name extension used by _path_.
+The extension is the suffix beginning at the final dot in the final slash-separated element of path.
+
+== Parameters
+
+path::
+Path with file name.
+
+== Return Values
+
+ext::
+File name extension.
+
+== Code
+
+[source,lua]
+----
+include::extname.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::extname.ex1.lua[]
+----
+
+== Inspired by
+
+* https://golang.org/pkg/path/#Ext[Go Ext]
+* https://nodejs.org/api/path.html#path_path_extname_p[Node.js path.extname]
+
+== See also
+
+* link:filename.html[filename]
+* link:longextname.html[longextname]
+* link:shortfilename.html[shortfilename]

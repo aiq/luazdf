@@ -1,0 +1,39 @@
+= isdir
+
+[source,lua]
+----
+function isdir( path ) --> res
+----
+
+== Description
+
+Is it a path to a directory.
+
+== Parameters
+
+path::
+Path that should be checked.
+
+== Return Values
+
+res::
+*true* if the path is to a directory, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::isdir.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isdir.ex1.lua[]
+----
+
+== See also
+
+* link:isfile.html[isfile]
+* link:isleafdir.html[isleafdir]

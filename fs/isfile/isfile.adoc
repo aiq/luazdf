@@ -1,0 +1,34 @@
+= isfile
+
+[source,lua]
+----
+function isfile( path ) --> res
+----
+
+== Description
+
+Is it a path to a file.
+
+== Parameters
+
+path::
+Path that should be checked.
+
+== Return Values
+
+res::
+*true* if the path is to a file, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::isfile.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isfile.ex1.lua[]
+----

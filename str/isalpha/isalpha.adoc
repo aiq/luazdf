@@ -1,0 +1,45 @@
+= isalpha
+
+[source,lua]
+----
+function isalpha( str ) --> res, idx
+----
+
+== Description
+
+Checks if all characters in the string are alphabetical ASCII character and there is at least one character.
+
+== Parameters
+
+str::
+The string that should be checked.
+
+== Return Values
+
+res::
+*true* if all characters in the string are alphabetical ASCII characters and there is at least one character, otherwise *false*.
+
+idx::
+If _res_ is *false* shows _idx_ the first character that is not a alphabetical ascii character.
+
+== Code
+
+[source,lua]
+----
+include::isalpha.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isalpha.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/cctype/isalpha/[C++ isalpha]
+
+== See also
+
+* link:isalnum.html[isalnum]

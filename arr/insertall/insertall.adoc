@@ -1,0 +1,42 @@
+= insertall
+
+[source,lua]
+----
+function insertall( arr, [pos,] oth ) --> arr
+----
+
+== Description
+
+Inserts all values of _oth_ at position _pos_ in _arr_.
+The default value for _pos_ is _#arr+1_, so that a call _insertall( arr, oth )_ inserts all values at the end of _arr_.
+
+== Parameters
+
+arr::
+Array table where the values should be inserted.
+
+pos::
+Position in the array table where the values should be inserted.
+The default value is _#arr+1_.
+
+oth::
+Array table with the values that should be inserted.
+
+== Return Values
+
+arr::
+Returns the modified table _arr_.
+
+== Code
+
+[source,lua]
+----
+include::insertall.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::insertall.ex1.lua[]
+----

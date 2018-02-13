@@ -1,0 +1,39 @@
+= isleafdir
+
+[source,lua]
+----
+function isleafdir( path ) --> res
+----
+
+== Description
+
+Checks if path directs to a directory without sub directories.
+
+== Parameters
+
+path::
+Path that should be checked.
+
+== Return Values
+
+res::
+*true* if the path is to directory without sub directories, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::isleafdir.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isleafdir.ex1.lua[]
+----
+
+== See also
+
+* link:isdir.html[isdir]
+* link:isfile.html[isfile]

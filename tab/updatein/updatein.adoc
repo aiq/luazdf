@@ -1,0 +1,46 @@
+= updatein
+
+[source,lua]
+----
+function updatein( tab, fv, ... ) 
+----
+
+== Description
+
+Updates a value in a nested table with the function _fv_, where _..._ is a sequence of keys.
+If any level fo not exist, a table will be created.
+
+== Parameters
+
+tab::
+The table where a value should be updated.
+
+f::
+Function that takes the old value and returns the new value.
+
+...::
+A sequence of keys.
+
+== Code
+
+[source,lua]
+----
+include::updatein.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::updatein.ex1.lua[]
+----
+
+== Inspired by
+
+* http://clojuredocs.org/clojure.core/update-in[Clojure update-in]
+
+== See also
+
+* link:accessor.html[accessor]
+* link:getin.html[getin]
+* link:setin.html[setin]

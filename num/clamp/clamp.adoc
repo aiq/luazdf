@@ -1,0 +1,50 @@
+= clamp
+
+[source,lua]
+----
+function clamp( num, min, max ) --> res
+----
+
+== Description
+
+If _num_ is less than _min_ returns the function _min_.
+If _num_ is greater than _max_ returns the function _max_.
+In all other cases returns the function _num_.
+
+== Parameters
+
+num::
+The value that should fit into a range.
+
+min::
+The minimum value that should be returned.
+
+max::
+The maximum value that should be returned.
+
+== Return Values
+
+res::
+The function returns _num_, _min_ or _max_.
+
+== Code
+
+[source,lua]
+----
+include::clamp.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::clamp.ex1.lua[]
+----
+
+== Inspired by
+
+* https://lodash.com/docs#clamp[lodash clamp]
+
+== Inspired by
+
+* link:inrange.html[inrange]

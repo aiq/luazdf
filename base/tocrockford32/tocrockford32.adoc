@@ -1,0 +1,44 @@
+= tocrockford32
+
+[source,lua]
+----
+function tocrockford32( str ) --> crock32str
+----
+
+== Description
+
+Encpdes a data string to a base 32 string using the crockford alphabet.
+
+== Parameters
+
+str::
+The data string that should be encoded.
+
+== Return Values
+
+crock32str::
+The encoded base 32 string.
+
+== Code
+
+[source,lua]
+----
+include::tocrockford32.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::tocrockford32.ex1.lua[]
+----
+
+== Inspired by
+
+* http://crockford.com/wrmg/base32.html
+
+== See also
+
+* link:fromcrockford32.html[fromcrockford32]
+* link:tobase32.html[tobase32]
+* link:tobase32hex.html[tobase32hex]

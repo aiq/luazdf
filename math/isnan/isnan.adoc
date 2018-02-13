@@ -1,0 +1,39 @@
+= isnan
+
+[source,lua]
+----
+function isnan( x ) --> res
+----
+
+== Description
+
+Returns whether _x_ is a NaN(Not-a-Number) value.
+
+== Parameters
+
+x::
+The number that should be checked.
+
+== Return Values
+
+res::
+*true* if _x_ is a NaN value, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::isnan.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::isnan.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.cplusplus.com/reference/cmath/isnan/[C++ isnan]
+* http://lua-users.org/wiki/InfAndNanComparisons[Lua Users Implementation Hints]

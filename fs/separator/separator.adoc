@@ -1,0 +1,28 @@
+= separator
+
+[source,lua]
+----
+function separator() --> sep
+----
+
+== Description
+
+Returns the path separator for the current platform.
+
+== Return Values
+
+sep::
+Path separator for the current platform.
+"\\" on windows and "/" on unix systems.
+
+== Code
+
+[source,lua]
+----
+include::separator.lua[]
+----
+
+== Inspired by
+
+* https://nodejs.org/api/path.html#path_path_sep[Node.js path.sep]
+* http://stackoverflow.com/questions/295052/how-can-i-determine-the-os-of-the-system-from-within-a-lua-script

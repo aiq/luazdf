@@ -1,0 +1,39 @@
+= transposegraph
+
+[source,lua]
+----
+function transposegraph( graph ) --> transpose
+----
+
+== Description
+
+Builds a new graph that is the transpose of _graph_.
+
+== Parameters
+
+graph::
+The graph that should be transposed.
+
+== Return Values
+
+transpose::
+The new created transposed graph.
+
+== Code
+
+[source,lua]
+----
+include::transposegraph.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::transposegraph.ex1.lua[]
+----
+
+== Inspired by
+
+* http://www.boost.org/doc/libs/1_64_0/libs/graph/doc/transpose_graph.html[boost transpose_graph]
+* http://networkx.readthedocs.io/en/stable/reference/generated/networkx.DiGraph.reverse.html[NetworkX reverse]

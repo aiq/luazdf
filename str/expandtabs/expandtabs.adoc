@@ -1,0 +1,43 @@
+= expandtabs
+
+[source,lua]
+----
+function expandtabs( str [, tabsize] ) --> nstr
+----
+
+== Description
+
+Returns a new string where all tab characters(0+0009) are replaced with spaces(U+0020).
+The optional parameter _tabsize_ defines how much spaces will be set.
+
+== Parameters
+
+str::
+Basic string where tab should be replaced.
+
+tabsize::
+The number of spaces that should be set for a tab character.
+The default value is 8.
+
+== Return Values
+
+nstr::
+A string without tabs.
+
+== Code
+
+[source,lua]
+----
+include::expandtabs.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::expandtabs.ex1.lua[]
+----
+
+== Inspired by
+
+* https://docs.python.org/3.5/library/stdtypes.html#string-methods[Python str.expandtabs]

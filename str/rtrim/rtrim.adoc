@@ -1,0 +1,39 @@
+= rtrim
+
+[source,lua]
+----
+function rtrim( str ) --> nstr
+----
+
+== Description
+
+The _rtrim_ function returns the string stripped of whitespace from the right side.
+
+== Parameters
+
+str::
+The string that should be trimmed.
+
+== Return Values
+
+nstr::
+A trimmed version of the assigned parameter string.
+
+== Code
+
+[source,lua]
+----
+include::rtrim.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::rtrim.lua[]
+----
+
+== Inspired by
+
+* http://ruby-doc.org/core-2.2.0/String.html#method-i-rstrip[Ruby String.rstrip]
+* http://lua-users.org/lists/lua-l/2009-12/msg00904.html[Lua Users]

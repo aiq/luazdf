@@ -1,0 +1,43 @@
+= snakecase
+
+[source,lua]
+----
+function snakecase( strlst ) --> str
+----
+
+== Description
+
+Concatenate the assigned words in the array table to a snake case string.
+
+== Parameters
+
+strlst::
+An array table with strings.
+
+== Return Values
+
+str::
+The generated snake case string.
+
+== Code
+
+[source,lua]
+----
+include::snakecase.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::snakecase.ex1.lua[]
+----
+
+== Inspired by
+
+* https://lodash.com/docs#snakeCase[Ruby snakeCase]
+
+== See also
+
+* link:camelcase.html[camelcase]
+* link:kebabcase.html[kebabcase]

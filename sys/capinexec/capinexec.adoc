@@ -1,0 +1,43 @@
+= capinexec
+
+[source,lua]
+----
+function capinexec( cmd [, outfile [, errfile]] ) --> exit, signal
+----
+
+== Description
+
+Executes a shell command _cmd_ and allows to capturethe output of _stdout_ in outfile and stderr in _errfile_ optionally.
+If only outfile is defined, writes the functions stdout and stderr to _outfile_.
+
+== Parameters
+
+cmd::
+A shell command.
+
+outfile::
+Optional path to a file.
+The file must not exist.
+
+errfile::
+Optional path to file.
+The file must not exist.
+
+== Return Values
+
+exit::
+The exit status of the command, if it terminated normally.
+
+signal::
+The signal that terminated the command, if it was terminated by a signal.
+
+== Code
+
+[source,lua]
+----
+include::capinexec.lua[]
+----
+
+== See also
+
+* link:capexec.html[capexec]
