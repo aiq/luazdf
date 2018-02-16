@@ -28,7 +28,7 @@ script:
    - lzt testenv > testenv.sh
    - source luapath.sh
    - source testenv.sh
-   - tappy *.tap
+   - tappy -v *.tap
 
 notifications:
    email:
