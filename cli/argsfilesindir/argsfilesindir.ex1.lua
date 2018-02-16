@@ -1,6 +1,7 @@
 local t = require( "tapered" )
 local argsfilesindir = require( "argsfilesindir" )
 -- util functions
+local like = require( "like" )
 local mkdirtree = require( "mkdirtree" )
 local rmdirtree = require( "rmdirtree" )
 
@@ -30,7 +31,7 @@ t.is( filepaths, nil )
 -- test subfolder
 defargs, filepaths = argsfilesindir( "app1", "subfolder" )
 t.is( defargs, "app1.auto.args" )
-t.same( filepaths, { "app1.args", "app1.var1.args" } )
+t.ok( like( filepaths, { "app1.args", "app1.var1.args" } ) )
 
 defargs, filepaths = argsfilesindir( "aaa", "subfolder" )
 t.is( defargs, nil )
