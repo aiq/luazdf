@@ -4,7 +4,7 @@ local function writelines( filename, strlst ) --> res, err
    if err then return nil, err end
 
    for _, str in ipairs( strlst ) do
-      f, err = f:write( str, "\n" )
+      local wres, err = f:write( str, "\n" )
       if err then return nil, err end
    end
 
