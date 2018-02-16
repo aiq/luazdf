@@ -6,7 +6,7 @@ local function mkdirtree( tree, root ) --> res, err
       local f, err = io.open( filename, "w" )
       if err then return nil, err end
 
-      f, err = f:write( ... )
+      local wres, err = f:write( ... )
       if err then return nil, err end
 
       return f:close()
