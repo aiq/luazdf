@@ -1,0 +1,50 @@
+
+= mint
+[source,lua]
+----
+function examplefunc( template_string [, ouput_function_name] ) ( binding_table ) --> expandend_string
+----
+
+== Description
+
+Expand a lua code contained in the template_string. In the strings the
+following pattern will be expanded:
+
+- @{luaexp} - will be substituted with the result of the loa expression
+- @{{luastm}} - embeds the lua statement. This allow to mix lua code and
+verbatim text.
+
+== Parameters
+
+output_fnction_name::
+The lua code will have access to a global with this name. It will be a function
+that will append its first argument to the template output string.
+
+binding_table::
+The contents of this table will be injected into the environment of the lua
+code (both expressions and statements). This allows you to pass parameters to
+the template.
+
+== Return Values
+
+expanded_string:
+The resulting expanded text.
+
+== Code
+
+[source,lua]
+----
+ include::mint.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+ include::mint.ex1.lua[]
+----
+
+== Inspired by
+
+* https://github.com/leafo/etlua
+
