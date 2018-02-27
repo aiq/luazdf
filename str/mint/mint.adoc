@@ -1,47 +1,62 @@
-
 = mint
+
 [source,lua]
 ----
-function examplefunc( template_string [, ouput_function_name] ) ( binding_table ) --> expandend_string
+function mint( template [, ename] ) --> ( sandbox ) --> expstr, err
 ----
 
 == Description
 
-Expand a lua code contained in the template_string. In the strings the
-following pattern will be expanded:
+Expand the Lua code contained in the _template_.
+The following pattern in the _template_ will be expanded:
 
-- @{luaexp} - will be substituted with the result of the loa expression
-- @{{luastm}} - embeds the lua statement. This allow to mix lua code and
-verbatim text.
+`@{luaexp}`::
+Will be substituted with the result of the Lua expression.
+
+`@{{luastm}}`::
+Embeds the Lua statement. This allow to mix Lua code and verbatim text.
+
+The function works in two steps:
+
+1. returns a generator function that takes a table(_sandbox_)
+2. returns the generator function the expanded string(_expstr_)
 
 == Parameters
 
-output_fnction_name::
-The lua code will have access to a global with this name. It will be a function
-that will append its first argument to the template output string.
+template::
+The string that should be expanded.
 
-binding_table::
-The contents of this table will be injected into the environment of the lua
+ename::
+The Lua code will have access to a global with this name.
+It will be a function that will append its first argument to the template output
+string.
+This parameter is optional, the default value is +_o+.
+
+sandbox::
+The contents of this table will be injected into the environment of the Lua
 code (both expressions and statements). This allows you to pass parameters to
 the template.
 
 == Return Values
 
-expanded_string:
-The resulting expanded text.
+expstr::
+The resulting expanded text or *nil* if an error occurse.
+
+err::
+A message if an error occurse, otherwise *nil*.
 
 == Code
 
 [source,lua]
 ----
- include::mint.lua[]
+include::mint.lua[]
 ----
 
 == Examples
 
 [source,lua]
 ----
- include::mint.ex1.lua[]
+include::mint.ex1.lua[]
 ----
 
 == Inspired by
