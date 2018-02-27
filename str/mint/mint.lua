@@ -1,6 +1,26 @@
 
 -- MINimal Template
 
+local function compat_env()
+  if _VERSION ~= 'Lua 5.1' then
+    return pairs(_ENV)
+  else
+    return pairs(getfenv())
+  end
+end
+
+local function compat_load(string, environment)
+  local chunkname = 'mint_script'
+  local func, err
+  if _VERSION ~= 'Lua 5.1' then
+    func, err = load(string, chunkname, 't', environment)
+  else
+    func, err = loadstring(string, chunkname)
+    if func then setfenv(func, environment) end
+  end
+  return func, err
+end
+
 --ZFUNC-mint-v1
 local function mint(template, ename) --> res
   if not ename then ename = '_o' end
@@ -27,10 +47,10 @@ local function mint(template, ename) --> res
     local result = ''
     if 'table' ~= type(sandbox) then
       sandbox = {}
-      for k,v in pairs(_ENV) do sandbox[k] = v end
+      for k,v in compat_env() do sandbox[k] = v end
     end
     sandbox[ename] = function(out) result = result .. out end
-    local generate, err = load(script,'mint_script','t', sandbox)
+    local generate, err = compat_load(script, sandbox)
     if not generate or err then
       error(err .. '\nTemplate script: [[\n' .. script .. '\n]]')
     end
