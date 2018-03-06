@@ -55,7 +55,7 @@ local function taptest(...) --> msg
 
       msg = msg
         .. 'not ok ' .. test_count .. ' - '
-        .. i.source:match('([^/\\]*)$') .. ':' .. i.currentline .. '. '
+        .. i.source:match('([^@/\\]*)$') .. ':' .. i.currentline .. '. '
         .. 'Expectation [' .. tostring(expected) .. '] '
         .. 'does not match with [' .. tostring(got) ..']. '
         .. err

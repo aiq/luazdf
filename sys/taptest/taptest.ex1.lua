@@ -34,12 +34,12 @@ tf(
 -- Additional infos when the test fails
 tf(
   uut( 1, 2 ),
-  'not ok 5 - @taptest.ex1.lua:19. Expectation [2] does not match with [1]. ' )
+  'not ok 5 - taptest.ex1.lua:19. Expectation [2] does not match with [1]. ' )
 
 -- Custom infos on fail
 tf(
   uut( 1, 2, 'Not good!' ),
-  'not ok 7 - @taptest.ex1.lua:19. Expectation [2] does not match with [1]. Not good!' )
+  'not ok 7 - taptest.ex1.lua:19. Expectation [2] does not match with [1]. Not good!' )
 
 -- Custom compare function
 tf(
@@ -47,15 +47,15 @@ tf(
   'ok 9' )
 tf(
   uut( 2, 1, function(a,b) return a < b end ),
-  'not ok 11 - @taptest.ex1.lua:19. Expectation [1] does not match with [2]. ' )
+  'not ok 11 - taptest.ex1.lua:19. Expectation [1] does not match with [2]. ' )
 
 -- Custom compare function and message
 tf(
   uut( 2, 1, function(a,b) return a < b end, 'Not good!' ),
-  'not ok 13 - @taptest.ex1.lua:19. Expectation [1] does not match with [2]. Not good!' )
+  'not ok 13 - taptest.ex1.lua:19. Expectation [1] does not match with [2]. Not good!' )
 tf(
   uut( 2, 1, 'Not good!', function(a,b) return a < b end ),
-  'not ok 15 - @taptest.ex1.lua:19. Expectation [1] does not match with [2]. Not good!' )
+  'not ok 15 - taptest.ex1.lua:19. Expectation [1] does not match with [2]. Not good!' )
 
 -- Single argument = Tap diagnostic
 tf(
