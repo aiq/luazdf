@@ -66,9 +66,12 @@ tf(
   '#\n#########\n# new\n# suite' )
 
 -- No argument = Summary and final plan
+mask_next_uut_failing_line()
 tf(
   uut( ),
   '#\n#########\n# 5 tests failed\n1..17' )
+
+tf()
 
 -- In case all the tests are successful, the line
 -- # all is right
