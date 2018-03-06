@@ -12,15 +12,15 @@ local function taptest(...) --> msg
   end
 
   local function print_summary()
-    local msg = ''
-    if fail_count == 0 then
-      msg = msg .. diagnostic('all is right')
-    else
-      msg = msg .. diagnostic(fail_count.. ' tests failed')
-    end
     local plan = '1..'..test_count
     print(plan)
-    return msg..'\n'..plan
+    local msg = ''
+    if fail_count == 0 then
+      msg = diagnostic('all is right')
+    else
+      msg = diagnostic(fail_count.. ' tests failed')
+    end
+    return plan .. '\n' .. msg
   end
 
   local function do_check(got, expected, a, b)

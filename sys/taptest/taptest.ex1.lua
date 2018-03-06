@@ -69,7 +69,7 @@ tf(
 mask_next_uut_failing_line()
 tf(
   uut( ),
-  '#\n#########\n# 5 tests failed\n1..17' )
+  '1..17\n#\n#########\n# 5 tests failed' )
 
 tf()
 
