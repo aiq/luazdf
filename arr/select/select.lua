@@ -1,4 +1,5 @@
 --ZFUNC-select-v1
+--TODO select is a function in the standard library
 local function select( tab, fv ) --> selection
    local selection = {}
 
