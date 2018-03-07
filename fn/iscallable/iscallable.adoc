@@ -2,22 +2,25 @@
 
 [source,lua]
 ----
-function iscallable( maybeFunc ) --> callableBool
+function iscallable( var ) --> res
 ----
 
 == Description
 
-This function checks if the argument is callable trhough the standard function call
+This function checks if _var_ is callable through the standard function call
 syntax.
 
 == Parameters
 
-maybeFunc::
+var::
+Variable that should be checked.
+
 
 == Return Values
 
-It returns `true` if the argument can be callad trhough the standard function call
-syntax. `false` Otherwise.
+res::
+*true* if the argument can be callad through the standard function call
+syntax, otherwise *false*.
 
 == Code
 
