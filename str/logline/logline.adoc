@@ -1,0 +1,76 @@
+== logline
+
+[source,lua]
+----
+function logline( level, messageStr, ... ) --> logStr
+function logline( level ) --> nil
+----
+
+== Description
+
+This function adds common useful information to the data that you want to
+output.
+
+When called with a single argument, it will set the global verbosity level.
+When called with additional arguments it will generate the log string. However
+the string will be generated only if the first argument, the line log level, is
+smaller than the global verbosity level. In this way you can dinamically enable
+or disable log messages in critical part of the code.
+
+The verbosity level can be given in two way: as an integer or as a string
+representing the verbosity class. The allowed verbosity classes are:
+- ERROR <-> 25
+- DEBUG <-> 50
+- INFO <-> 75
+- VERBOSE <-> 99
+
+Each class will be considered to cantain any integer level just below it, e.g.
+26, 30 and 50 all belongs to the "DEBUG" class. When specifying the verbosity level
+as a class name, the higher belonging integer will be used.
+
+== Parameters
+
+level::
+Integer verbosity level or string verbosity class name.  When called without
+any other argument this is the global verbosity level to be set. If other
+arguments are present, it is the verbosity level of the log line.  Note that
+the output will be generated only if the line have a level smaller than the
+global verbosity.
+
+messageStr::
+Additional information that will be appended to the output. More than one
+arguments can be passed (vararg), all of them will be appended.
+
+== Return Values
+
+It return nil if called with one arguments o if the global verbosity level is
+not high enough. Otherwise it will return a string containing:
+- Date
+- Time
+- os.clock() result
+- Incremental number
+- Verbosity level of the log line
+- Source position of function call
+- Additional info in the arguments
+
+Note 1: The verbosity level will be reported both as number that as the
+symbolic class name.
+
+Note 2: if the caller is a tail call or a function with a name that starts or
+ends with 'log', the position used will be the one of the caller of the caller
+(and so on).
+
+== Code
+
+[source,lua]
+----
+include::logline.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+ include::logline.ex1.lua[]
+----
+

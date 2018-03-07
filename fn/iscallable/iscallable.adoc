@@ -1,0 +1,35 @@
+== iscallable
+
+[source,lua]
+----
+function iscallable( maybeFunc ) --> callableBool
+----
+
+== Description
+
+This function checks if the argument is callable trhough the standard function call
+syntax.
+
+== Parameters
+
+maybeFunc::
+
+== Return Values
+
+It returns `true` if the argument can be callad trhough the standard function call
+syntax. `false` Otherwise.
+
+== Code
+
+[source,lua]
+----
+include::iscallable.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::iscallable.ex1.lua[]
+----
+
