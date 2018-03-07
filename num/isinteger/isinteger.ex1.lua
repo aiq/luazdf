@@ -1,14 +1,12 @@
+local t = require "taptest"
+local isinteger = require "isinteger"
 
-local tt = require 'taptest'
-local ii = require 'isinteger'
+t( isinteger( 1 ),      true )
+t( isinteger( 0 ),      true )
+t( isinteger( 1.1 ),   false )
+t( isinteger( "1" ),   false )
+t( isinteger( true ),  false )
+t( isinteger( { 1 } ), false )
+t( isinteger(),        false )
 
-tt( ii(1),    true )
-tt( ii(0),    true )
-tt( ii(1.1),  false )
-tt( ii('1'),  false )
-tt( ii(true), false )
-tt( ii({1}),  false )
-tt( ii(),     false )
-
-tt( )
-
+t()

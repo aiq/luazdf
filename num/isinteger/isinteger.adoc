@@ -2,21 +2,22 @@
 
 [source,lua]
 ----
-function isinteger( maybeInt ) --> bool
+function isinteger( i ) --> res
 ----
 
 == Description
 
-Check if the argument is an integer or not.
+Checks if the argument _i_ is an integer or not.
 
 == Parameters
 
-maybeInt::
+i::
 Argument to check.
 
 == Return Values
 
-It return `true` if the argument is and integer or `false` otherwise.
+res::
+*true* if the argument is and integer, otherwise *false*.
 
 == Code
 
@@ -31,4 +32,3 @@ include::isinteger.lua[]
 ----
 include::isinteger.ex1.lua[]
 ----
-
