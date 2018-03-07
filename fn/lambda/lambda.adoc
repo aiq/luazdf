@@ -1,0 +1,57 @@
+== lambda
+
+[source,lua]
+----
+function lambda( defStr ) --> func, err
+----
+
+== Description
+
+Define functions using a compact lambda-like syntax.
+
+This function internally works by expanding the following patterns into a
+standard lua function definition. Then it is parsed by the common lua
+load/loadstring function.
+
+The fundamental expanded pattern is 'prologue|statement;expression'.
+
+It generate a function that has 'prologue' as nominal arguments. It can be a
+comma separated list, like in 'x,y,z|statement;expression'.
+
+Then the 'statement' will be injected as the function body. It must be a
+sequence of lua statements like in 'prologue|for k = 1,10 do print(k) end
+print("ok");expression'.
+
+At end of the function the 'expression' will be returned. So it must be a valid
+lua expression like in 'prologue|statement;math.random(2)'.
+
+When the 'prologue' is missing, a default one will be used consisting of the
+first 6 alphabet letters. 'expression' must always be given but the 'statement'
+and the separation ';' can be missing. Indeed, in the main use case, prologue
+and statement will be missing and only the expression will be given.
+
+== Parameters
+
+defStr::
+This is the string containing the function definition. The syntax is
+described in the previous section.
+
+== Return Values
+
+A new function is returned, behaving accordly the 'defStr'. In case of error,
+nil will be returned plus an error message.
+
+== Code
+
+[source,lua]
+----
+include::lambda.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+ include::lambda.ex1.lua[]
+----
+
