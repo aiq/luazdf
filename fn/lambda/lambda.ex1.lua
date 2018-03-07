@@ -1,15 +1,13 @@
-
-local l = require( "lambda" )
-local test = require( "taptest" )
+local t = require "taptest"
+local lambda = require "lambda"
 
 -- lambda-like syntax
-test( 1, l'x|x+1'(0) )
+t( 1, lambda"x|x+1"( 0 ) )
 
 -- additional statement, only the last expression is returned
-test( 3, l'x| x=x+1; x+1'(1) )
+t( 3, lambda"x| x=x+1; x+1"( 1 ) )
 
--- default args are a,b,c,d,e,f,...(vararg)
-test( 1, l'a+1'(0) )
+-- default args are a,b,c,d,e,f,...( vararg )
+t( 1, lambda"a+1"( 0 ) )
 
-test()
-
+t()
