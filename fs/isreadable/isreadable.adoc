@@ -2,22 +2,22 @@
 
 [source,lua]
 ----
-function isreadable( pathStr, ... ) --> readableStr
+function isreadable( path ) --> res
 ----
 
 == Description
 
-Find the first argument that is the path to a readable file.
+Is it a path to a readable file.
 
 == Parameters
 
 path::
-One or more (vararg) strings containing a filesystem path to check.
+Path to a file that should be checked.
 
 == Return Values
 
-It returns `nil` if no one of the supplied path is a readable file. Otherwise it
-returns the first path that corresponds to a readable file.
+res::
+*true* if the path is to a readable file, otherwise *false*.
 
 == Code
 
@@ -32,4 +32,3 @@ include::isreadable.lua[]
 ----
 include::isreadable.ex1.lua[]
 ----
-
