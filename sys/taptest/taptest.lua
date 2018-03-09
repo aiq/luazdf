@@ -36,7 +36,7 @@ local function taptest(...) --> msg
 
     -- Check the condition
     test_count = test_count + 1
-    local ok = checker(got, expected)
+    local ok, info = checker(got, expected)
 
     -- Generate TAP line
     local msg = ''
@@ -61,6 +61,7 @@ local function taptest(...) --> msg
         .. err
     end
 
+    if info then msg = msg .. ' ' .. info end
     print(msg)
     return msg
   end
