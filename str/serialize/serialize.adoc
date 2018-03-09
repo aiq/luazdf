@@ -1,0 +1,40 @@
+== serialize
+
+[source,lua]
+----
+function serialize( value ) --> str
+----
+
+== Description
+
+It serializes the value. The resulting string can be parsed by the common lua
+`load`/`loadstring` function to restore the original value. It have not the lua
+literal limitation for tables, as the one found in the `lualiteral` function.
+So it can handle tables with cycles or with a nest level higher than the max
+defined for the lua literals (200). It still can not handle `userdata` and
+`lightuserdata`.
+
+== Parameters
+
+value::
+The value to be serialized.
+
+== Return Values
+
+A string that can be read back from common `load`/`loadstring` function to
+recontruct the original data.
+
+== Code
+
+[source,lua]
+----
+include::tablestr.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::tablestr.ex1.lua[]
+----
+
