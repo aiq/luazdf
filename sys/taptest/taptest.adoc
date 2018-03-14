@@ -44,7 +44,8 @@ This is ment as a way to give additional information about the failure.
 
 diagnostic::
 When called with just one string argument, a TAP diagnostic block will be
-printed. A '#' will be prepended to each line of the diagnostic message.
+printed.
+A _#_ will be prepended to each line of the diagnostic message.
 
 == Return Values
 

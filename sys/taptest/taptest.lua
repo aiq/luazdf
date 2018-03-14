@@ -1,7 +1,7 @@
+--ZFUNC-taptest-v0
 local test_count = 0
 local fail_count = 0
 
---ZFUNC-taptest-v0
 local function taptest( ... ) --> msg
 
    local function diagnostic( desc )
