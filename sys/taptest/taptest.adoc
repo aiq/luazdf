@@ -64,7 +64,7 @@ include::taptest.lua[]
 
 [source,lua]
 ----
- include::taptest.ex1.lua[]
+include::taptest.ex1.lua[]
 ----
 
 == Inspired by
