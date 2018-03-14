@@ -2,7 +2,7 @@
 
 [source,lua]
 ----
-function copyfile( srcPath, dstPath ) --> ok, err
+function copyfile( src, dst ) --> res, err
 ----
 
 == Description
@@ -19,8 +19,11 @@ Path where to copy the file.
 
 == Return Values
 
-If the copy successes, it returns `true`. Otherwise it returns `false` plus an
-error message string.
+res::
+*true* if the copy successes of *nil* if an error occurse.
+
+err::
+A message if an error occurse, otherwise *nil*
 
 == Code
 
@@ -33,6 +36,10 @@ include:copyfile.lua[]
 
 [source,lua]
 ----
- include:copyfile.ex1.lua[]
+include:copyfile.ex1.lua[]
 ----
 
+== See also
+
+* link:readfile.html[readfile]
+* link:writefile.html[writefile]
