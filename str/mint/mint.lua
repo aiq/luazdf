@@ -1,5 +1,4 @@
-
---ZFUNC-mint-v1
+--ZFUNC-mint-v0
 local function mint( template, ename ) --> ( sandbox ) --> expstr, err
    if not ename then ename = '_o' end
    local function expr(e) return ' '..ename..'('..e..')' end
