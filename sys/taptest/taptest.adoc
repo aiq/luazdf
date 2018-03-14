@@ -2,19 +2,22 @@
 
 [source,lua]
 ----
-function taptest( actual, expect, [ compare, [ message ]] ) --> string
-function taptest( diagnostic ) --> string
-function taptest( ) --> string
+function taptest( actual, expect [, compare [, message ]] ) --> msg
+function taptest( diagnostic ) --> msg
+function taptest() --> msg
 ----
 
 == Description
 
-This function behaves differently based on the number of arguments. It can
-check actual values versus expected ones. It can print diagnostic. Or it can
-print tests summary when called without arguments.
+This function behaves differently based on the number of arguments.
 
-All the output is done in the Test Anything Protocol (TAP) format. In case of
-failure some information are appended, like source position, actual value, etc.
+* It can check actual values versus expected ones.
+* It can print diagnostic.
+* Or it can print tests summary when called without arguments.
+
+All the output is done in the Test Anything Protocol (TAP) format.
+In case of failure some information are appended, like source position, actual
+value, etc.
 
 For a more detailed explanation of its behaviour, refer to the next section.
 
@@ -27,15 +30,17 @@ expect::
 The expected value
 
 compare::
-The compare function. If it is given as 3-rd or 4-th argument, this function
-will be called with 'actual, expected' as argument. If it return true the test
-will be assumed to success, otherwise it will be assumed to be failed. If no
-compare function is given, the '==' operator will be used as default.
+The compare function.
+If it is given as 3-rd or 4-th argument, this function
+will be called with _actual, expected_ as argument.
+If it return true the test will be assumed to success, otherwise it will be
+assumed to be failed.
+If no compare function is given, the _==_ operator will be used as default.
 
 message::
 If a message string is given as 3-rd or 4-th argument, it will be appended to
-the TAP formatted line, only in case of failing test. This is ment as a way to
-give additional information about the failure.
+the TAP formatted line, only in case of failing test.
+This is ment as a way to give additional information about the failure.
 
 diagnostic::
 When called with just one string argument, a TAP diagnostic block will be
@@ -43,8 +48,9 @@ printed. A '#' will be prepended to each line of the diagnostic message.
 
 == Return Values
 
-Returns a string containing the same message written to the stdout. This
-message is a TAP check line or a sequence of TAP diagnostic lines.
+msg::
+Returns a string containing the same message written to the stdout.
+This message is a TAP check line or a sequence of TAP diagnostic lines.
 
 == Code
 
@@ -64,4 +70,3 @@ include::taptest.lua[]
 
 https://testanything.org/
 https://github.com/telemachus/tapered
-
