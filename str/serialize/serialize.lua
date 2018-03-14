@@ -1,6 +1,6 @@
---ZFUNC-serialize-v1
+--ZFUNC-serialize-v0
 local function serialize( a ) --> result
-
+   --TODO
   --ZFUNC-lualiteral-v1
   local function lualiteral( tab, alias ) --> result
 

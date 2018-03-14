@@ -1,6 +1,6 @@
---ZFUNC-lualiteral-v1
+--ZFUNC-lualiteral-v0
 local function lualiteral( tab, alias ) --> result
-
+   --TODO
   -- export ???
   local function atomdump( val )
     local t = type( val )
