@@ -1,4 +1,4 @@
---ZFUNC-lambda-v1
+--ZFUNC-lambda-v0
 local function lambda( def ) --> func, err
    -- Compatibility wrapper
    local function compat_load( chunk )
