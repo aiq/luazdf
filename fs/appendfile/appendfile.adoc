@@ -2,7 +2,7 @@
 
 [source,lua]
 ----
-function appendfile( path, data[, prefix[, suffix]] ) --> ok, err
+function appendfile( path, data [, prefix [, suffix]] ) --> res, err
 ----
 
 == Description
@@ -15,8 +15,8 @@ path::
 Path to the file to modify.
 
 data::
-Chunks of data to add at end of file. It can be a table of string or a single
-string (in case of single chunk).
+Chunks of data to add at end of file.
+It can be a table of string or a single string (in case of single chunk).
 
 prefix::
 Data to be written before each chunk of data. 
@@ -26,8 +26,11 @@ Data to be written after each chunk of data.
 
 == Return Values
 
-It return *true* if the update successed. Otherwise it will return *nil* plus
-an error message string.
+res::
+*true* or *nil* if an error occurse.
+
+err::
+A message if an error occurse, otherwise *nil*.
 
 == Code
 
@@ -43,3 +46,6 @@ include:appendfile.lua[]
 include:appendfile.ex1.lua[]
 ----
 
+== See also
+
+* link:writefile.html[writefile]
