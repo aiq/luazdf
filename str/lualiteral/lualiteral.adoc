@@ -1,0 +1,55 @@
+== lualiteral
+
+[source,lua]
+----
+function lualiteral( value[, alias] ) --> str
+----
+
+== Description
+
+It creates a string containig a string representation of the argument. The
+string will contain a valid lua literal, so the same limitation of the lua
+parser holds:
+
+- Only nil, boolean, number, string or table value are allowed, no userdata or
+lightuserdata
+- The table must no contain any cycle
+- The table have a limited nested level size (200)
+
+The case of table with two (or more) contents pointing to the same camera can
+not be written as lua literal. However this function will support such cases
+generating two (or more) different tables with the same content. Cycles are
+still not supported.
+
+Optionally this function let you to substitute all the references to a
+particular table with a supplied string. In this way also circular table may
+somehow handled.
+
+== Parameters
+
+value::
+The lua value you want to serialize as lua literal.
+
+alias::
+A table containig a map from other table to strings. When serializing the
+value, each sub-table will be subtituded by the string in the alias table (if
+any).
+
+== Return Values
+
+The string containig a lua literal representing the value passed as argument.
+
+== Code
+
+[source,lua]
+----
+include::lualiteral.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::lualiteral.ex1.lua[]
+----
+

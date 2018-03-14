@@ -65,7 +65,11 @@ local function logline(level, ...) --> logStr
     local n = td.name
     if not n then break end
     n = n:lower()
-    if not n:match('log$') and not n:match('^log') then break end
+    if  not n:match('log$')
+    and not n:match('^log')
+    and n ~= '' then
+      break
+    end
     stackup = stackup + 1
     td = debug.getinfo(stackup)
   end

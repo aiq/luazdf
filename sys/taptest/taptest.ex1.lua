@@ -62,10 +62,20 @@ tf(
   uut( 'new\nsuite' ),
   '#\n#########\n# new\n# suite' )
 
+-- Checker function can add useful information
+
+tf(
+  uut( 1, 1, function(a, b) return a==b, '- additional info' end ),
+  'ok 18 - additional info' )
+
+tf(
+  uut( 1, 2, function(a, b) return a==b, '- additional info' end ),
+  'not ok 20 - taptest.ex1.lua:19. Expectation [2] does not match with [1].  - additional info' )
+
 -- No argument = Summary and final plan
 tf(
   uut( ),
-  '#\n#########\n# 5 tests failed\n1..17' )
+  '#\n#########\n# 6 tests failed\n1..21' )
 
 tf()
 

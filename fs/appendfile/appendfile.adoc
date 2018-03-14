@@ -1,0 +1,45 @@
+== appendfile
+
+[source,lua]
+----
+function appendfile( path, data[, prefix[, suffix]] ) --> ok, err
+----
+
+== Description
+
+This function will append some data to the file at the specified path.
+
+== Parameters
+
+path::
+Path to the file to modify.
+
+data::
+Chunks of data to add at end of file. It can be a table of string or a single
+string (in case of single chunk).
+
+prefix::
+Data to be written before each chunk of data. 
+
+suffix::
+Data to be written after each chunk of data. 
+
+== Return Values
+
+It return *true* if the update successed. Otherwise it will return *nil* plus
+an error message string.
+
+== Code
+
+[source,lua]
+----
+include:appendfile.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include:appendfile.ex1.lua[]
+----
+

@@ -1,0 +1,38 @@
+== copyfile
+
+[source,lua]
+----
+function copyfile( srcPath, dstPath ) --> ok, err
+----
+
+== Description
+
+This function copy the file in the source path in the destination path.
+
+== Parameters
+
+srcPath::
+Path to the source file.
+
+dstPath::
+Path where to copy the file.
+
+== Return Values
+
+If the copy successes, it returns `true`. Otherwise it returns `false` plus an
+error message string.
+
+== Code
+
+[source,lua]
+----
+include:copyfile.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+ include:copyfile.ex1.lua[]
+----
+
