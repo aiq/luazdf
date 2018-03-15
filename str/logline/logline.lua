@@ -1,4 +1,3 @@
---ZFUNC-logline-v1
 local skip_lower_level = 25
 local log_count = 0
 
@@ -19,6 +18,7 @@ end
 
 update_level_map()
 
+--ZFUNC-logline-v0
 local function logline( level, ... ) --> line
    -- Classify log level
    local level_class
