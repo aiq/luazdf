@@ -37,7 +37,7 @@ local function mint( template, ename ) --> ( sandbox ) --> expstr, err
     if 'table' ~= type( sandbox ) then
       return nil, "mint generator requires a sandbox"
     end
-    sandbox[ ename ] = function( out ) expstr = expstr..out end
+    sandbox[ ename ] = function( out ) expstr = expstr..tostring(out) end
     local generate, err = compat_load( script, sandbox )
     if not generate or err then
        return nil, err..'\nTemplate script: [[\n'..script..'\n]]'
