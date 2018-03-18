@@ -14,6 +14,10 @@ t( ' hello world! hello world! hello world!', m{ item = 'world' } )
 m = mint( "@{{for i=1,3 do o(' hello '..item..'!') end}}", 'o' )
 t( ' hello dude! hello dude! hello dude!', m{ item = 'dude' } )
 
+-- Last text appending
+m = mint( "@{'true'} ok" )
+t( 'true ok', m{} )
+
 -- Value cast in the output function
 m = mint( "@{true} ok" )
 t( 'true ok', m{} )
