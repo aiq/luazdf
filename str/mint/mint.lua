@@ -45,7 +45,10 @@ local function mint( template, ename ) --> ( sandbox ) --> expstr, err
     if not generate or err then
        return nil, err..'\nTemplate script: [[\n'..script..'\n]]'
     end
-    generate()
+    local ok, err = pcall(generate)
+    if not ok or err then
+       return nil, err..'\nTemplate script: [[\n'..script..'\n]]'
+    end
     return expstr
   end
 end
