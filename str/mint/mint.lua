@@ -28,10 +28,14 @@ local function mint( template, ename ) --> ( sandbox ) --> expstr, err
            return prefix .. expr( code ) .. suffix
         end
      end
-    )
+   )
+
+   -- The generator must be run only if at least one @{} was found
+   local run_generator = ( script ~= template )
 
    -- Return a function that executes the script with a custom environment
    return function( sandbox )
+    if not run_generator then return script end
     local expstr = ''
     if 'table' ~= type( sandbox ) then
       return nil, "mint generator requires a sandbox"

@@ -1,8 +1,12 @@
 local t = require( "taptest" )
 local mint = require( "mint" )
 
+-- Blank templates are not touched
+local m = mint( "ok" )
+t( 'ok', m{} )
+
 -- Lua expression expansion with @{}
-local m = mint( "@{item.a} @{item.b:upper()}" )
+m = mint( "@{item.a} @{item.b:upper()}" )
 t( 'a B', m{ item = { a = 'a', b = 'b' } } )
 t( 'B A', m{ item = { a = 'B', b = 'a' } } )
 
