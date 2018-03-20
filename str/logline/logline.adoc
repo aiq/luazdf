@@ -21,10 +21,11 @@ The verbosity level can be given in two way: as an integer or as a string
 representing the verbosity class.
 
 The allowed verbosity classes are:
-- *ERROR* <-> 25
-- *DEBUG* <-> 50
-- *INFO* <-> 75
-- *VERBOSE* <-> 99
+
+- *ERROR* `<= 25`
+- *DEBUG* `<= 50`
+- *INFO* `<= 75`
+- *VERBOSE* `<= 99`
 
 Each class will be considered to cantain any integer level just below it, e.g.
 26, 30 and 50 all belongs to the *DEBUG* class.
@@ -79,6 +80,6 @@ include::logline.lua[]
 
 [source,lua]
 ----
- include::logline.ex1.lua[]
+include::logline.ex1.lua[]
 ----
 
