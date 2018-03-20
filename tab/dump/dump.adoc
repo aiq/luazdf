@@ -34,3 +34,8 @@ include::dump.lua[]
 ----
 include::dump.ex1.lua[]
 ----
+
+== See also
+
+* link:lualiteral.html[lualiteral]
+* link:serialize.html[serialize]

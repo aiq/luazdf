@@ -31,13 +31,17 @@ recontruct the original data.
 
 [source,lua]
 ----
-include::tablestr.lua[]
+include::serialize.lua[]
 ----
 
 == Examples
 
 [source,lua]
 ----
-include::tablestr.ex1.lua[]
+include::serialize.ex1.lua[]
 ----
 
+== See also
+
+* link:dump.html[dump]
+* link:lualiteral.html[lualiteral]
