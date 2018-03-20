@@ -3,6 +3,9 @@ local intern = require 'intern'
 local t = require 'taptest'
 
 local function diff( a, b ) return a ~= b end
+local function GC()
+  local c = os.clock() while os.clock()<c+0.5 do collectgarbage() end
+end
 
 t( type( intern() ), 'function' )
 
@@ -32,12 +35,12 @@ t( alt( 1, nil, 0/0, 3 ), int( 1, nil, 0/0, 3 ), diff )
 -- No collection if some reference is still around
 local x = int( true, false )
 local xstr = tostring( x )
-collectgarbage()
+GC()
 t( xstr, tostring( int( true, false )))
 
 -- Automatic collection
 x = nil
-collectgarbage()
+GC()
 t( xstr, tostring( int( true, false )), diff )
 
 t()

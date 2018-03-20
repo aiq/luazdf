@@ -3,6 +3,9 @@ local tuple = require 'tuple'
 local t = require 'taptest'
 
 local function diff( a, b ) return a ~= b end
+local function GC()
+  local c = os.clock() while os.clock()<c+0.5 do collectgarbage() end
+end
 
 -- Equality operation
 t( type(tuple(1,'a',true,3)), 'function' )
@@ -24,12 +27,12 @@ t( d, 3 )
 
 -- No collection if some reference is still around
 local r =  tuple(2,nil,0/0,4)
-collectgarbage()
+GC()
 t( tuple(2,nil,0/0,4), r )
 
 -- Automatic collection
 r = nil
-collectgarbage()
+GC()
 t( tostring(tuple(2,nil,0/0,4)), rstr, diff )
 
 t()
