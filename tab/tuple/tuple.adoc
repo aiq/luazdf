@@ -1,0 +1,39 @@
+== tuple
+
+[source,lua]
+----
+function tuple( ... ) --> tuple
+----
+
+== Description
+
+Constructs a tuple type, i.e. an object representing an unmodifiable list of
+fields.
+
+== Parameters
+
+...::
+List of tuple fields.
+
+== Return Values
+
+It returns a function that when evaluated will returns the tuple fields. When called with same arguments, the same function reference will be returned. The unused reference will be automatically garbage collected.
+
+== Code
+
+[source,lua]
+----
+include:tuple.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include:tuple.ex1.lua[]
+----
+
+== Inspired by
+
+* http://lua-users.org/wiki/SimpleTuples
+
