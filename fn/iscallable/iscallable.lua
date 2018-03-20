@@ -1,4 +1,3 @@
---ZFUNC-iscallable-v0
 local function iscallable_rec( mask, i )
 
    if "function" == type( i ) then return true end
@@ -14,6 +13,7 @@ local function iscallable_rec( mask, i )
    return iscallable_rec( mask, callee )
 end
 
+--ZFUNC-iscallable-v0
 local function iscallable( var ) --> res
    return iscallable_rec( {},  var )
 end
