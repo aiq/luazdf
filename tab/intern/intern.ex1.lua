@@ -3,9 +3,6 @@ local intern = require 'intern'
 local t = require 'taptest'
 
 local function diff( a, b ) return a ~= b end
-local function GC()
-  local c = os.clock() while os.clock()<c+0.5 do collectgarbage() end
-end
 
 t( type( intern() ), 'function' )
 
@@ -32,16 +29,20 @@ t( type( alt( 1, nil, 0/0, 3 )), 'table' )
 t( alt( 1, nil, 0/0, 3 ), alt( 1, nil, 0/0, 3 ))
 t( alt( 1, nil, 0/0, 3 ), int( 1, nil, 0/0, 3 ), diff )
 
--- No collection if some reference is still around
+-- Garbage collection test
+
+local gccount = 0
 local x = int( true, false )
-local xstr = tostring( x )
-GC()
-t( xstr, tostring( int( true, false )))
+x = setmetatable( x, {__gc=function(t) gccount = gccount + 1 end} )
+
+-- No collection if some reference is still around
+collectgarbage('collect')
+t( gccount, 0 )
 
 -- Automatic collection
 x = nil
-GC()
-t( xstr, tostring( int( true, false )), diff )
+collectgarbage('collect')
+t( gccount, 1 )
 
 t()
 
