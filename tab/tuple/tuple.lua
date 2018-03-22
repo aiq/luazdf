@@ -43,21 +43,26 @@ local function intern() --> reference
   end
 end
 
-local unp = unpack or table.unpack
-local tuplestore = setmetatable( {}, { __mode = "v" })
-
 local tuplefact = intern()
 
 --ZFUNC-tuple-v1
-local function tuple( ... ) --> tupleFunc
-  local ref = tuplefact( ... )
-  local tupleFunc = tuplestore[ref]
-  if not tupleFunc then
-    local result = { ... }
-    tupleFunc = function() return unp( result ) end
-    tuplestore[ref] = tupleFunc
+local function tuple( ... ) --> tupleTable
+
+  local tupleTable = tuplefact( ... )
+  if not getmetatable( tupleTable ).__type then -- First time initialization
+
+    -- Store fields
+    local fields = ( pack or table.pack )( ... )
+
+    -- Dispatch to the stored fields, and forbid modification
+    setmetatable( tupleTable, {
+      type = 'tuple',
+      __index = function( t, k ) return fields[k] end,
+      __newindex = function( t, k ) return error( 'can not change tuple field', 2 ) end,
+    })
+
   end
-  return tupleFunc
+  return tupleTable
 end
 
 return tuple

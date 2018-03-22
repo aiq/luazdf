@@ -2,7 +2,7 @@
 
 [source,lua]
 ----
-function tuple( ... ) --> tuple
+function tuple( ... ) --> tupleTable
 ----
 
 == Description
@@ -17,7 +17,9 @@ List of tuple fields.
 
 == Return Values
 
-It returns a function that when evaluated will returns the tuple fields. When called with same arguments, the same function reference will be returned. The unused reference will be automatically garbage collected.
+It returns a table that allows to read the tuple fields, but it forbit the modification of the fields.
+
+When called with same arguments, the same table reference will be returned. The unused reference will be automatically garbage collected.
 
 == Code
 
