@@ -7,12 +7,11 @@ local function intern() --> reference
   local NIL, NAN = {}, {}
 
   local internmeta = {
-    __mode = "kv",
     __index = function() error('Can not access interned content directly.', 2) end,
     __newindex = function() error('Can not cahnge or add contents to a intern.', 2) end,
   }
 
-  local internstore = setmetatable( {}, internmeta )
+  local internstore = setmetatable( {}, { __mode = "kv" } )
 
   -- A map from child to parent is used to protect the internstore table's contents.
   -- In this way, they will he collected only when all the cildren are collected
