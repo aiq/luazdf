@@ -31,18 +31,27 @@ t( b:match( 'can not change tuple field' ), 'can not change tuple field' )
 
 -- Garbage collection test
 
+-- Check if the current lua version supports garbage collection metamethod
+local has_gc_meta
+setmetatable({},{__gc=function()has_gc_meta=true end})
+collectgarbage('collect')
+local function skipon51(a, b)
+  if has_gc_meta then return a == b end
+  return true, 'skipped'
+end
+
 local gccount = 0
 local x = tuple(2,nil,0/0,4)
 x = setmetatable( x, {__gc=function(t) gccount = gccount + 1 end} )
 
 -- No collection if some reference is still around
 collectgarbage('collect')
-t( gccount, 0 )
+t( gccount, 0, skipon51 )
 
 -- Automatic collection
 x = nil
 collectgarbage('collect')
-t( gccount, 1 )
+t( gccount, 1, skipon51 )
 
 t()
 

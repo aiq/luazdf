@@ -51,7 +51,8 @@ local function tuple( ... ) --> tupleTable
   if not getmetatable( tupleTable ).__type then -- First time initialization
 
     -- Store fields
-    local fields = ( pack or table.pack )( ... )
+    local fields = { ... }
+    fields.n = select( '#', ... )
 
     -- Dispatch to the stored fields, and forbid modification
     setmetatable( tupleTable, {
