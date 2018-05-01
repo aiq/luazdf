@@ -1,0 +1,41 @@
+== intern
+
+[source,lua]
+----
+function intern( ... ) --> reference
+----
+
+== Description
+
+This function interns the list of arguments, i.e. it generates a reference for
+each possible list. When it is called multiple times with the same list, it
+will return the same reference.  All the reference are automatically garbage
+collected when no more used.
+
+== Parameters
+
+...::
+List of argument to which associate a reference.
+
+== Return Values
+
+Reference associated to the list of arguments.
+
+== Code
+
+[source,lua]
+----
+include:intern.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include:intern.ex1.lua[]
+----
+
+== Inspired by
+
+* http://lua-users.org/wiki/SimpleTuples
+

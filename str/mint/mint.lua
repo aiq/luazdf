@@ -16,33 +16,39 @@ local function mint( template, ename ) --> ( sandbox ) --> expstr, err
    end
 
    -- Generate a script that expands the template
-   local script = ''
-   template:gsub( '(.-)@(%b{})', function( text, code )
-      script = script..expr( string.format( '%q', text ) )
-      code = code:sub( 2, #code-1 )
-      if code:match( '^{.*}$' ) then
-         script = script..code:sub( 2, #code-1 )
-      else
-         script = script..expr( code )
-      end
-   end )
-   local text = template:match( '^.*@%b{}(.-)$' )
-   if text then
-      script = script..expr( string.format( '%q', text ) )
-   end
+   local script = template:gsub( '(.-)@(%b{})([^@]*)',
+     function( prefix, code, suffix )
+        prefix = expr( string.format( '%q', prefix ) )
+        suffix = expr( string.format( '%q', suffix ) )
+        code = code:sub( 2, #code-1 )
+
+        if code:match( '^{.*}$' ) then
+           return prefix .. code:sub( 2, #code-1 ) .. suffix
+        else
+           return prefix .. expr( code ) .. suffix
+        end
+     end
+   )
+
+   -- The generator must be run only if at least one @{} was found
+   local run_generator = ( script ~= template )
 
    -- Return a function that executes the script with a custom environment
    return function( sandbox )
+    if not run_generator then return script end
     local expstr = ''
     if 'table' ~= type( sandbox ) then
       return nil, "mint generator requires a sandbox"
     end
-    sandbox[ ename ] = function( out ) expstr = expstr..out end
+    sandbox[ ename ] = function( out ) expstr = expstr..tostring(out) end
     local generate, err = compat_load( script, sandbox )
     if not generate or err then
        return nil, err..'\nTemplate script: [[\n'..script..'\n]]'
     end
-    generate()
+    local ok, err = pcall(generate)
+    if not ok or err then
+       return nil, err..'\nTemplate script: [[\n'..script..'\n]]'
+    end
     return expstr
   end
 end
