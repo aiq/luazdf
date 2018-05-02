@@ -44,5 +44,12 @@ t( s, nil )
 t( e, 'Template script: ', contain )
 t( e, '_o("")undefined_function() _o("")', contain )
 
+-- Nested template
+local s = {}
+function s.nestcall()
+  return mint( "@{'B'}" )( s )
+end
+t( mint( "@{nestcall()}@{nestcall()}" )( s ), 'BB' )
+
 t()
 
