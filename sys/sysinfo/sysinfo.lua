@@ -1,3 +1,4 @@
+--ZFUNC-sysinfo-v1
 local function sysinfo() --> info
    local info = {}
 

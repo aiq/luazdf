@@ -1,4 +1,4 @@
-
+--ZFUNC-rmcmdline-v1
 local function rmcmdline( system, options ) --> cmdline
    local exec_unix = function( options )
       local cmd = {}
