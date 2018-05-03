@@ -1,0 +1,43 @@
+== flyweightstore
+
+[source,lua]
+----
+function flyweightstore() --> ( ... ) --> reference
+----
+
+== Description
+
+Creates a flyweight storage, which is a function that interns the list of
+arguments, i.e. it generates a reference for each possible list.
+When it is called multiple times with the same list, it will return the same
+reference. 
+All the reference are automatically garbage collected when no more used.
+
+== Parameters
+
+...::
+List of argument to which associate a reference.
+
+== Return Values
+
+reference::
+Reference associated to the list of arguments.
+
+== Code
+
+[source,lua]
+----
+include:flyweightstore.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include:flyweightstore.ex1.lua[]
+----
+
+== Inspired by
+
+* http://lua-users.org/wiki/SimpleTuples
+

@@ -17,9 +17,11 @@ List of tuple fields.
 
 == Return Values
 
-It returns a table that allows to read the tuple fields, but it forbit the modification of the fields.
-
-When called with same arguments, the same table reference will be returned. The unused reference will be automatically garbage collected.
+tubleTable::
+It returns a table that allows to read the tuple fields, but it forbit the
+modification of the fields.
+When called with same arguments, the same table reference will be returned.
+The unused reference will be automatically garbage collected.
 
 == Code
 

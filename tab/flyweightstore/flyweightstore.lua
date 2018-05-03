@@ -44,29 +44,4 @@ local function flyweightstore() --> ( ... ) --> reference
    end
 end
 
-local tuplefact = flyweightstore()
-
---ZFUNC-tuple-v0
-local function tuple( ... ) --> tupleTable
-   local tupleTable = tuplefact( ... )
-   if not getmetatable( tupleTable ).__type then -- First time initialization
-
-      -- Store fields
-      local fields = { ... }
-      fields.n = select( "#", ... )
-
-      -- Dispatch to the stored fields, and forbid modification
-      setmetatable( tupleTable, {
-         type = "tuple",
-         __index = function( t, k ) return fields[k] end,
-         __newindex = function( t, k )
-            return error( "can not change tuple field", 2 )
-         end,
-      } )
-
-   end
-   return tupleTable
-end
-
-return tuple
-
+return flyweightstore
