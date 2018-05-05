@@ -1,2 +1,6 @@
+# generated test files
 *.sh
 *.tap
+
+# vim
+*.swp
