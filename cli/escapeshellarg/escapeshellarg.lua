@@ -1,7 +1,7 @@
 
 local quote_function
 
---ZFUNC-escapeshellarg-v1
+--ZFUNC-escapeshellarg-v2
 local function escapeshellarg( str ) --> esc
 
   local function posix_quote_argument(str)
