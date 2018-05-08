@@ -27,14 +27,14 @@ Reference associated to the list of arguments.
 
 [source,lua]
 ----
-include:flyweightstore.lua[]
+include::flyweightstore.lua[]
 ----
 
 == Examples
 
 [source,lua]
 ----
-include:flyweightstore.ex1.lua[]
+include::flyweightstore.ex1.lua[]
 ----
 
 == Inspired by

@@ -27,14 +27,14 @@ The unused reference will be automatically garbage collected.
 
 [source,lua]
 ----
-include:tuple.lua[]
+include::tuple.lua[]
 ----
 
 == Examples
 
 [source,lua]
 ----
-include:tuple.ex1.lua[]
+include::tuple.ex1.lua[]
 ----
 
 == Inspired by
