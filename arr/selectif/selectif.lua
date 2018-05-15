@@ -1,6 +1,5 @@
---ZFUNC-select-v1
---TODO select is a function in the standard library
-local function select( tab, fv ) --> selection
+--ZFUNC-selectif-v1
+local function selectif( tab, fv ) --> selection
    local selection = {}
 
    for i, v in ipairs( tab ) do
@@ -10,4 +9,4 @@ local function select( tab, fv ) --> selection
    return selection
 end
 
-return select
+return selectif

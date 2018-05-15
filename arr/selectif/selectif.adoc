@@ -1,13 +1,14 @@
-= select
+= selectif
 
 [source,lua]
 ----
-function select( arr, fv ) --> selection
+function selectif( arr, fv ) --> selection
 ----
 
 == Description
 
-Looks through a array table and returning all values that matches a truth function.
+Looks through a array table and returning all values that matches a truth
+function.
 
 == Parameters
 
@@ -26,12 +27,16 @@ Array table with all values that matches the truth function _fv_.
 
 [source,lua]
 ----
-include::select.lua[]
+include::selectif.lua[]
 ----
 
 == Examples
 
 [source,lua]
 ----
-include::select.ex1.lua[]
+include::selectif.ex1.lua[]
 ----
+
+== Inspired by
+
+* http://underscorejs.org/#filter[Underscore.js filter]
