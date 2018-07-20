@@ -1,6 +1,4 @@
-
 local quote_function
-
 --ZFUNC-escapeshellarg-v2
 local function escapeshellarg( str ) --> esc
 
@@ -30,4 +28,3 @@ local function escapeshellarg( str ) --> esc
 end
 
 return escapeshellarg
-
