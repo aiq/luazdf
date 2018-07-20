@@ -26,7 +26,8 @@ The default name must just start with a "-".
 == Return Values
 
 opt::
-The identified option value, or *nil* if the first value in _args_ does not start with _name_ or does not start with "-".
+The identified option value, or *nil* if the first value in _args_ does not
+start with _name_ or does not start with "-".
 
 val::
 The value of the option pair.
