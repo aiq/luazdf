@@ -1,10 +1,10 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local luhn = require( "luhn" )
 
 -- examples http://rosettacode.org/wiki/Luhn_test_of_credit_card_numbers
-t.ok( luhn( "49927398716" ) )
-t.nok( luhn( "49927398717" ) )
-t.nok( luhn( "1234567812345678" ) )
-t.ok( luhn( "1234567812345670" ) )
+t( luhn( "49927398716" ), true )
+t( luhn( "49927398717" ), false )
+t( luhn( "1234567812345678" ), false )
+t( luhn( "1234567812345670" ), true )
 
-t.done()
+t()
