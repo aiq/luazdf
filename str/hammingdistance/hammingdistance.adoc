@@ -1,0 +1,47 @@
+= hammingdistance
+
+[source,lua]
+----
+function hammingdistance( a, b ) --> distance, err
+----
+
+== Description
+
+Determines the Hamming distance between two strings of equal length.
+The Hamming distance is the number of positions at which the corresponding
+byte values are different.
+
+== Parameters
+
+a::
+The first string.
+
+b::
+The second string.
+
+== Return Values
+
+distance::
+The number of positions at which the corresponding values in the strings are
+different or *nil* if an error occurs.
+
+err::
+*nil* or a message if the the strings have not the same length.
+
+== Code
+
+[source,lua]
+----
+include::hammingdistance.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::hammingdistance.ex1.lua[]
+----
+
+== Inspired by
+
+* https://en.wikipedia.org/wiki/Hamming_distance[Wikipedia Hamming Distance]
