@@ -29,14 +29,14 @@ A message if an error occurse, otherwise *nil*
 
 [source,lua]
 ----
-include:copyfile.lua[]
+include::copyfile.lua[]
 ----
 
 == Examples
 
 [source,lua]
 ----
-include:copyfile.ex1.lua[]
+include::copyfile.ex1.lua[]
 ----
 
 == See also

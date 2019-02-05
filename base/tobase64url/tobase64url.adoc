@@ -30,7 +30,7 @@ include::tobase64url.lua[]
 
 [source,lua]
 ----
-include tobase64url.ex1.lua[]
+include::tobase64url.ex1.lua[]
 ----
 
 == Inspired by

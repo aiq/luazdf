@@ -36,14 +36,14 @@ A message if an error occurse, otherwise *nil*.
 
 [source,lua]
 ----
-include:appendfile.lua[]
+include::appendfile.lua[]
 ----
 
 == Examples
 
 [source,lua]
 ----
-include:appendfile.ex1.lua[]
+include::appendfile.ex1.lua[]
 ----
 
 == See also
