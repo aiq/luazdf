@@ -1,0 +1,41 @@
+= filelist
+
+[source,lua]
+----
+function filelist( tree [, root] ) --> list
+----
+
+== Description
+
+Converts a tree structure that represents directories with files into a list
+of files.
+
+== Parameters
+
+tree::
+Lua table where two types of key/value pairs are expected.
+* string/table = the string is the name of a dictionary(table)
+* index/string = the string value is a filename, the index is not relevant
+
+root::
+Optional root directory that will be used as parent directory for all entries
+in the tree.
+
+== Return Values
+
+list::
+List of file paths
+
+== Code
+
+[source,lua]
+----
+include::filelist.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::filelist.ex1.lua[]
+----
