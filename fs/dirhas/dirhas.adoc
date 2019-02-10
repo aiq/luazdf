@@ -19,7 +19,9 @@ name::
 Name of the entry the function looks for.
 
 mode::
-Optional string representing a associated protection mode (the values can be file, directory, link, socket, named pipe, char device, block device or other)
+Optional string representing a associated protection mode
+(the values can be file, directory, link, socket, named pipe, char device,
+block device or other)
 
 == Return Values
 
@@ -43,4 +45,5 @@ include::dirhas.ex1.lua[]
 == See also
 
 * link:dirfiles.html[dirfiles]
+* link:findup.html[findup]
 * link:subdirs.html[subdirs]

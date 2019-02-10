@@ -1,0 +1,53 @@
+= findup
+
+[source,lua]
+----
+function findup( path, name [, mode [, depth]] ) --> entrypath
+----
+
+== Description
+
+Find a file or directory by walking up parent directories.
+
+== Parameters
+
+path::
+Start path to a directory that should be checked.
+
+name::
+Name of the entry this function is looking for.
+
+mode::
+Optional string representing a associated protection mode
+(the values can be file, directory, link, socket, named pipe, char device,
+block device or other)
+
+depth::
+Optional number of parents the function should check at most.
+
+== Return Values
+
+entrypath::
+The path to the entry, otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::findup.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::findup.ex1.lua[]
+----
+
+== Inspired by
+
+* https://www.npmjs.com/package/find-up[npm find-up]
+
+== See also
+
+* link:dirhas.html[dirhas]
