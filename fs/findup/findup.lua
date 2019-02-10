@@ -33,7 +33,6 @@ local function dirhas( path, name, mode ) --> entrypath
 end
 --ZFUNC-dirname-v1
 local function dirname( path ) --> parent
-
    local i = #path
    local c = string.sub( path, i, i )
    if c == "/" and #path >= 1 then
@@ -54,18 +53,42 @@ local function dirname( path ) --> parent
       return string.sub( path, 1, i-1 )
    end
 end
+--ZFUNC-unixpath-v1
+local function unixpath( path )
+   return path:gsub( "\\", "/" )
+end
+--ZFUNC-currentdir-v1
+local function currentdir()
+   local path = lfs.currentdir()
+   return unixpath( path )
+end
+--ZFUNC-rootprefix-v1
+local function rootprefix( path )
+   local remote = path:match[[^//%w+/]] or path:match[[^\\%w+\]]
+   if remote then return remote end
+
+   local unix = path:sub( 1, 1 )
+   if unix == "/" then return unix end
+
+   local win = path:match[=[^[a-zA-Z]:[\/]]=]
+   if win then return win end
+
+   return ""
+end
+--ZFUNC-isabsolute-v1
+local function isabsolute( path ) --> res
+   return rootprefix( path ) ~= ""
+end
+--ZFUNC-firstchar-v1
+local function firstchar( str )
+   return string.sub( str, 1, 1 )
+end
+--ZFUNC-lastchar-v1
+local function lastchar( str )
+   return string.sub( str, #str )
+end
 --ZFUNC-joinpath-v1
 local function joinpath( tab )
-   --ZFUNC-firstchar-v1
-   local function firstchar( str )
-      return string.sub( str, 1, 1 )
-   end
-
-   --ZFUNC-lastchar-v1
-   local function lastchar( str )
-      return string.sub( str, #str )
-   end
-
    local rooted = false
    local tmptab = {}
    for k, s in ipairs( tab ) do
@@ -91,17 +114,10 @@ local function joinpath( tab )
 
    return table.concat( tmptab, "/" )
 end
---ZFUNC-abspath-v1
+--ZFUNC-abspath-v2
 local function abspath( path ) --> abs
-   --ZFUNC-currentdir-v1
-   local function currentdir()
-      --ZFUNC-unixpath-v1
-      local function unixpath( path )
-         return path:gsub( "\\", "/" )
-      end
-
-      local path = lfs.currentdir()
-      return unixpath( path )
+   if isabsolute( path ) then
+      return path
    end
 
    return joinpath{ currentdir(), path }

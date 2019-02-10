@@ -14,7 +14,7 @@ The absolute path name for a given file is not guaranteed to be unique.
 == Parameters
 
 path::
-A relative path.
+A relative or absolute path.
 
 == Return Values
 
