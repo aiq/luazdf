@@ -1,14 +1,14 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local isblank = require( "isblank" )
 
-t.ok( isblank( " \t " ) )
+t( isblank( " \t " ), true )
 
 res, pos = isblank( "" )
-t.nok( res )
-t.is( 0, pos )
+t( res, false )
+t( pos, 0 )
 
 re, pos = isblank( " \n" )
-t.nok( res )
-t.is( 2, pos )
+t( res, false )
+t( pos, 2 )
 
-t.done()
+t()

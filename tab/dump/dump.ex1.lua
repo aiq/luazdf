@@ -1,6 +1,5 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local dump = require( "dump" )
--- util functions
 local like = require( "like" )
 local readlines = require( "readlines" )
 
@@ -12,8 +11,8 @@ f:close()
 expect = { "cool: true", "name: james bond", "lucky_numbers:",
            "   1: 1", "   2: 2", "   3: 6", "   4: 8" }
 written, err = readlines( "DumpXmpl.txt" )
-t.ok( like( expect, written ) )
+t( like( written, expect ), true )
 
 os.remove( "DumpXmpl.txt" )
 
-t.done()
+t()

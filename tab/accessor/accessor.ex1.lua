@@ -1,4 +1,4 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local accessor = require( "accessor" )
 
 local obj = {
@@ -9,14 +9,14 @@ local obj = {
 }
 
 local age = accessor( obj, false, "age" )
-t.is( "age", age.key )
-t.is( 28, age:get() )
+t( age.key, "age" )
+t( age:get(), 28 )
 age:set( 29 )
-t.is( 29, obj.age )
+t( obj.age, 29 )
 
 local city = accessor( obj, true, "address", "city" )
-t.is( nil, city:get() )
+t( city:get(), nil )
 city:set( "Durham" )
-t.is( "Durham", obj.address.city )
+t( obj.address.city, "Durham" )
 
-t.done()
+t()

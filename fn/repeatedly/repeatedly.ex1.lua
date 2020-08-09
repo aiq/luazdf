@@ -1,7 +1,8 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local repeatedly = require( "repeatedly" )
+local same = require( "same" )
 
 local add = function( a, b ) return a + b end
-t.same( { 5, 5, 5, 5, 5 }, repeatedly( 5, add, 2, 3 ) )
+t( same( repeatedly( 5, add, 2, 3 ), { 5, 5, 5, 5, 5 } ), true )
 
-t.done()
+t()

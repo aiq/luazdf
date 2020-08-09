@@ -1,6 +1,6 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local winpath = require( "winpath" )
 
-t.is( [[C:\a\b\c]], winpath( "C:/a/b/c" ) )
+t( winpath( "C:/a/b/c" ), [[C:\a\b\c]] )
 
-t.done()
+t()

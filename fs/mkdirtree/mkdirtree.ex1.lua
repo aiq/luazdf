@@ -1,6 +1,5 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local mkdirtree = require( "mkdirtree" )
--- util functions
 local readfile = require( "readfile" )
 local rmdirtree = require( "rmdirtree" )
 
@@ -18,15 +17,15 @@ res, err = mkdirtree{
    }
 }
 
-t.ok( res )
-t.is( nil, err )
+t( res, true )
+t( err, nil )
 
-t.is( "", readfile( "root/fa.txt" ) )
-t.is( "content", readfile( "root/da/fab.txt" ) )
-t.is( "the is the end", readfile( "doot/last.txt" ) )
+t( readfile( "root/fa.txt" ), "" )
+t( readfile( "root/da/fab.txt" ), "content" )
+t( readfile( "doot/last.txt" ), "the is the end" )
 
-t.ok( rmdirtree( "root" ) )
-t.ok( rmdirtree( "doot" ) )
+t( rmdirtree( "root" ), true )
+t( rmdirtree( "doot" ), true )
 
 lfs.mkdir( "xxx" )
 
@@ -39,13 +38,13 @@ tree = {
 
 res, err = mkdirtree( tree, "xxx" )
 
-t.ok( res )
-t.is( nil, err )
+t( res, true )
+t( err, nil )
 
-t.is( "foo", readfile( "xxx/zzz/foo.txt" ) )
-t.is( "bar", readfile( "xxx/zzz/bar.txt" ) )
+t( readfile( "xxx/zzz/foo.txt" ), "foo" )
+t( readfile( "xxx/zzz/bar.txt" ), "bar" )
 
 -- teardown
-t.ok( rmdirtree( "xxx" ) )
+t( rmdirtree( "xxx" ), true )
 
-t.done()
+t()

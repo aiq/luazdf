@@ -1,7 +1,6 @@
 local t = require( "taptest" )
-local findup = require( "findup" )
--- util functions
 local currentdir = require( "currentdir" )
+local findup = require( "findup" )
 local mkdirtree = require( "mkdirtree" )
 local rmdirtree = require( "rmdirtree" )
 local relativepath = require( "relativepath" )

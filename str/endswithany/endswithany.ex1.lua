@@ -1,8 +1,8 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local endswithany = require( "endswithany" )
 
 filename = "note.adoc"
-t.ok( endswithany( filename, { ".adoc", ".lua" } ) )
-t.nok( endswithany( filename, { ".txt", ".lua" } ) )
+t( endswithany( filename, { ".adoc", ".lua" } ), true )
+t( endswithany( filename, { ".txt", ".lua" } ), false )
 
-t.done()
+t()

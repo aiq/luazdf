@@ -1,10 +1,11 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local shallowcopy = require( "shallowcopy" )
+local same = require( "same" )
 
 tab = { "abc", "def", { 123, 456 } }
 copy = shallowcopy( tab )
-t.isnt( tab, copy )
-t.is( tab[ 3 ], copy[ 3 ] )
-t.same( tab, copy )
+t( tab ~= copy, true )
+t( tab[ 3 ], copy[ 3 ] )
+t( same( tab, copy ), true )
 
-t.done()
+t()

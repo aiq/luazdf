@@ -1,9 +1,9 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local isnan = require( "isnan" )
 
-t.nok( isnan( 0.0 ) )
-t.nok( isnan( 1.0 / 0.0 ) )
-t.nok( isnan( -1.0 / 0.0 ) )
-t.ok( isnan( math.sqrt( -1.0 ) ) )
+t( isnan( 0.0 ), false )
+t( isnan( 1.0 / 0.0 ), false )
+t( isnan( -1.0 / 0.0 ), false )
+t( isnan( math.sqrt( -1.0 ) ), true )
 
-t.done()
+t()

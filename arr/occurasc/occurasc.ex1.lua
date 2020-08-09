@@ -1,12 +1,12 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local occurasc = require( "occurasc" )
 
 local arr = { "a", "x", "r", "f", "i" }
 
-t.ok( occurasc( arr, "a", "x", "r", "f", "i" ) )
-t.ok( occurasc( arr, "a", "i" ) )
-t.ok( occurasc( arr, "a", "r", "i" ) )
-t.nok( occurasc( arr, "i", "a" ) )
-t.nok( occurasc( arr, "x", "z" ) )
+t( occurasc( arr, "a", "x", "r", "f", "i" ), true )
+t( occurasc( arr, "a", "i" ), true )
+t( occurasc( arr, "a", "r", "i" ), true )
+t( occurasc( arr, "i", "a" ), false )
+t( occurasc( arr, "x", "z" ), false )
 
-t.done()
+t()

@@ -1,15 +1,15 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local joinpath = require( "joinpath" )
 
-t.is( "abc/def/ghi", joinpath{ "abc", "def", "ghi" } )
-t.is( "abc/def/ghi", joinpath{ "abc/", "def", "/ghi" } )
-t.is( "abc/def/ghi", joinpath{ "abc", "/def/", "ghi" } )
-t.is( "abc/def/ghi", joinpath{ "abc", "def/ghi" } )
+t( joinpath{ "abc", "def", "ghi" }, "abc/def/ghi" )
+t( joinpath{ "abc/", "def", "/ghi" }, "abc/def/ghi" )
+t( joinpath{ "abc", "/def/", "ghi" }, "abc/def/ghi" )
+t( joinpath{ "abc", "def/ghi" }, "abc/def/ghi" )
 
-t.is( "", joinpath{} )
+t( joinpath{}, "" )
 
-t.is( "/a/b/c", joinpath{ "/a", "/b/c/" } )
+t( joinpath{ "/a", "/b/c/" }, "/a/b/c" )
 
-t.is( "/", joinpath{ "/", "/", "/" } )
+t( joinpath{ "/", "/", "/" }, "/" )
 
-t.done()
+t()

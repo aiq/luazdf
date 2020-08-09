@@ -1,4 +1,4 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local fnil = require( "fnil" )
 
 local function favs( age, food ) 
@@ -7,16 +7,16 @@ end
 
 local favs_with_defaults = fnil( favs, 28, "waffles" )
 
-t.is( "I'm 64 years old and eat cranberries.",
-      favs_with_defaults( 64, "cranberries" ) )
+t( favs_with_defaults( 64, "cranberries" ),
+   "I'm 64 years old and eat cranberries." )
 
-t.is( "I'm 28 years old and eat anchovy pizza.",
-      favs_with_defaults( nil, "anchovy pizza" ) )
+t( favs_with_defaults( nil, "anchovy pizza" ),
+   "I'm 28 years old and eat anchovy pizza." )
 
-t.is( "I'm 16 years old and eat waffles.",
-      favs_with_defaults( 16 ) )
+t( favs_with_defaults( 16 ),
+   "I'm 16 years old and eat waffles." )
 
-t.is( "I'm 28 years old and eat waffles.",
-      favs_with_defaults() )
+t( favs_with_defaults(),
+   "I'm 28 years old and eat waffles." )
 
-t.done()
+t()

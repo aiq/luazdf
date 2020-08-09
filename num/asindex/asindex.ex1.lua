@@ -1,19 +1,19 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local asindex = require( "asindex" )
 
 length = 10
 
-t.is( 7, asindex( 7, length ) )
+t( asindex( 7, length ), 7 )
 
-t.is( 10, asindex( -1, length ) )
-t.is( 1, asindex( -10, length ) )
+t( asindex( -1, length ), 10 )
+t( asindex( -10, length ), 1 )
 
-t.is( 11, asindex( 11, length ) )
-t.is( 0, asindex( 0, length ) )
-t.is( 0, asindex( -11, length ) )
+t( asindex( 11, length ), 11 )
+t( asindex( 0, length ), 0 )
+t( asindex( -11, length ), 0 )
 
-t.is( 10, asindex( 10, length, true ) )
-t.is( 1, asindex( 0, length, true ) )
-t.is( 1, asindex( -11, length, true ) )
+t( asindex( 10, length, true ), 10 )
+t( asindex( 0, length, true ), 1 )
+t( asindex( -11, length, true ), 1 )
 
-t.done()
+t()

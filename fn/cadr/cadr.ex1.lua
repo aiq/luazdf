@@ -1,14 +1,14 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local cadr = require( "cadr" )
 
 local function beatles()
    return "John", "Paul", "George", "Ringo"
 end
 
-t.is( nil, cadr() )
-t.is( nil, cadr{ 1.0 } )
-t.is( "b", cadr{ "a", "b" } )
-t.is( "b", cadr{ "a", "b", "c" } )
-t.is( "Paul", cadr{ beatles() } )
+t( cadr(), nil )
+t( cadr{ 1.0 }, nil )
+t( cadr{ "a", "b" }, "b" )
+t( cadr{ "a", "b", "c" }, "b" )
+t( cadr{ beatles() }, "Paul" )
 
-t.done()
+t()

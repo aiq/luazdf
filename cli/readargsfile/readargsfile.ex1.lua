@@ -1,9 +1,8 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local readargsfile = require( "readargsfile" )
-
 local writefile = require( "writefile" )
 
-t.ok( writefile( "example.args", [[
+t( writefile( "example.args", [[
 
 --longopt
 value
@@ -26,21 +25,21 @@ lorem ipsum
 |t 456
 |n muspi merol
 
-]]) )
+]] ), true )
 
 args, err = readargsfile( "example.args" )
-t.is( #args, 10 )
-t.is( args[  1 ], "--longopt" )
-t.is( args[  2 ], "value" )
-t.is( args[  3 ], "-opt" )
-t.is( args[  4 ], "file name with spaces.txt" )
-t.is( args[  5 ], "--para=pval" )
-t.is( args[  6 ], "--arg=Full" )
-t.is( args[  7 ], "--fs" )
-t.is( args[  8 ], "sys rem" )
-t.is( args[  9 ], "-para=hello world" )
-t.is( args[ 10 ], "lorem ipsum lorem ipsum\t123\t456\nmuspi merol" )
+t( #args, 10 )
+t( args[  1 ], "--longopt" )
+t( args[  2 ], "value" )
+t( args[  3 ], "-opt" )
+t( args[  4 ], "file name with spaces.txt" )
+t( args[  5 ], "--para=pval" )
+t( args[  6 ], "--arg=Full" )
+t( args[  7 ], "--fs" )
+t( args[  8 ], "sys rem" )
+t( args[  9 ], "-para=hello world" )
+t( args[ 10 ], "lorem ipsum lorem ipsum\t123\t456\nmuspi merol" )
 
 os.remove( "example.args" )
 
-t.done()
+t()

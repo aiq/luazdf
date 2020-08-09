@@ -1,11 +1,10 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local acosh = require( "acosh" )
--- util functions
 local isnan = require( "isnan" )
 local round = require( "round" )
 
-t.is( 0, acosh( 1 ) )
-t.is( 2.9932228, round( acosh( 10 ), 7 ) )
-t.ok( isnan( acosh( 0 ) ) )
+t( acosh( 1 ), 0 )
+t( round( acosh( 10 ), 7 ), 2.9932228 )
+t( isnan( acosh( 0 ) ), true )
 
-t.done()
+t()

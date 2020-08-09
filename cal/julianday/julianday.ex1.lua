@@ -1,18 +1,18 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local julianday = require( "julianday" )
 
 -- should work like http://aa.usno.navy.mil/data/docs/JulianDate.php at 12:00:00
-t.is( 1721424, julianday( 1, 1, 1 ) )
-t.is( 1842713, julianday( 333, 1, 27 ) )
-t.is( 2299160, julianday( 1582, 10, 4 ) )
+t( julianday( 1, 1, 1 ), 1721424 )
+t( julianday( 333, 1, 27 ), 1842713 )
+t( julianday( 1582, 10, 4 ),2299160 )
 
-t.is( 2299161, julianday( 1582, 10, 15 ) )
-t.is( 2415021, julianday( 1900, 1, 1 ) )
-t.is( 2447893, julianday( 1990, 1, 1 ) )
+t( julianday( 1582, 10, 15 ), 2299161 )
+t( julianday( 1900, 1, 1 ), 2415021 )
+t( julianday( 1990, 1, 1 ), 2447893 )
 
-t.is( 2451545, julianday( 2000, 1, 1 ) )
-t.is( 2453750, julianday( 2006, 1, 14 ) )
-t.is( 2455281, julianday( 2010, 3, 25 ) )
-t.is( 2456798, julianday( 2014, 5, 20 ) )
+t( julianday( 2000, 1, 1 ), 2451545 )
+t( julianday( 2006, 1, 14 ), 2453750 )
+t( julianday( 2010, 3, 25 ), 2455281 )
+t( julianday( 2014, 5, 20 ), 2456798 )
 
-t.done()
+t()

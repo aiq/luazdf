@@ -1,25 +1,24 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local dirhas = require( "dirhas" )
--- util functions
 local mkdirtree = require( "mkdirtree" )
 local rmdirtree = require( "rmdirtree" )
 
 -- setup
-t.ok( mkdirtree{
+t( mkdirtree{
    [ "tmpdir" ] = {
       [ "abc.txt" ] = "",
       [ "xyz.txt" ] = ""
    }
-} )
+}, true )
 
 -- test
-t.ok( dirhas( "tmpdir", "xyz.txt" ) )
-t.nok( dirhas( "tmpdir", "xyz" ) )
+t( dirhas( "tmpdir", "xyz.txt" ), "tmpdir/xyz.txt" )
+t( dirhas( "tmpdir", "xyz" ), nil )
 
-t.nok( dirhas( "tmpdir", "xyz.txt", "directory" ) )
-t.ok( dirhas( "tmpdir", "xyz.txt", "file" ) )
+t( dirhas( "tmpdir", "xyz.txt", "directory" ), nil )
+t( dirhas( "tmpdir", "xyz.txt", "file" ), "tmpdir/xyz.txt" )
 
 -- teardown
-t.ok( rmdirtree( "tmpdir" ) )
+t( rmdirtree( "tmpdir" ), true )
 
-t.done()
+t()

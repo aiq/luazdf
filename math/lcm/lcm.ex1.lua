@@ -1,8 +1,8 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local lcm = require( "lcm" )
 
-t.is( 10, lcm( 5, 2 ) )
-t.is( 72, lcm( 24, 36 ) )
-t.is( 30, lcm( 2, 3, 5 ) )
+t( lcm( 5, 2 ), 10 )
+t( lcm( 24, 36 ), 72 )
+t( lcm( 2, 3, 5 ), 30 )
 
-t.done()
+t()

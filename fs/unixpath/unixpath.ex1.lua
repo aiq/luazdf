@@ -1,6 +1,6 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local unixpath = require( "unixpath" )
 
-t.is( "C:/a/b/c", unixpath[[C:\a\b\c]] )
+t( unixpath[[C:\a\b\c]], "C:/a/b/c" )
 
-t.done()
+t()

@@ -1,12 +1,12 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local leftpad = require( "leftpad" )
 
-t.is( "  foo", leftpad( "foo", 5 ) )
-t.is( "foo", leftpad( "foo", 3 ) )
+t( leftpad( "foo", 5 ), "  foo" )
+t( leftpad( "foo", 3 ), "foo" )
 
-t.is( "foobar", leftpad( "foobar", 5 ) )
-t.is( "fooba", leftpad( "foobar", 5, " ", true ) )
+t( leftpad( "foobar", 5 ), "foobar" )
+t( leftpad( "foobar", 5, " ", true ), "fooba" )
 
-t.is( "01", leftpad( tostring( 1 ), 2, 0 ) )
+t( leftpad( tostring( 1 ), 2, "0" ), "01" )
 
-t.done()
+t()

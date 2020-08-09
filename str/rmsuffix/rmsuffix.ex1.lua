@@ -1,8 +1,8 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local rmsuffix = require( "rmsuffix" )
 
-t.is( "node", rmsuffix( "node.txt", ".txt" ) )
-t.is( "node.txt", rmsuffix( "node.txt", ".adoc" ) )
-t.is( "node.txt", rmsuffix( "node.txt.txt", ".txt" ) )
+t( rmsuffix( "node.txt", ".txt" ), "node" )
+t( rmsuffix( "node.txt", ".adoc" ), "node.txt" )
+t( rmsuffix( "node.txt.txt", ".txt" ), "node.txt" )
 
-t.done()
+t()

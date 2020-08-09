@@ -1,12 +1,12 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local isleapyear = require( "isleapyear" )
 
-t.nok( isleapyear( 1900 ) )
-t.nok( isleapyear( 2001 ) )
-t.nok( isleapyear( 2002 ) )
+t( isleapyear( 1900 ), false )
+t( isleapyear( 2001 ), false )
+t( isleapyear( 2002 ), false )
 
-t.ok( isleapyear( 2000 ) )
-t.ok( isleapyear( 2004 ) )
-t.ok( isleapyear( 2008 ) )
+t( isleapyear( 2000 ), true )
+t( isleapyear( 2004 ), true )
+t( isleapyear( 2008 ), true )
 
-t.done()
+t()

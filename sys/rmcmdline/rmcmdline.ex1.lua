@@ -1,14 +1,24 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local rmcmdline = require( "rmcmdline" )
 
 -- should work for unix
-t.is( "rm", rmcmdline( { unix = true } ) )
-t.is( "rm -f", rmcmdline( { unix = true }, { force = true } ) )
-t.is( "rm -r -f", rmcmdline( { unix = true }, { recursive = true, force = true } ) )
+cmd = rmcmdline( { unix = true } )
+t( cmd, "rm" )
+
+cmd = rmcmdline( { unix = true }, { force = true } )
+t( cmd, "rm -f" )
+
+cmd = rmcmdline( { unix = true }, { recursive = true, force = true } )
+t( cmd, "rm -r -f" )
 
 -- should work for windows
-t.is( "del", rmcmdline( { windows = true } ) )
-t.is( "del /q", rmcmdline( { windows = true }, { force = true } ) )
-t.is( "rd /s /q", rmcmdline( { windows = true }, { recursive = true, force = true } ) )
+cmd = rmcmdline( { windows = true } )
+t( cmd, "del" )
 
-t.done()
+cmd = rmcmdline( { windows = true }, { force = true } )
+t( cmd, "del /q" )
+
+cmd = rmcmdline( { windows = true }, { recursive = true, force = true } )
+t( cmd, "rd /s /q" )
+
+t()

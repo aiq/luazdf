@@ -1,9 +1,9 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local argsfilesindir = require( "argsfilesindir" )
--- util functions
 local like = require( "like" )
 local mkdirtree = require( "mkdirtree" )
 local rmdirtree = require( "rmdirtree" )
+local same = require( "same" )
 
 -- setup
 res, err = mkdirtree{
@@ -17,32 +17,32 @@ res, err = mkdirtree{
    }
 }
 
-t.ok( res )
+t( res,true )
 
 -- test in the working dir
 defargs, filepaths = argsfilesindir( "app1" )
-t.is( defargs, "app1.auto.args" )
-t.is( filepaths, nil )
+t( defargs, "app1.auto.args" )
+t( filepaths, nil )
 
 defargs, filepaths = argsfilesindir( "xxx" )
-t.is( defargs, nil )
-t.is( filepaths, nil )
+t( defargs, nil )
+t( filepaths, nil )
 
 -- test subfolder
 defargs, filepaths = argsfilesindir( "app1", "subfolder" )
-t.is( defargs, "app1.auto.args" )
-t.ok( like( filepaths, { "app1.args", "app1.var1.args" } ) )
+t( defargs, "app1.auto.args" )
+t( like( filepaths, { "app1.args", "app1.var1.args" } ), true )
 
 defargs, filepaths = argsfilesindir( "aaa", "subfolder" )
-t.is( defargs, nil )
-t.same( filepaths, { "aaa.var.args" } )
+t( defargs, nil )
+t( same( filepaths, { "aaa.var.args" } ), true )
 
 defargs, filepaths = argsfilesindir( "zzz", "subfolder" )
-t.is( defargs, "zzz.auto.args" )
-t.is( filepaths, nil )
+t( defargs, "zzz.auto.args" )
+t( filepaths, nil )
 
 -- teardown
 os.remove( "app1.auto.args" )
-t.ok( rmdirtree( "subfolder" ) )
+t( rmdirtree( "subfolder" ), true )
 
-t.done()
+t()

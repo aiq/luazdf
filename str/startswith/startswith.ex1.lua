@@ -1,8 +1,8 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local startswith = require( "startswith" )
 
 str = "abcdef"
-t.ok( startswith( str, "abc" ) )
-t.nok( startswith( str, "def" ) )
+t( startswith( str, "abc" ), true )
+t( startswith( str, "def" ), false )
 
-t.done()
+t()

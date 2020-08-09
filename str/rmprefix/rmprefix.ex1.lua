@@ -1,8 +1,8 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local rmprefix = require( "rmprefix" )
 
-t.is( "def", rmprefix( "abc.def", "abc." ) )
-t.is( "abc.def", rmprefix( "abc.def", "def." ) )
-t.is( "abc.def", rmprefix( "abc.abc.def", "abc." ) )
+t( rmprefix( "abc.def", "abc." ), "def" )
+t( rmprefix( "abc.def", "def." ), "abc.def" )
+t( rmprefix( "abc.abc.def", "abc." ), "abc.def" )
 
-t.done()
+t()

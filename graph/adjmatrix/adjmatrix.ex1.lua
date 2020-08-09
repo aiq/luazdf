@@ -1,6 +1,5 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local adjmatrix = require( "adjmatrix" )
--- util functions
 local buildgraph = require( "buildgraph" )
 local matrixtostrlst = require( "matrixtostrlst" )
 
@@ -21,9 +20,9 @@ local g = buildgraph( nodes, edges )
 --        \         /
 --         --> d -->
 local m = adjmatrix( g, nodes )
-t.same( tostr( m ), "0100 0011 0000 0010" )
+t( tostr( m ), "0100 0011 0000 0010" )
 
 m = adjmatrix( g, { "a", "b", "c" } )
-t.same( tostr( m ), "010 001 000" )
+t( tostr( m ), "010 001 000" )
 
-t.done()
+t()

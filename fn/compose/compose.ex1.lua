@@ -1,30 +1,30 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local compose = require( "compose" )
 
 local function first( a, b )
-   t.is( 1, a )
-   t.is( 1, b )
+   t( a, 1 )
+   t( b, 1 )
 
    return ( a + b ), 1
 end
 
 local function second( a, b )
-   t.is( 2, a )
-   t.is( 1, b )
+   t( a, 2 )
+   t( b, 1 )
 
    return ( a + b ), 2
 end
 
 local function third( a, b )
-   t.is( 3, a )
-   t.is( 2, b )
+   t( a, 3 )
+   t( b, 2 )
 
    return ( a + b ), 3
 end
 
 local f = compose( first, second, third )
 local a, b = f( 1, 1 )
-t.is( 5, a )
-t.is( 3, b )
+t( a, 5 )
+t( b, 3 )
 
-t.done()
+t()

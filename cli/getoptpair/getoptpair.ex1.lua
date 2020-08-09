@@ -1,21 +1,22 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local getoptpair = require( "getoptpair" )
+local same = require( "same" )
 
 args = { "--mode=safe", "-l" }
 
 opt, val, rest = getoptpair( args )
-t.is( opt, "--mode" )
-t.is( val, "safe" )
-t.same( rest, { "-l" } )
+t( opt, "--mode" )
+t( val, "safe" )
+t( same( rest, { "-l" } ), true )
 
 opt, val, rest = getoptpair( args, "--mode" )
-t.is( opt, "--mode" )
-t.is( val, "safe" )
-t.same( rest, { "-l" } )
+t( opt, "--mode" )
+t( val, "safe" )
+t( same( rest, { "-l" } ), true )
 
 opt, val, rest = getoptpair( args, "--file" )
-t.is( opt, nil )
-t.is( val, nil )
-t.same( rest, args )
+t( opt, nil )
+t( val, nil )
+t( same( rest, args ), true )
 
-t.done()
+t()

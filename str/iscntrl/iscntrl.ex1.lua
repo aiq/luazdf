@@ -1,4 +1,4 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local iscntrl = require( "iscntrl" )
 
 local NUL = string.char( 0x00 )
@@ -36,14 +36,14 @@ local US = string.char( 0x1f )
 
 local DEL = string.char( 0x7f )
 
-t.ok( iscntrl( NUL..SOH..DEL..ETB ) )
+t( iscntrl( NUL..SOH..DEL..ETB ), true )
 
 res, pos = iscntrl( "" )
-t.nok( res )
-t.is( 0, pos )
+t( res, false )
+t( pos, 0 )
 
 res, pos = iscntrl( NUL..SOH.."1"..DEL )
-t.nok( res )
-t.is( 3, pos )
+t( res, false )
+t( pos, 3 )
 
-t.done()
+t()

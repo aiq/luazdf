@@ -1,8 +1,8 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local fact2 = require( "fact2" )
 
-t.is( 48, fact2( 6 ) )
-t.is( 105, fact2( 7 ) )
-t.is( 1, fact2( 0 ) )
+t( fact2( 6 ), 48 )
+t( fact2( 7 ), 105 )
+t( fact2( 0 ), 1 )
 
-t.done()
+t()

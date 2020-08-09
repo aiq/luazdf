@@ -1,12 +1,12 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local countmatch = require( "countmatch" )
 
 -- sub string
-t.is( 3, countmatch( "aaa", "a" ) )
-t.is( 0, countmatch( "", "" ) )
-t.is( 0, countmatch( "", "a" ) )
+t( countmatch( "aaa", "a" ), 3 )
+t( countmatch( "", "" ), 0 )
+t( countmatch( "", "a" ), 0 )
 
 -- use pattern
-t.is( 4, countmatch( "hello world from Lua", "%a+" ) ) -- count words
+t( countmatch( "hello world from Lua", "%a+" ), 4 ) -- count words
 
-t.done()
+t()

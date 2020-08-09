@@ -1,14 +1,14 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local notf = require( "notf" )
 
 f = notf( function () return false end )
-t.ok( f() )
+t( f(), true )
 
 f = notf( function () return true end )
-t.nok( f() )
+t( f(), false )
 
 f = notf( function ( b ) return b end )
-t.ok( f( false ) )
-t.nok( f( true ) )
+t( f( false ), true )
+t( f( true ), false )
 
-t.done()
+t()

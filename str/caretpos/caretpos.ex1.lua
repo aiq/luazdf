@@ -1,13 +1,13 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local caretpos = require( "caretpos" )
 
 idx = caretpos( "abdefgh", 1, 4 )
-t.is( 4, idx )
+t( idx, 4 )
 
 idx = caretpos( "\nabcd\n\nefgh\n\n", 4, 2 )
-t.is( 9, idx )
+t( idx, 9 )
 
 idx = caretpos( "", 3, 2 )
-t.is( 1, idx )
+t( idx, 1 )
 
-t.done()
+t()

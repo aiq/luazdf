@@ -1,10 +1,10 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local gcd = require( "gcd" )
 
-t.is( 1, gcd( 5, 2 ) )
-t.is( 12, gcd( 24, 36 ) )
-t.is( 1, gcd( 7, 1 ) )
-t.is( 5, gcd( 5, 0 ) )
-t.is( 1, gcd( 2, 3, 5 ) )
+t( gcd( 5, 2 ), 1 )
+t( gcd( 24, 36 ), 12 )
+t( gcd( 7, 1 ), 1 )
+t( gcd( 5, 0 ), 5 )
+t( gcd( 2, 3, 5 ), 1 )
 
-t.done()
+t()

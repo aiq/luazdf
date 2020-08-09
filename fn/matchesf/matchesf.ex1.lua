@@ -1,9 +1,9 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local matchesf = require( "matchesf" )
 
 func = matchesf( "ab" )
 
-t.ok( func( "abba" ) )
-t.nok( func( "bbaa" ) )
+t( func( "abba" ), true )
+t( func( "bbaa" ), false )
 
-t.done()
+t()

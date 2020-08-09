@@ -1,9 +1,9 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local isfinite = require( "isfinite" )
 
-t.ok( isfinite( 0.0 ) )
-t.nok( isfinite( 1.0 / 0.0 ) )
-t.nok( isfinite( -1.0 / 0.0 ) )
-t.nok( isfinite( math.sqrt( -1.0 ) ) )
+t( isfinite( 0.0 ), true )
+t( isfinite( 1.0 / 0.0 ), false )
+t( isfinite( -1.0 / 0.0 ), false )
+t( isfinite( math.sqrt( -1.0 ) ), false )
 
-t.done()
+t()

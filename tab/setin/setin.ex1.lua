@@ -1,4 +1,4 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local setin = require( "setin" )
 
 local obj = {
@@ -9,9 +9,9 @@ local obj = {
 }
 
 setin( obj, 29, "age" )
-t.is( 29, obj.age )
+t( obj.age, 29 )
 
 setin( obj, "Durham", "address", "city" )
-t.is( "Durham", obj.address.city )
+t( obj.address.city, "Durham" )
 
-t.done()
+t()

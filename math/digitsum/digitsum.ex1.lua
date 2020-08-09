@@ -1,6 +1,6 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local digitsum = require( "digitsum" )
 
-t.is( digitsum( 1234 ), 10 )
+t( digitsum( 1234 ), 10 )
 
-t.done()
+t()

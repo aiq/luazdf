@@ -1,7 +1,7 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local lastchar = require( "lastchar" )
 
-t.is( "c", lastchar( "abc" ) )
-t.is( "", lastchar( "" ) )
+t( lastchar( "abc" ), "c" )
+t( lastchar( "" ), "" )
 
-t.done()
+t()

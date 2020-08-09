@@ -1,7 +1,7 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local camelcase = require( "camelcase" )
 
 -- with table as argument
-t.is( "WikiWordBumpyCaps", camelcase{ "Wiki", "Word", "bumpy", "Caps" } )
+t( camelcase{ "Wiki", "Word", "bumpy", "Caps" }, "WikiWordBumpyCaps" )
 
-t.done()
+t()

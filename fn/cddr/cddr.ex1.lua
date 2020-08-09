@@ -1,14 +1,15 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local cddr = require( "cddr" )
+local same = require( "same" )
 
 local function beatles()
    return "John", "Paul", "George", "Ringo"
 end
 
-t.is( nil, cddr() )
-t.is( nil, cddr{ 1.0 } )
-t.is( nil, cddr{ "a", "b" } )
-t.same( { "c" }, cddr{ "a", "b", "c" } )
-t.same( { "George", "Ringo" }, cddr{ beatles() } )
+t( cddr(), nil )
+t( cddr{ 1.0 }, nil )
+t( cddr{ "a", "b" }, nil )
+t( same( cddr{ "a", "b", "c" }, { "c" } ), true )
+t( same( cddr{ beatles() }, { "George", "Ringo" } ), true )
 
-t.done()
+t()

@@ -1,12 +1,13 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local pluck = require( "pluck" )
+local same = require( "same" )
 
 -- Array table test
 arr = { { "moe", "larry", "curly" }, { 30, 40, 50 }, { true, false, false } }
 res = pluck( arr, 1 )
 
-t.is( 3, #res )
-t.same( { "moe", 30, true }, res )
+t( #res, 3 )
+t( same( res, { "moe", 30, true } ), true )
 
 -- Dict table test
 dict = { { name = "moe", age = 30 },
@@ -14,7 +15,7 @@ dict = { { name = "moe", age = 30 },
          { name = "curly", age = 60 } }
 res = pluck( dict, "name" )
 
-t.is( 3, #res )
-t.same( { "moe", "larry", "curly" }, res )
+t( #res, 3 )
+t( same( res, { "moe", "larry", "curly" } ), true )
 
-t.done()
+t()

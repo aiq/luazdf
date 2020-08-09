@@ -1,9 +1,9 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local isdodd = require( "isdodd" )
 
-t.nok( isdodd( "file.txt" ) )
-t.nok( isdodd( ".hidden.txt" ) )
-t.ok( isdodd( "." ) )
-t.ok( isdodd( ".." ) )
+t( isdodd( "file.txt" ), false )
+t( isdodd( ".hidden.txt" ), false )
+t( isdodd( "." ), true )
+t( isdodd( ".." ), true )
 
-t.done()
+t()

@@ -1,14 +1,14 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local clamp = require( "clamp" )
 
 min = 2
 max = 11
 
-t.is( 2, clamp( 2, min, max ) )
-t.is( 7, clamp( 7, min, max ) )
-t.is( 11, clamp( 11, min, max ) )
+t( clamp( 2, min, max ), 2 )
+t( clamp( 7, min, max ), 7 )
+t( clamp( 11, min, max ), 11 )
 
-t.is( 2, clamp( 1, min, max ) )
-t.is( 11, clamp( 12, min, max ) )
+t( clamp( 1, min, max ), 2 )
+t( clamp( 12, min, max ), 11 )
 
-t.done()
+t()

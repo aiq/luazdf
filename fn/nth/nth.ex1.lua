@@ -1,7 +1,7 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local nth = require( "nth" )
 
 func = nth( 2 )
-t.is( "b", func( "a", "b", "c" ) )
+t( func( "a", "b", "c" ), "b" )
 
-t.done()
+t()

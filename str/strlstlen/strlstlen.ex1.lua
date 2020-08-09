@@ -1,7 +1,7 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local strlstlen = require( "strlstlen" )
 
-t.is( 0, strlstlen{ "", "", "", "" } )
-t.is( 8, strlstlen{ "abc", "def", "", "gh" } )
+t( strlstlen{ "", "", "", "" }, 0 )
+t( strlstlen{ "abc", "def", "", "gh" }, 8 )
 
-t.done()
+t()

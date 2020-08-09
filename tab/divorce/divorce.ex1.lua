@@ -1,11 +1,10 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local divorce = require( "divorce" )
--- util functions
 local like = require( "like" )
 
 local keys, values = divorce{ even=2, odd=3, name="pierrot" }
       
-t.ok( like( { "even", "odd", "name" }, keys ) )
-t.ok( like( { 2, 3, "pierrot" }, values ) )
+t( like( { "even", "odd", "name" }, keys ), true )
+t( like( { 2, 3, "pierrot" }, values ), true )
 
-t.done()
+t()

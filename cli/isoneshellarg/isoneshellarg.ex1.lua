@@ -1,10 +1,10 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local isoneshellarg = require( "isoneshellarg" )
 
-t.ok( isoneshellarg( "-sd" ) )
-t.ok( isoneshellarg( "'hello world'" ) )
+t( isoneshellarg( "-sd" ), true )
+t( isoneshellarg( "'hello world'" ), true )
 
-t.nok( isoneshellarg( "one two" ) )
-t.nok( isoneshellarg( "'on" ) )
+t( isoneshellarg( "one two" ), false )
+t( isoneshellarg( "'on" ), false )
 
-t.done()
+t()

@@ -1,12 +1,12 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local dirname = require( "dirname" )
 
 path = "/foo/bar/baz/asdf/quux.html"
-t.is( "/foo/bar/baz/asdf", dirname( path ) )
+t( dirname( path ), "/foo/bar/baz/asdf" )
 
-t.is( "/etc", dirname( "/etc/passwd" ) )
-t.is( "/", dirname( "/etc/" ) )
-t.is( "/", dirname( "/" ) )
-t.is( ".", dirname( "." ) )
+t( dirname( "/etc/passwd" ), "/etc" )
+t( dirname( "/etc/" ), "/" )
+t( dirname( "/" ), "/" )
+t( dirname( "." ), "." )
 
-t.done()
+t()

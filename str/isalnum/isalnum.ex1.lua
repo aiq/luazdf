@@ -1,18 +1,18 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local isalnum = require( "isalnum" )
 
-t.ok( isalnum( "abc123ABC" ) )
+t( isalnum( "abc123ABC" ), true )
 
 res, pos = isalnum( "" )
-t.nok( res )
-t.is( 0, pos )
+t( res, false )
+t( pos, 0 )
 
 res, pos = isalnum( "abc 123 ABC" )
-t.nok( res )
-t.is( 4, pos )
+t( res, false )
+t( pos, 4 )
 
 res, pos = isalnum( "abc123-ABC" )
-t.nok( res )
-t.is( 7, pos )
+t( res, false )
+t( pos, 7 )
 
-t.done()
+t()

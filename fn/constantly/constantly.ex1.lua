@@ -1,14 +1,15 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local constantly = require( "constantly" )
+local same = require( "same" )
 
 f = constantly( "the usual suspect" )
 
-t.is( "the usual suspect", f( 123 ) )
-t.is( "the usual suspect", f( "sdfsadg" ) )
+t( f( 123 ), "the usual suspect" )
+t( f( "sdfsadg" ), "the usual suspect" )
 
 f = constantly( 42, true, "cow" )
 
-t.same( { 42, true, "cow" }, { f( 123 ) } )
-t.same( { 42, true, "cow" }, { f( 1, 2, 3 ) } )
+t( same( { f( 123 ) }, { 42, true, "cow" } ), true )
+t( same( { f( 1, 2, 3 ) }, { 42, true, "cow" } ), true )
 
-t.done()
+t()

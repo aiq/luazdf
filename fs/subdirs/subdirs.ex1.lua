@@ -1,12 +1,11 @@
-local t = require( "tapered" )
-local subdirs = require( "subdirs" )
--- util functions
+local t = require( "taptest" )
 local collectk = require( "collectk" )
 local mkdirtree = require( "mkdirtree" )
 local rmdirtree = require( "rmdirtree" )
+local subdirs = require( "subdirs" )
 
 -- setup
-t.ok( mkdirtree{ 
+t( mkdirtree{ 
    [ "tmp_subdir" ] = {
       [ "a" ] = {},
       [ "x" ] = "",
@@ -15,17 +14,17 @@ t.ok( mkdirtree{
       [ "c" ] = {},
       [ "z" ] = ""
    }
-} )
+}, true )
 
 -- test
 dirs = collectk( subdirs( "tmp_subdir" ) )
 table.sort( dirs )
-t.is( #dirs, 3 )
-t.is( "a", dirs[ 1 ] )
-t.is( "b", dirs[ 2 ] )
-t.is( "c", dirs[ 3 ] )
+t( #dirs, 3 )
+t( dirs[ 1 ], "a" )
+t( dirs[ 2 ], "b" )
+t( dirs[ 3 ], "c" )
 
 -- teardown
-t.ok( rmdirtree( "tmp_subdir" ) )
+t( rmdirtree( "tmp_subdir" ), true )
 
-t.done()
+t()

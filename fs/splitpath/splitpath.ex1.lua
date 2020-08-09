@@ -1,9 +1,10 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
+local same = require( "same" )
 local splitpath = require( "splitpath" )
 
-t.same( { "a", "b", "c" }, splitpath( "a/b/c" ) )
-t.same( { "a", "b", "c" }, splitpath( "a/b/c/" ) )
-t.same( { "a", "b", "c" }, splitpath( "/a/b/c" ) )
-t.same( { "c:", "a", "b", "c" }, splitpath( "c:/a/b/c" ) )
+t( same( splitpath( "a/b/c" ), { "a", "b", "c" } ), true )
+t( same( splitpath( "a/b/c/" ), { "a", "b", "c" } ), true )
+t( same( splitpath( "/a/b/c" ), { "a", "b", "c" } ), true )
+t( same( splitpath( "c:/a/b/c" ), { "c:", "a", "b", "c" } ), true )
 
-t.done()
+t()

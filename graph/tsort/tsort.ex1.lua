@@ -1,9 +1,8 @@
-local t = require( "tapered" )
-local tsort = require( "tsort" )
--- util functions
+local t = require( "taptest" )
 local addedge = require( "addedge" )
 local buildgraph = require( "buildgraph" )
 local occurasc = require( "occurasc" )
+local tsort = require( "tsort" )
 
 local edges = { 
    { "a", "x" },
@@ -17,13 +16,13 @@ local g = buildgraph( {}, edges )
 --        -----> --> z
 local order, err = tsort( g )
 
-t.ok( occurasc( order, "a", "x", "c", "z" ) )
-t.is( err, nil )
+t( occurasc( order, "a", "x", "c", "z" ), true )
+t( err, nil )
 
 addedge( g, "z", "a" ) -- adding circle a->x->z->a
 order, err = tsort( g )
-t.is( order, nil )
-t.is( err, "Graph contains a cycle." )
+t( order, nil )
+t( err, "Graph contains a cycle." )
 
 g = buildgraph( { "a", "b", "c" }, {} )
 addedge( g, "a", "b" )
@@ -33,7 +32,7 @@ addedge( g, "b", "c" )
 --  \         /
 --   --> b -->
 order, err = tsort( g )
-t.ok( occurasc( order, "a", "b", "c" ) )
-t.is( err, nil )
+t( occurasc( order, "a", "b", "c" ), true )
+t( err, nil )
 
-t.done()
+t()

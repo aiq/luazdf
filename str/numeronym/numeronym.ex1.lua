@@ -1,9 +1,9 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local numeronym = require( "numeronym" )
 
-t.is( numeronym( "internationalization" ), "i18n" )
-t.is( numeronym( "accessibility" ), "a11y" )
-t.is( numeronym( "software development" ), "s17t" )
-t.is( numeronym( "systems administration" ), "s19n" )
+t( numeronym( "internationalization" ), "i18n" )
+t( numeronym( "accessibility" ), "a11y" )
+t( numeronym( "software development" ), "s17t" )
+t( numeronym( "systems administration" ), "s19n" )
 
-t.done()
+t()

@@ -1,18 +1,18 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local isalpha = require( "isalpha" )
 
-t.ok( isalpha( "abcABC" ) )
+t( isalpha( "abcABC" ), true )
 
 res, pos = isalpha( "" )
-t.nok( res )
-t.is( 0, pos )
+t( res, false )
+t( pos, 0 )
 
 res, pos = isalpha( "abc123ABC" )
-t.nok( res )
-t.is( 4, pos )
+t( res, false )
+t( pos, 4 )
 
 res, pos = isalpha( "abcABC-123" )
-t.nok( res )
-t.is( 7, pos )
+t( res, false )
+t( pos, 7 )
 
-t.done()
+t()

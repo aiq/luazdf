@@ -1,0 +1,42 @@
+= same
+
+[source,lua]
+----
+function same( arr, other ) --> res
+----
+
+== Description
+
+Checks if both array tables are the same.
+Array tables are the same if they have at each position the same values.
+
+== Parametes
+
+arr::
+An array table you want to compare.
+
+other::
+An array table you want to compare.
+
+== Return Values
+
+res::
+*true* if both array tables are the same, otherwise *false*.
+
+== Code
+
+[source,lua]
+----
+include::same.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::same.ex1.lua[]
+----
+
+== See also
+
+* link:like.html[like]

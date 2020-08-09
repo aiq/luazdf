@@ -1,9 +1,9 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local slice = require( "slice" )
 
 local tab = { "a", "b", "c", "d", "e" }
-t.is( "bcde", table.concat( slice( tab, 2 ) ) )
-t.is( "bcd", table.concat( slice( tab, 2, -2 ) ) )
-t.is( "bc", table.concat( slice( tab, 2, 3 ) ) )
+t( table.concat( slice( tab, 2 ) ), "bcde" )
+t( table.concat( slice( tab, 2, -2 ) ), "bcd" )
+t( table.concat( slice( tab, 2, 3 ) ), "bc" )
 
-t.done()
+t()

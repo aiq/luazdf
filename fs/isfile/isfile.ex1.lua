@@ -1,21 +1,20 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local isfile = require( "isfile" )
--- util functions
 local mkdirtree = require( "mkdirtree" )
 local rmdirtree = require( "rmdirtree" )
 
 -- setup
-t.ok( mkdirtree{
+t( mkdirtree{
    [ "tmpdir" ] = {
       [ "tmpfile.txt" ] = ""
    }
-} )
+}, true )
 
 -- test
-t.nok( isfile( "tmpdir" ) )
-t.ok( isfile( "tmpdir/tmpfile.txt" ) )
+t( isfile( "tmpdir" ), false )
+t( isfile( "tmpdir/tmpfile.txt" ), true )
 
 -- teardown
-t.ok( rmdirtree( "tmpdir" ) )
+t( rmdirtree( "tmpdir" ), true )
 
-t.done()
+t()

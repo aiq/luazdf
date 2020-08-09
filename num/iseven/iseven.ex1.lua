@@ -1,15 +1,15 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local iseven = require( "iseven" )
 
-t.ok( iseven( 98 ) )
-t.ok( iseven( 2 ) )
-t.ok( iseven( 0 ) )
-t.ok( iseven( -4 ) )
+t( iseven( 98 ), true )
+t( iseven( 2 ), true )
+t( iseven( 0 ), true )
+t( iseven( -4 ), true )
 
-t.nok( iseven( 99 ) )
-t.nok( iseven( 1 ) )
-t.nok( iseven( -3 ) )
+t( iseven( 99 ), false )
+t( iseven( 1 ), false )
+t( iseven( -3 ), false )
 
-t.nok( iseven( 7.3 ) )
+t( iseven( 7.3 ), false )
 
-t.done()
+t()

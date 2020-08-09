@@ -1,4 +1,4 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local updatein = require( "updatein" )
 
 local users = {
@@ -16,7 +16,7 @@ local function inc( i )
    return i+1
 end
 updatein( users, inc, 1, "age" )
-t.is( 27, users[ 1 ].age )
+t( users[ 1 ].age, 27 )
 
 local function def( v )
    if not v then
@@ -25,6 +25,6 @@ local function def( v )
    return v
 end
 updatein( users, def, 2, "notes", 1 )
-t.is( "a", users[ 2 ].notes[ 1 ] )
+t( users[ 2 ].notes[ 1 ], "a" )
 
-t.done()
+t()

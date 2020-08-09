@@ -1,10 +1,10 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local rounddown = require( "rounddown" )
 
-t.is( 3, rounddown( 3.2, 0 ) )
-t.is( 76, rounddown( 76.9, 0 ) )
-t.is( 3.141, rounddown( 3.14159, 3 ) )
-t.is( -3.1, rounddown( -3.14159, 1 ) )
-t.is( 31400, rounddown( 31415.92654, -2 ) )
+t( rounddown( 3.2, 0 ), 3 )
+t( rounddown( 76.9, 0 ), 76 )
+t( rounddown( 3.14159, 3 ), 3.141 )
+t( rounddown( -3.14159, 1 ), -3.1 )
+t( rounddown( 31415.92654, -2 ), 31400 )
 
-t.done()
+t()

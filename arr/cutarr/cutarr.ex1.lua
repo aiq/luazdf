@@ -1,8 +1,9 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local cutarr = require( "cutarr" )
+local same = require( "same" )
 
 left, right = cutarr( { "a", "b", "c" }, 2 )
-t.same( { "a", "b" }, left )
-t.same( { "c" }, right )
+t( same( left, { "a", "b" } ), true )
+t( same( right, { "c" } ), true )
 
-t.done()
+t()

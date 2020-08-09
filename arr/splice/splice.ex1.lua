@@ -1,4 +1,5 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
+local same = require( "same" )
 local splice = require( "splice" )
 
 -- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
@@ -7,23 +8,23 @@ local splice = require( "splice" )
 local fishlist = { "angel", "clown", "mandarin", "surgeon" }
 
 local removed = splice( fishlist, 3, 0, "drum" )
-t.same( { "angel", "clown", "drum", "mandarin", "surgeon" }, fishlist )
-t.same( {}, removed )
+t( same( fishlist, { "angel", "clown", "drum", "mandarin", "surgeon" } ), true )
+t( same( removed, {} ), true )
 
 removed = splice( fishlist, 4, 1 )
-t.same( { "angel", "clown", "drum", "surgeon" }, fishlist )
-t.same( { "mandarin" }, removed )
+t( same( fishlist, { "angel", "clown", "drum", "surgeon" } ), true )
+t( same( removed, { "mandarin" } ), true )
 
 removed = splice( fishlist, 3, 1, "trumpet" )
-t.same( { "angel", "clown", "trumpet", "surgeon" }, fishlist )
-t.same( { "drum" }, removed )
+t( same( fishlist, { "angel", "clown", "trumpet", "surgeon" } ), true )
+t( same( removed, { "drum" } ), true )
 
 removed = splice( fishlist, 1, 2, "parrot", "anemone", "blue" )
-t.same( { "parrot", "anemone", "blue", "trumpet", "surgeon" }, fishlist )
-t.same( { "angel", "clown" }, removed )
+t( same( fishlist, { "parrot", "anemone", "blue", "trumpet", "surgeon" } ), true )
+t( same( removed, { "angel", "clown" } ), true )
 
 removed = splice( fishlist, 4, 8000 )
-t.same( { "parrot", "anemone", "blue" }, fishlist )
-t.same( { "trumpet", "surgeon" }, removed )
+t( same( fishlist, { "parrot", "anemone", "blue" } ), true )
+t( same( removed, { "trumpet", "surgeon" } ), true )
 
-t.done()
+t()

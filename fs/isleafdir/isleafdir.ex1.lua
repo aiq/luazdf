@@ -1,23 +1,22 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local isleafdir = require( "isleafdir" )
--- util functions
 local mkdirtree = require( "mkdirtree" )
 local rmdirtree = require( "rmdirtree" )
 
 -- setup
-t.ok( mkdirtree{
+t( mkdirtree{
    [ "middir" ] = {
       [ "leafdir" ] = {
          [ "tmpfile.txt" ] = ""
       }
    }
-} )
+}, true )
 
 -- test
-t.ok( isleafdir( "middir/leafdir" ) )
-t.nok( isleafdir( "middir" ) )
+t( isleafdir( "middir/leafdir" ), true )
+t( isleafdir( "middir" ), false )
 
 -- teardown
-t.ok( rmdirtree( "middir" ) )
+t( rmdirtree( "middir" ), true )
 
-t.done()
+t()

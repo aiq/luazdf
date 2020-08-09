@@ -1,8 +1,8 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local cutstr = require( "cutstr" )
 
 left, right = cutstr( "abc", 2 )
-t.is( "ab", left )
-t.is( "c", right )
+t( left, "ab" )
+t( right, "c" )
 
-t.done()
+t()

@@ -1,12 +1,12 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local isempty = require( "isempty" )
 
-t.ok( isempty{} )
-t.nok( isempty{ 1, 2, 3 } )
+t( isempty{}, true )
+t( isempty{ 1, 2, 3 }, false )
 
 local tab = { single_value="1" }
-t.nok( isempty( tab ) )
+t( isempty( tab ), false )
 tab.single_value = nil
-t.ok( isempty( tab ) )
+t( isempty( tab ), true )
 
-t.done()
+t()

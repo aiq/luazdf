@@ -1,6 +1,5 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local isdir = require( "isdir" )
--- util functions
 local mkdirtree = require( "mkdirtree" )
 local rmdirtree = require( "rmdirtree" )
 
@@ -12,10 +11,10 @@ res, err = mkdirtree{
 }
 
 -- test
-t.ok( isdir( "tmpdir" ) )
-t.nok( isdir( "tmpdir/tmpfile.txt" ) )
+t( isdir( "tmpdir" ), true )
+t( isdir( "tmpdir/tmpfile.txt" ), false )
 
 -- teardown
-t.ok( rmdirtree( "tmpdir" ) )
+t( rmdirtree( "tmpdir" ), true )
 
-t.done()
+t()

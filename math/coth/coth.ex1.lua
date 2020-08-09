@@ -1,8 +1,7 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local coth = require( "coth" )
--- util functions
 local round = require( "round" )
 
-t.is( 1.0373147, round( coth( 2 ), 7 ) )
+t( round( coth( 2 ), 7 ), 1.0373147 )
 
-t.done()
+t()

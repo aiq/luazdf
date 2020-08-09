@@ -1,40 +1,40 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local linecol = require( "linecol" )
 
 -- should work with a single line
 line, col = linecol( "abcdefgh", 4 )
-t.is( 1, line )
-t.is( 4, col )
+t( line, 1 )
+t( col, 4 )
 
 line, col = linecol( "abcdefgh", 1 )
-t.is( 1, line )
-t.is( 1, col )
+t( line, 1 )
+t( col, 1 )
 
 -- first and last value
 line, col = linecol( "", 1 )
-t.is( 1, line )
-t.is( 1, col )
+t( line, 1 )
+t( col, 1 )
 
 line, col = linecol( "abc", 3 )
-t.is( 1, line )
-t.is( 3, col )
+t( line, 1 )
+t( col, 3 )
 
 -- should work with multi line strings
 line, col = linecol( "\nabcd\n\nefgh\n\n", 9 )
-t.is( 4, line )
-t.is( 2, col )
+t( line, 4 )
+t( col, 2 )
 
 line, col = linecol( "abc\ndef\nghi", -1 )
-t.is( 3, line )
-t.is( 3, col )
+t( line, 3 )
+t( col, 3 )
 
 -- should trim out of word values
 line, col = linecol( "abc\ndef\nghi", 0 )
-t.is( 1, line )
-t.is( 1, col )
+t( line, 1 )
+t( col, 1 )
 
 line, col = linecol( "abc\ndef\nghi", 20 )
-t.is( 3, line )
-t.is( 3, col )
+t( line, 3 )
+t( col, 3 )
 
-t.done()
+t()

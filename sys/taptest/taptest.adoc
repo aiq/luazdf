@@ -69,5 +69,4 @@ include::taptest.ex1.lua[]
 
 == Inspired by
 
-https://testanything.org/
-https://github.com/telemachus/tapered
+* https://testanything.org/[Test Anything Protocol]

@@ -1,21 +1,21 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local tilldayofweek = require( "tilldayofweek" )
 
 local d = { year = 2014, month = 3, day = 22 } -- saturday
 
-t.is( 1, tilldayofweek( d, 7, 1 ) ) -- next sunday
-t.is( 4, tilldayofweek( d, 3, 1 ) ) -- next wednesday
-t.is( 7, tilldayofweek( d, 6, 1 ) ) -- next saturday
+t( tilldayofweek( d, 7, 1 ), 1 ) -- next sunday
+t( tilldayofweek( d, 3, 1 ), 4 ) -- next wednesday
+t( tilldayofweek( d, 6, 1 ), 7 ) -- next saturday
 
 -- next next wednesday
-t.is( 11, tilldayofweek( d, 3, 2 ) )
+t( tilldayofweek( d, 3, 2 ), 11 )
 
 
-t.is( -7, tilldayofweek( d, 6, -1 ) ) -- last saturday
-t.is( -5, tilldayofweek( d, 1, -1 ) ) -- last monday
-t.is( -1, tilldayofweek( d, 5, -1 ) ) -- last friday
+t( tilldayofweek( d, 6, -1 ), -7 ) -- last saturday
+t( tilldayofweek( d, 1, -1 ), -5 ) -- last monday
+t( tilldayofweek( d, 5, -1 ), -1 ) -- last friday
 
 -- last last last monday
-t.is( -19, tilldayofweek( d, 1, -3 ) )
+t( -19, tilldayofweek( d, 1, -3 ) )
 
-t.done()
+t()

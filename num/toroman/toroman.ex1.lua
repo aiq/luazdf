@@ -1,20 +1,20 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local toroman = require( "toroman" )
 
-t.is( "III", toroman( 3 ) )
-t.is( "VII", toroman( 7 ) )
-t.is( "MCMXCIX", toroman( 1999 ) )
+t( toroman( 3 ), "III" )
+t( toroman( 7 ), "VII" )
+t( toroman( 1999 ), "MCMXCIX" )
 
-t.is( "CDXCIX", toroman( 499, 0 ) )
-t.is( "LDVLIV", toroman( 499, 1 ) )
-t.is( "XDIX", toroman( 499, 2 ) )
-t.is( "VDIV", toroman( 499, 3 ) )
-t.is( "ID", toroman( 499, 4 ) )
+t( toroman( 499, 0 ), "CDXCIX" )
+t( toroman( 499, 1 ), "LDVLIV" )
+t( toroman( 499, 2 ), "XDIX" )
+t( toroman( 499, 3 ), "VDIV" )
+t( toroman( 499, 4 ), "ID" )
    
-t.is( "", toroman( -1 ) )
+t( toroman( -1 ), "" )
 
 -- should allow only 3999 as max value
-t.is( "MMMCMXCIX", toroman( 3999 ) )
-t.is( "", toroman( 4000 ) )
+t( toroman( 3999 ), "MMMCMXCIX" )
+t( toroman( 4000 ), "" )
 
-t.done()
+t()

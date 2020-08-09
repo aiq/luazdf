@@ -1,4 +1,4 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local partial = require( "partial" )
 
 local function sum( a, b )
@@ -7,6 +7,6 @@ end
 
 fixsum = partial( sum, 100 )
 
-t.is( 128, fixsum( 28 ) )
+t( fixsum( 28 ), 128 )
 
-t.done()
+t()

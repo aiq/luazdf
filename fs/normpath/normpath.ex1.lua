@@ -1,13 +1,13 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local normpath = require( "normpath" )
 
-t.is( "a/c", normpath( "a/c" ) )
-t.is( "a/c", normpath( "a//c" ) )
-t.is( "a/c", normpath( "a/c/." ) )
-t.is( "a/c", normpath( "a/c/b/.." ) )
-t.is( "/a/c", normpath( "/../a/c" ) )
-t.is( "/a/c", normpath( "/../a/b/../././/c" ) )
+t( normpath( "a/c" ), "a/c" )
+t( normpath( "a//c" ), "a/c" )
+t( normpath( "a/c/." ), "a/c" )
+t( normpath( "a/c/b/.." ), "a/c" )
+t( normpath( "/../a/c" ), "/a/c" )
+t( normpath( "/../a/b/../././/c" ), "/a/c" )
 
-t.is( "C:/a/b/c", normpath( "C:/a/b_/../b/c_/d_/../.././c" ) )
+t( normpath( "C:/a/b_/../b/c_/d_/../.././c" ), "C:/a/b/c" )
 
-t.done()
+t()

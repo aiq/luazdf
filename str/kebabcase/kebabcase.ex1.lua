@@ -1,6 +1,6 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local kebabcase = require( "kebabcase" )
 
-t.is( "wiki-word-bumpy-caps", kebabcase{ "Wiki", "Word", "BUMPY", "caPS" } )
+t( kebabcase{ "Wiki", "Word", "BUMPY", "caPS" }, "wiki-word-bumpy-caps" )
 
-t.done()
+t()

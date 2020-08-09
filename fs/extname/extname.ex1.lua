@@ -1,15 +1,15 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local extname = require( "extname" )
 
-t.is( ".html", extname( "index.html" ) )
-t.is( ".md", extname( "index.coffee.md" ) )
+t( extname( "index.html" ), ".html" )
+t( extname( "index.coffee.md" ), ".md" )
 
-t.is( ".", extname( "index.." ) )
-t.is( "", extname( "index" ) )
+t( extname( "index.." ), "." )
+t( extname( "index" ), "" )
 
-t.is( ".index", extname( ".index" ) )
-t.is( ".index", extname( "/.index" ) )
+t( extname( ".index" ), ".index" )
+t( extname( "/.index" ), ".index" )
 
-t.is( "", extname( "abc.def/index" ) )
+t( extname( "abc.def/index" ), "" )
 
-t.done()
+t()

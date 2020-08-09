@@ -1,8 +1,8 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local keys = require( "keys" )
--- util functions
 local like = require( "like" )
 
-t.ok( like( { "even", "odd", "name" }, keys{ even=2, odd=3, name="pierrot" } ) )
+res = keys{ even=2, odd=3, name="pierrot" }
+t( like( res, { "even", "odd", "name" } ), true )
 
-t.done()
+t()

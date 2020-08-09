@@ -1,4 +1,4 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local getin = require( "getin" )
 
 local obj = {
@@ -8,8 +8,8 @@ local obj = {
    hobbies = { "music", "languages", "programming" }
 }
 
-t.is( "Yarwood", getin( obj, "name", "last_name" ) )
-t.is( "programming", getin( obj, "hobbies", 3 ) )
-t.is( nil, getin( obj, "birthday" ) )
+t( getin( obj, "name", "last_name" ), "Yarwood" )
+t( getin( obj, "hobbies", 3 ), "programming" )
+t( getin( obj, "birthday" ), nil )
 
-t.done()
+t()

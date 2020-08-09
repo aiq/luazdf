@@ -1,10 +1,9 @@
-local t = require( "tapered" )
-local rmdirtree = require( "rmdirtree" )
--- util functions
+local t = require( "taptest" )
 local mkdirtree =require( "mkdirtree" )
+local rmdirtree = require( "rmdirtree" )
 
 -- test
-t.ok( mkdirtree{
+t( mkdirtree{
    [ "tmp_rmdirtree" ] = {
       [ "fa.txt" ] = "",
       [ "da" ] = {
@@ -12,10 +11,10 @@ t.ok( mkdirtree{
          [ "fab.txt" ] = "content",
       }
    }
-} )
+}, true )
 
 res, err = rmdirtree( "tmp_rmdirtree" )
-t.ok( res )
-t.is( nil, err )
+t( res, true )
+t( err, nil )
 
-t.done()
+t()

@@ -1,10 +1,10 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local ltf = require( "ltf" )
 
 func = ltf( 2 )
 
-t.nok( func( 3 ) )
-t.nok( func( 2 ) )
-t.ok( func( 1 ) )
+t( func( 3 ), false )
+t( func( 2 ), false )
+t( func( 1 ), true )
 
-t.done()
+t()

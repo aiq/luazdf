@@ -1,11 +1,11 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local countlen = require( "countlen" )
 
 tab = {}
-t.is( 0, countlen( tab ) )
+t( countlen( tab ), 0 )
 
 tab = { "a", "b", "c" }
-t.is( 3, countlen( tab ) )
+t( countlen( tab ), 3 )
 
 tab = {
    [ "a" ] = { 1, 2, 3 },
@@ -13,6 +13,6 @@ tab = {
    [ "c" ] = nil,
    [ "d" ] = { 1 }
 }
-t.is( 3, countlen( tab ) )
+t( countlen( tab ), 3 )
 
-t.done()
+t()

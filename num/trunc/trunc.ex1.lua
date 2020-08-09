@@ -1,10 +1,10 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local trunc = require( "trunc" )
 
-t.is( 0, trunc( 0.2 ) )
-t.is( 0, trunc( 0.7 ) )
+t( trunc( 1.2 ), 1 )
+t( trunc( 1.7 ), 1 )
 
-t.is( 0, trunc( -0.2 ) )
-t.is( 0, trunc( -0.7 ) )
+t( trunc( -2.2 ), -2 )
+t( trunc( -2.7 ), -2 )
 
-t.done()
+t()

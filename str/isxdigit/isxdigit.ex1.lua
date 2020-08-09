@@ -1,18 +1,18 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local isxdigit = require( "isxdigit" )
 
-t.ok( isxdigit( "0123456789abcdefABCDEF" ) )
+t( isxdigit( "0123456789abcdefABCDEF" ), true )
 
 res, pos = isxdigit( "" )
-t.nok( res )
-t.is( 0, pos )
+t( res, false )
+t( 0, pos, 0 )
 
 res, pos = isxdigit( "abcdefghABCDEFGH" )
-t.nok( res )
-t.is( 7, pos )
+t( res, false )
+t( pos, 7 )
 
 res, pos = isxdigit( "ABCDEFGHabcdefgh" )
-t.nok( res )
-t.is( 7, pos )
+t( res, false )
+t( pos, 7 )
 
-t.done()
+t()

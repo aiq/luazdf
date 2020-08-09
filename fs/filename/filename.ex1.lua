@@ -1,15 +1,15 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local filename = require( "filename" )
 
-t.is( "index", filename( "index.html" ) )
-t.is( "index.coffee", filename( "index.coffee.md" ) )
+t( filename( "index.html" ), "index" )
+t( filename( "index.coffee.md" ), "index.coffee" )
 
-t.is( "index.", filename( "index.." ) )
-t.is( "index", filename( "index" ) )
+t( filename( "index.." ), "index." )
+t( filename( "index" ), "index" )
 
-t.is( "", filename( ".index" ) )
-t.is( "", filename( "/.index" ) )
+t( filename( ".index" ), "" )
+t( filename( "/.index" ), "" )
 
-t.is( "index", filename( "abc.def/index" ) )
+t( filename( "abc.def/index" ), "index" )
 
-t.done()
+t()

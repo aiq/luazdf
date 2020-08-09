@@ -1,9 +1,9 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local eqf = require( "eqf" )
 
 func = eqf( "foo" )
 
-t.ok( func( "foo" ) )
-t.nok( func( "bar" ) )
+t( func( "foo" ), true )
+t( func( "bar" ), false )
 
-t.done()
+t()

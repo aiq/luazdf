@@ -1,4 +1,4 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local once = require( "once" )
 
 local v = 3
@@ -9,7 +9,7 @@ local add = function( n )
 end
 
 local f = once( add )
-t.is( 8, f( 5 ) )
-t.is( 8, f( 10 ) )
+t( f( 5 ), 8 )
+t( f( 10 ), 8 )
 
-t.done()
+t()

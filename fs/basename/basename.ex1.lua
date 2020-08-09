@@ -1,11 +1,11 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local basename = require( "basename" )
 
 path = "/foo/bar/baz/asdf/quux.html"
-t.is( "quux.html", basename( path ) )
-t.is( "quux", basename( path, ".html" ) )
+t( basename( path ), "quux.html" )
+t( basename( path, ".html" ), "quux" )
 
-t.is( "quux.html", basename( "quux.html" ) )
-t.is( "quux", basename( "quux.html", ".html" ) )
+t( basename( "quux.html" ), "quux.html" )
+t( basename( "quux.html", ".html" ), "quux" )
 
-t.done()
+t()

@@ -1,10 +1,12 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local appendall = require( "appendall" )
+local same = require( "same" )
 
-t.same( { "a", "b", "c", "d" }, appendall( { "a", "b" }, { "c", "d" } ) )
+arr = appendall( { "a", "b" }, { "c", "d" } )
+t( same( arr, { "a", "b", "c", "d" } ), true )
 
 arr = { 1, 2, 3 }
 appendall( arr, { 4, 5 } )
-t.same( { 1, 2, 3, 4, 5 }, arr )
+t( same( arr, { 1, 2, 3, 4, 5 } ), true )
 
-t.done()
+t()

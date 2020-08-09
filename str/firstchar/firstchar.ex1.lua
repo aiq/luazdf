@@ -1,7 +1,7 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local firstchar = require( "firstchar" )
 
-t.is( "a", firstchar( "abc" ) )
-t.is( "", firstchar( "" ) )
+t( firstchar( "abc" ), "a" )
+t( firstchar( "" ), "" )
 
-t.done()
+t()

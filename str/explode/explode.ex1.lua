@@ -1,14 +1,23 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local explode = require( "explode" )
+local same = require( "same" )
 
 str = "one|two|three|four"
 
-t.same( { "one", "two", "three", "four" }, explode( str, "|" ) )
-t.same( { "one", "two|three|four" }, explode( str, "|", 2 ) )
-t.same( { "one", "two", "three" }, explode( str, "|", -1 ) )
+res = explode( str, "|" )
+t( same( res, { "one", "two", "three", "four" } ), true )
 
-t.same( { "a ", "b c" }, explode( "a  +b c", " +" ) )
 
-t.same( { "a;b;c" }, explode( "a;b;c", "/" ) )
+res = explode( str, "|", 2 )
+t( same( res, { "one", "two|three|four" } ), true )
 
-t.done()
+res = explode( str, "|", -1 )
+t( same( res, { "one", "two", "three" } ), true )
+
+res = explode( "a  +b c", " +" )
+t( same( res, { "a ", "b c" } ), true )
+
+res = explode( "a;b;c", "/" )
+t( same( { "a;b;c" }, explode( "a;b;c", "/" ) ), true )
+
+t()

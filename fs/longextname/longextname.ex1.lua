@@ -1,15 +1,15 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local longextname = require( "longextname" )
 
-t.is( ".html", longextname( "index.html" ) )
-t.is( ".coffee.md", longextname( "index.coffee.md" ) )
+t( longextname( "index.html" ), ".html" )
+t( longextname( "index.coffee.md" ), ".coffee.md" )
 
-t.is( "..", longextname( "index.." ) )
-t.is( "", longextname( "index" ) )
+t( longextname( "index.." ), ".." )
+t( longextname( "index" ), "" )
 
-t.is( ".index", longextname( ".index" ) )
-t.is( ".index", longextname( "/.index" ) )
+t( longextname( ".index" ), ".index" )
+t( longextname( "/.index" ), ".index" )
 
-t.is( "", longextname( "abc.def/index" ) )
+t( longextname( "abc.def/index" ), "" )
 
-t.done()
+t()

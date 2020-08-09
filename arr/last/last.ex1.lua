@@ -1,7 +1,7 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
 local last = require( "last" )
 
 arr = { "w", "x", "y", "z" }
-t.is( "z", last( arr ) )
+t( last( arr ), "z" )
 
-t.done()
+t()

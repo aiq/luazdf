@@ -1,13 +1,18 @@
-local t = require( "tapered" )
+local t = require( "taptest" )
+local same = require( "same" )
 local zip = require( "zip" )
 
 -- should work like the zip function from underscore.js
-local res = zip{ { "moe", "larry", "curly" }, { 30, 40, 50 }, { true, false, false } }
+local res = zip{
+   { "moe", "larry", "curly" },
+   { 30, 40, 50 },
+   { true, false, false }
+}
 
-t.is( 3, #res )
+t( #res, 3 )
 
-t.same( { "moe", 30, true }, res[ 1 ] )
-t.same( { "larry", 40, false }, res[ 2 ] )
-t.same( { "curly", 50, false }, res[ 3 ] )
+t( same( res[ 1 ], { "moe", 30, true } ), true )
+t( same( res[ 2 ], { "larry", 40, false } ), true )
+t( same( res[ 3 ], { "curly", 50, false } ), true )
 
-t.done()
+t()
