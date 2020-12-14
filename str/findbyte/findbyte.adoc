@@ -1,0 +1,41 @@
+= findbyte
+
+[source,lua]
+----
+function findbyte( str, byte [, init] ) --> idx
+----
+
+== Description
+
+Returns the index of the first appearance _byte_ in _str_.
+The optional argument _init_ specifies wher to start the search.
+
+== Parameters
+
+str::
+The string that should be checked.
+
+byte::
+The byte to search for.
+
+init::
+The position where the search should be started.
+
+== Return Values
+
+idx::
+The first appearance of _byte_ in _str_, otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::findbyte.lua[]
+----
+
+== Examples
+
+[source,lua]
+----
+include::findbyte.ex1.lua[]
+----
