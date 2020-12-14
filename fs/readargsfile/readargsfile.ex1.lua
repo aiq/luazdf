@@ -2,7 +2,7 @@ local t = require( "taptest" )
 local readargsfile = require( "readargsfile" )
 local writefile = require( "writefile" )
 
-t( writefile( "example.args", [[
+t( writefile( "readargsfile.args", [[
 
 --longopt
 value
@@ -27,7 +27,7 @@ lorem ipsum
 
 ]] ), true )
 
-args, err = readargsfile( "example.args" )
+args, err = readargsfile( "readargsfile.args" )
 t( #args, 10 )
 t( args[  1 ], "--longopt" )
 t( args[  2 ], "value" )

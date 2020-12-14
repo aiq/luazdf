@@ -7,7 +7,7 @@ function readargsfile( filepath ) --> args, err
 
 == Description
 
-Reads and parses a file that is formated with the args file format.
+Reads and parses a file that is formated in the args file format.
 
 == Parameters
 
@@ -20,7 +20,7 @@ args::
 The defined aurgument values in the file.
 
 err::
-A message if an error occurse otherwise *nil*.
+A message if an error occurse, otherwise *nil*.
 
 == Code
 
