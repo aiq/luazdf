@@ -42,4 +42,4 @@ include::tsort2d.ex1.lua[]
 
 == See Also
 
-* link:tsort.hmtl[tsort]
+* link:tsort.html[tsort]
