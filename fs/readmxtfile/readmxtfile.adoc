@@ -1,0 +1,41 @@
+= readmxtfile
+
+[source,lua]
+----
+function readmxtfile( filepath ) --> tab, err
+----
+
+== Description
+
+Reads and parses a mxt file.
+
+== Parameters
+
+filepath::
+Path to the file that should be read.
+
+== Return Values
+
+tab::
+Map table that represents the content of the mxt file.
+
+err::
+A meessage if an error occurse, otherwise *nil*.
+
+== Code
+
+[source,lua]
+----
+include::readmxtfile.lua[]
+----
+
+== Example
+
+[source,lua]
+----
+include::readmxtfile.ex1.lua[]
+----
+
+== Inspired by
+
+* https://mxt.aiq.dk[mxt Specification]
