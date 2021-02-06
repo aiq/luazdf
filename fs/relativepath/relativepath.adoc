@@ -8,6 +8,7 @@ function relativepath( from, to ) --> path
 == Description
 
 Returns a relative path between the paths _from_ and _to_.
+If both paths are the same returns the function ".".
 
 == Parameters
 
@@ -38,6 +39,7 @@ include::relativepath.ex1.lua[]
 
 == Inspired by
 
+* https://golang.org/pkg/path/filepath/#Rel[Go path.filepath.Rel]
 * https://nodejs.org/docs/latest-v5.x/api/path.html#path_path_relative_from_to[Node.js path.relativepath]
 
 == See also

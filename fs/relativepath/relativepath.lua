@@ -79,16 +79,39 @@ local function splitpath( path ) --> tab
    end
    return tab
 end
+--ZFUNC-normpath-v1
+local function normpath( dirty ) --> clean
+   if dirty == "" then return "." end
 
---ZFUNC-relativepath-v1
+   local rooted = dirty:sub( 1, 1 ) == "/"
+   
+   local dirtytab = splitpath( dirty )
+   local cleantab = {}
+   for k, v in ipairs( dirtytab ) do
+      if v == "." then
+      elseif v == ".." then
+         table.remove( cleantab )
+      elseif v == "" then
+      else
+         table.insert( cleantab, v )
+      end
+   end
+  
+   if rooted then
+      return "/"..table.concat( cleantab, "/" )
+   end
+
+   return table.concat( cleantab, "/" )
+end
+--ZFUNC-relativepath-v2
 local function relativepath( from, to ) --> path
    from = abspath( from )
    to = abspath( to )
 
-   if from == to then return "" end
+   if from == to then return "." end
 
-   local fromtab = splitpath( from )
-   local totab = splitpath( to )
+   local fromtab = splitpath( normpath( from ) )
+   local totab = splitpath( normpath( to ) )
 
    local f = 1
    local t = 1
@@ -107,6 +130,7 @@ local function relativepath( from, to ) --> path
       table.insert( pathtab, totab[ i ] )
    end
 
+   if #pathtab == 0 then return "." end
    return table.concat( pathtab, "/" )
 end
 

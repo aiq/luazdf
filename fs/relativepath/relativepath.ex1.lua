@@ -2,11 +2,12 @@ local t = require( "taptest")
 local relativepath = require( "relativepath" )
 
 t( relativepath( "data/dir/test/aaa", "data/dir/impl/bbb" ), "../../impl/bbb" )
+t( relativepath( "/the/same/path", "/the/same/path/order/../../path" ), "." )
 
 --https://github.com/nodejs/node/blob/master/test/parallel/test-path.js
 t( relativepath( "/var/lib", "/var" ), ".." )
 t( relativepath( "/var/lib", "/bin" ), "../../bin" )
-t( relativepath( "/var/lib", "/var/lib" ), "" )
+t( relativepath( "/var/lib", "/var/lib" ), "." )
 t( relativepath( "/var/lib", "/var/apache" ), "../apache" )
 t( relativepath( "/var/", "/var/lib" ), "lib" )
 t( relativepath( "/", "/var/lib" ), "var/lib" )
