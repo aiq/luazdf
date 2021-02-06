@@ -1,16 +1,15 @@
+--ZFUNC-splitpath-v1
+local function splitpath( path )
+   local tab = {}
+   for token in string.gmatch( path, "[^/]+" ) do
+      if #token > 0 then
+         table.insert( tab, token )
+      end
+   end
+   return tab
+end
 --ZFUNC-normpath-v1
 local function normpath( dirty ) --> clean
-   --ZFUNC-splitpath-v1
-   local function splitpath( path )
-      local tab = {}
-      for token in string.gmatch( path, "[^/]+" ) do
-         if #token > 0 then
-            table.insert( tab, token )
-         end
-      end
-      return tab
-   end
-
    if dirty == "" then return "." end
 
    local rooted = dirty:sub( 1, 1 ) == "/"

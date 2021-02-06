@@ -7,7 +7,7 @@ function relativepath( from, to ) --> path
 
 == Description
 
-Returns a relative path between the paths _from_ and _to_.
+Returns a clean relative path between the paths _from_ and _to_.
 If both paths are the same returns the function ".".
 
 == Parameters
@@ -45,3 +45,4 @@ include::relativepath.ex1.lua[]
 == See also
 
 * link:abspath.html[abspath]
+* link:normpath.html[normpath]

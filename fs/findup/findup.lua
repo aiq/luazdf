@@ -114,15 +114,48 @@ local function joinpath( tab )
 
    return table.concat( tmptab, "/" )
 end
---ZFUNC-abspath-v2
-local function abspath( path ) --> abs
-   if isabsolute( path ) then
-      return path
+--ZFUNC-splitpath-v1
+local function splitpath( path )
+   local tab = {}
+   for token in string.gmatch( path, "[^/]+" ) do
+      if #token > 0 then
+         table.insert( tab, token )
+      end
+   end
+   return tab
+end
+--ZFUNC-normpath-v1
+local function normpath( dirty ) --> clean
+   if dirty == "" then return "." end
+
+   local rooted = dirty:sub( 1, 1 ) == "/"
+   
+   local dirtytab = splitpath( dirty )
+   local cleantab = {}
+   for k, v in ipairs( dirtytab ) do
+      if v == "." then
+      elseif v == ".." then
+         table.remove( cleantab )
+      elseif v == "" then
+      else
+         table.insert( cleantab, v )
+      end
+   end
+  
+   if rooted then
+      return "/"..table.concat( cleantab, "/" )
    end
 
-   return joinpath{ currentdir(), path }
+   return table.concat( cleantab, "/" )
 end
+--ZFUNC-abspath-v3
+local function abspath( path ) --> abs
+   if isabsolute( path ) then
+      return normpath( path )
+   end
 
+   return normpath( joinpath{ currentdir(), path } )
+end
 --ZFUNC-findup-v1
 local function findup( path, name, mode, depth ) --> entrypath
    if not isdir( path ) then return nil end

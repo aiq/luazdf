@@ -61,14 +61,6 @@ local function joinpath( tab )
 
    return table.concat( tmptab, "/" )
 end
---ZFUNC-abspath-v2
-local function abspath( path ) --> abs
-   if isabsolute( path ) then
-      return path
-   end
-
-   return joinpath{ currentdir(), path }
-end
 --ZFUNC-splitpath-v1
 local function splitpath( path ) --> tab
    local tab = {}
@@ -102,6 +94,14 @@ local function normpath( dirty ) --> clean
    end
 
    return table.concat( cleantab, "/" )
+end
+--ZFUNC-abspath-v3
+local function abspath( path ) --> abs
+   if isabsolute( path ) then
+      return normpath( path )
+   end
+
+   return normpath( joinpath{ currentdir(), path } )
 end
 --ZFUNC-relativepath-v2
 local function relativepath( from, to ) --> path

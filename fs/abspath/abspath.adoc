@@ -7,7 +7,7 @@ function abspath( path ) --> abs
 
 == Description
 
-Returns an absolute representation of path.
+Returns an clean absolute representation of path.
 If the path is not absolute it will be joined with the current working directory to turn it into an absolute path.
 The absolute path name for a given file is not guaranteed to be unique.
 
@@ -34,4 +34,5 @@ include::abspath.lua[]
 
 == See also
 
+* link:normpath.html[normpath]
 * link:relativepath.html[relativepath]
