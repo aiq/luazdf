@@ -45,7 +45,7 @@ ro/CU6vIqkOSNRUrNYDwqz1g3Z3eAQB/8t9Y4WsV4KL0M229rsFrtl26i7+quYfg
 uuTd
 =WxK9
 -----END PGP MESSAGE-----
-//-XYZ- hello-world.h -->
+//XYZ hello-world.h -->
 //---------------------------------------------------------- hello-world.c --> X
 // this is part of hello-world.c
 #include<stdio.h>

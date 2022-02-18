@@ -33,8 +33,8 @@ local function findbyte( str, byte, init ) --> idx
 end
 
 local function readmxtheader( str, idx ) --> name, pat, idx
-   local startBeg, startEnd = str:find( "//%-*%w*%-*", idx )
-   if not startBeg then return nil, nil, "no start line" end
+   local startBeg, startEnd = idx, findbyte(str, string.byte( ' ' ), idx)
+   if not startEnd then return nil, nil, "no start line" end
 
    local arrowBeg, arrowEnd = str:find( "-->", startEnd+1, true )
    if not arrowBeg then return nil, nil, nil end
@@ -53,15 +53,14 @@ local function readmxtheader( str, idx ) --> name, pat, idx
 end
 
 local function startmarker( pat ) --> mrk
-   local snip = "//"
    if pat == "" then 
       return "//"
    else
-      return "//-"..pat.."-"
+      return "//"..pat
    end
 end
 
---ZFUNC-readmxtfile-v1
+--ZFUNC-readmxtfile-v2
 local function readmxtfile( filepath ) --> tab, err
    local str, err = readfile( filepath )
    if err then return nil, err end
