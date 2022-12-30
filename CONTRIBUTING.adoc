@@ -1,8 +1,6 @@
 = Contributing
 
 Feel free to contribute to the project.
-Check before starting on https://www.reddit.com/r/LuaZDF/[reddit] for discussion
-that allready deal with the problem.
 To contribute, https://help.github.com/articles/fork-a-repo/[fork] the
 repository, commit your changes and send a
 https://help.github.com/articles/about-pull-requests/[pull request].
