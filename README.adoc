@@ -56,13 +56,10 @@ http://www.landley.net/toybox/license.html[Toybox] project.
 You can explore and use existing functions as a consumer or you can add new
 functions as a creator.
 
-You can explore all functions on the https://luazdf.aiq.dk/[website].
+You can explore all functions on the https://code.aiq.dk/luazdf/[website].
 
 Check the information about https://luazdf.aiq.dk/contributing.html[contribution] 
 if you want to add or modify a function.
 
 For both use cases is it recommended to use to the command line tool
 https://github.com/aiq/lzt[lzt].
-
-The user discussion about LuaZDF in general and the functions takes place on
-https://www.reddit.com/r/LuaZDF/[reddit].
